@@ -1,0 +1,31 @@
+/* All of the main CSS files are imported in the index.css file. (This one) */
+
+/* These are the main files that are gonna be used for all the pages */
+
+/* This one is for various things such as resizing the css properties, effects etc.. */
+@import url(style.css);
+
+/* File for fonts */
+@import url(font-styles.css);
+
+/* The navbar file */
+@import url(navbar.css);
+
+/* The landing page / index */
+@import url(landing-page.css);
+
+/* The 3 main pages : Apps, photos, books */
+@import url(applications-page.css);
+@import url(books-page.css);
+@import url(photos-page.css);
+
+/* The pages for photos sections */
+@import url(photos-sections-pages.css);
+
+/* The pages for books sections */
+
+/* The lightbox css properties */
+@import url(lightbox.css);
+
+/* The footer file  */
+@import url(footer.css);

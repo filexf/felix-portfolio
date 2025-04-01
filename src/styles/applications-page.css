@@ -1,0 +1,143 @@
+.frame-header-applications-page {
+  margin-top: 30px;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3rem;
+  gap: 50px;
+}
+
+.github-account-frame{
+  display: flex;
+  padding: 0px 28px;
+  align-items: center;
+  gap: 133px;
+}
+
+.frame-application{
+  display: flex;
+  position: relative;
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: 446.755px;
+  object-fit: cover;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  gap: 13.018px;
+  flex-shrink: 0;
+
+  border-radius: 65.09px;
+  border: 6.509px solid #000;
+  box-shadow: 0px 5.207px 5.207px 0px rgba(0, 0, 0, 0.25);
+}
+
+.center-title-application{
+  position:absolute;
+  inset:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.container-photo-app{
+  overflow: hidden;
+  position:relative;
+  .main-photo{
+    /* height: 730.218px;
+    width: 422.358px; */
+    object-fit: cover;
+    transition: all 0.3s;
+  }
+}
+
+.frame-hovered-content-application{
+
+  position: absolute;
+  inset:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  background: rgba(23, 23, 23, 0.926);
+  gap: 20px;
+  border-radius: 65.09px;
+}
+
+.font-hovered{
+  color: white;
+  padding: 1.5rem;
+  font-size: 20px;
+}
+
+.container-photo-app > img,
+.container-photo-app > .frame-hovered-content-application {
+  transition: 200ms ease-in-out;
+}
+
+.container-photo-app:hover > img {
+  transform: scale(1.00);
+}
+
+.container-photo-app > .frame-hovered-content-application {
+  opacity: 0;
+}
+
+.container-photo-app:hover > .frame-hovered-content-application {
+  opacity: 1;
+}
+
+.icons-projects{
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+/* This section is about the tech stack I used */
+
+.tech-stack{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  gap: 48px;
+
+  p{
+    color: #000;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}
+
+.frame-icons-tech-stack{
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+
+  gap: 57.023px;
+  flex-wrap: wrap;
+}
+
+.layout-icons-tech-stack{
+  width: 97px;
+  height: 97px;
+  flex-shrink: 0;
+}
+
+/* -------------------------------------- */

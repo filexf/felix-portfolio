@@ -1,0 +1,79 @@
+
+/* The h1 of the landing page with my name */
+.title{
+  color: #000;
+  font-family: Raleway;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 992px) {
+  .title{
+    font-size: 60px;
+  }
+}
+
+
+/* The font which is used in most of the contents descriptions */
+.body-font{
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+
+  /* Body font */
+  font-family: Raleway;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.body-font-white{
+  overflow: hidden;
+  color: #fff;
+  text-overflow: ellipsis;
+
+  /* Body font */
+  font-family: Raleway;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.font-main-sections{
+  color: #000;
+  text-align: center;
+
+  /* Font main sections */
+  font-family: Raleway;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .font-main-sections{
+    font-size: 80px;
+  }
+}
+
+
+
+.font-header-applications{
+  color: #FFF;
+  text-align: center;
+
+  text-shadow: 0px 5.207px 5.207px rgba(0, 0, 0, 0.25);
+  /* -webkit-text-stroke-width: 1.3017973899841309; */
+  -webkit-text-stroke-color: #000;
+  font-family: Raleway;
+  font-size: 80.144px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
