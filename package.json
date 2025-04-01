@@ -2,15 +2,15 @@
   "name": "portfolio-felix",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https:/filexf.github.io",
+  "homepage": "https:/filexf.github.io/felix-portfolio/",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.0.0",
