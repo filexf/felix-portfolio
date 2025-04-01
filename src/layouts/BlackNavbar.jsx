@@ -46,15 +46,10 @@ export default function BlackNavbar() {
               </ul>
             </div>
             {/*-------------------- The new burger menu  --------------------*/}
-            {/* <div class="hamburger">
-  </div> */}
+            {/* <div class="hamburger"> </div> */}
             <input type="checkbox" id="check" style={{ display: "none" }} />
             <label htmlFor="check" className="checkbtn">
-              <img
-                src={dropdown}
-                className=""
-                alt="Dropdown-menu"
-              />
+              <img src={dropdown} className="" alt="Dropdown-menu" />
             </label>
             <div className="nav-mobile">
               <a href="#">English 🇺🇸</a>
