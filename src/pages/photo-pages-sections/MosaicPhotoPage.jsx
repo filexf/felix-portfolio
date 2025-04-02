@@ -14,7 +14,7 @@ import photo13 from "../../assets/images/Photos-mosaics/Paris_WE_V1-24.jpg";
 import photo14 from "../../assets/images/Photos-mosaics/Photos_Bangkok_V1-142.jpg";
 import photo15 from "../../assets/images/Photos-mosaics/Photos_Bangkok_V1-146.jpg";
 import photo16 from "../../assets/images/Photos-mosaics/Photos_Bangkok_V1-186.jpg";
-import photo17 from "../../assets/images/Photos-mosaics/Photos_Bangkok_V1-21.jpg";
+
 import photo18 from "../../assets/images/Photos-mosaics/Photos_Bangkok_V1-33.jpg";
 import photo19 from "../../assets/images/Photos-mosaics/Photos_Bangkok_V1-88.jpg";
 import photo20 from "../../assets/images/Photos-mosaics/Photos_HK_chill-128.jpg";
@@ -25,26 +25,28 @@ import photo25 from "../../assets/images/Photos-mosaics/Photos_HK_chill-72.jpg";
 
 
 const images = [
-  { src: photo1, title: "Mosaics image" },
-  { src: photo2, title: "Mosaics image" },
-  { src: photo3, title: "Mosaics image" },
-  { src: photo4, title: "Mosaics image" },
-  { src: photo5, title: "Mosaics image" },
   { src: photo10, title: "Mosaics image" },
   { src: photo11, title: "Mosaics image" },
+  { src: photo18, title: "Mosaics image" },
+  { src: photo3, title: "Mosaics image" },
+
+  { src: photo20, title: "Mosaics image" },
+  { src: photo22, title: "Mosaics image" },
+  { src: photo2, title: "Mosaics image" },
+  { src: photo19, title: "Mosaics image" },
+
+  { src: photo23, title: "Mosaics image" },
+  { src: photo24, title: "Mosaics image" },
+  { src: photo25, title: "Mosaics image" },
+  { src: photo4, title: "Mosaics image" },
+  { src: photo5, title: "Mosaics image" },
   { src: photo12, title: "Mosaics image" },
   { src: photo13, title: "Mosaics image" },
   { src: photo14, title: "Mosaics image" },
   { src: photo15, title: "Mosaics image" },
   { src: photo16, title: "Mosaics image" },
-  { src: photo17, title: "Mosaics image" },
-  { src: photo18, title: "Mosaics image" },
-  { src: photo19, title: "Mosaics image" },
-  { src: photo20, title: "Mosaics image" },
-  { src: photo22, title: "Mosaics image" },
-  { src: photo23, title: "Mosaics image" },
-  { src: photo24, title: "Mosaics image" },
-  { src: photo25, title: "Mosaics image" },
+  { src: photo1, title: "Mosaics image" },
+
 ];
 
 export default function MosaicPhotoPage() {
