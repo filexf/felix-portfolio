@@ -12,7 +12,7 @@ export default function LandingPage() {
     <>
       <LandingFrame />
       <CardsWork />
-      <div class="layout-all-frames">
+      <div className="layout-all-frames">
         <WebDevelopmentSection />
         <PhotographySection />
         <DesignSection />

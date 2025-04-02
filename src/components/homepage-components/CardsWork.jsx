@@ -16,7 +16,7 @@ export default function CardsWork() {
         </p>
         <div className="frame-cards-latest-works">
           {cardData.map((card) => (
-            <Card title={card.title} icon={card.icon} text={card.text} path={card.path} />
+            <Card key={card.title} title={card.title} icon={card.icon} text={card.text} path={card.path} />
           ))}
         </div>
       </div>
