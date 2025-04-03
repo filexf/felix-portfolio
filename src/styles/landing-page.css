@@ -100,7 +100,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 48px;
+  gap: 3rem;
 }
 
 .header-landing-page{
