@@ -6,7 +6,21 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  animation: fade-up 1s ease-in-out;
 }
+
+@keyframes fade-up {
+  0% {
+  opacity: 0.3;
+  transform: translateY (30px) scale(0.9);
+  }
+  100%{
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+  }
+};
+
+
 
 /* Frame title, text and buttons */
 
@@ -15,7 +29,7 @@
   justify-content: center;
   padding-left: 20px;
   align-items: flex-start;
-  gap: 238.811px;
+  gap: 15rem;
   align-self: stretch;
 }
 
@@ -72,7 +86,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 13%;
+    bottom: 14%;
     color: #FFF;
   }
 }
@@ -101,13 +115,13 @@
   justify-content: center;
   align-items: center;
   gap: 3rem;
+
 }
 
 .header-landing-page{
   align-self: stretch;
   color: #000;
   text-align: center;
-  font-family: Raleway;
   font-size: 3.75em;
   font-style: normal;
   font-weight: 600;
@@ -116,9 +130,9 @@
 
 .font-text-latest-works{
   color: #000;
-  font-family: Raleway;
   font-size: 24px;
   text-align: center;
+
   padding: 20px;
   font-style: normal;
   font-weight: 400;
@@ -157,7 +171,6 @@
 .title-card-latest-works{
   color: #000;
   text-align: center;
-  font-family: Raleway;
   font-size: 23px;
   font-style: normal;
   font-weight: 800;
@@ -166,15 +179,15 @@
 
 .font-card-latest-works{
   width: 16rem;
-  height: 15.625rem;
+  height: 15.5rem;
   flex-shrink: 0;
-
+  text-align:left;
   overflow: hidden;
   color: #000;
   text-overflow: ellipsis;
   /* Font card landing page */
   font-size: 1.25rem;
-  text-align: left;
+
   /* font-style: normal; */
   font-weight: 400;
   /* line-height: normal; */

@@ -8,13 +8,17 @@ import Photo2 from "../../assets/images/Important-photos/Photos Bangkok V1-33.jp
 import Photo3 from "../../assets/images/Important-photos/Photos HK chill-109.jpg";
 import Photo4 from "../../assets/images/Important-photos/Photos HK chill-132.jpg";
 
+import Reveal from "../Reveal";
+
 export default function PhotographySection() {
   const photos = [Photo1, Photo2, Photo3, Photo4];
 
   return (
     <>
+      <Reveal>
       <div className="frames-layouts-landing-page-with-see-more">
         <div className="frames-layouts-landing-page">
+
           <div className="frames-layouts-landing-page-logo">
             <img
               className="logo-layouts-landing-page"
@@ -22,7 +26,11 @@ export default function PhotographySection() {
               alt="Photography icon"
             />
           </div>
+
+
           <div className="frames-layouts-landing-page-content">
+
+
             <h2 className="header-layouts-landing-page">Photography</h2>
             <p className="body-font">
               Since I was little, I’ve always been fascinated by art and
@@ -46,6 +54,7 @@ export default function PhotographySection() {
           </div>
         </div>
       </div>
+      </Reveal>
     </>
   );
 }

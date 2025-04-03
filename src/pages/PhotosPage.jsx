@@ -8,6 +8,7 @@ import iconLoupe from "../assets/icons/Main-icons/Loop-plus-icon.svg";
 
 import { Link } from "react-router-dom";
 
+import Reveal from "../components/Reveal";
 
 export default function PhotosPage() {
   return (
@@ -20,25 +21,29 @@ export default function PhotosPage() {
           justifyContent: "center",
         }}
       >
-        <div className="frame-header-photos-page">
-          <h2 className="font-main-sections" style={{ color: "#ffffff" }}>
-            Photography
-          </h2>
-          <p className="body-font" style={{ color: "#ffffff" }}>
-            Since I was little, I’ve always been fascinated by art and
-            adventure. I wanted to fulfill this deep need for adventure and be
-            able to tell those stories in my own way. So, when I discovered
-            photography a few years ago, an entirely new world opened up to me.
-            Photography opened up an entirely new way of seeing the world—a lens
-            through which every shadow, color, and frame held potential.
-          </p>
-          {/* The frame showcasing all the photos */}
-          <div className="frame-page-photos">
-            <Photo title={"Sport"} photo={Photo1} />
-            <Photo title={"Mosaic"} photo={Photo2} />
-            <Photo title={"Cityscape"} photo={Photo3} />
-            <Photo title={"Landscape"} photo={Photo4} />
-          </div>
+        <div className="frame-header-photos-page" style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: "20px" }}>
+          <Reveal>
+            <h2 className="font-main-sections" style={{ color: "#ffffff", marginBottom: "40px", marginTop: "40px" }}>
+              Photography
+            </h2>
+            <p className="body-font" style={{ color: "#ffffff", marginBottom: "50px" }}>
+              Since I was little, I’ve always been fascinated by art and
+              adventure. I wanted to fulfill this deep need for adventure and be
+              able to tell those stories in my own way. So, when I discovered
+              photography a few years ago, an entirely new world opened up to
+              me. Photography opened up an entirely new way of seeing the
+              world—a lens through which every shadow, color, and frame held
+              potential.
+            </p>
+            {/* The frame showcasing all the photos */}
+
+            <div className="frame-page-photos">
+              <Photo title={"Sport"} photo={Photo1} />
+              <Photo title={"Mosaic"} photo={Photo2} />
+              <Photo title={"Cityscape"} photo={Photo3} />
+              <Photo title={"Landscape"} photo={Photo4} />
+            </div>
+          </Reveal>
         </div>
       </div>
     </>

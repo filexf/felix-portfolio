@@ -6,23 +6,39 @@ import Navbar from "./layouts/Navbar";
 import BlackNavbar from "./layouts/BlackNavbar";
 import { useLocation } from "react-router-dom";
 
-import ApplicationsPage from "./pages/ApplicationsPage";
 import LandingPage from "./pages/LandingPage";
-import BooksPage from "./pages/BooksPage";
-import PhotosPage from "./pages/PhotosPage";
-import NotFound from "./pages/NotFound";
+// import ApplicationsPage from "./pages/ApplicationsPage";
+// import BooksPage from "./pages/BooksPage";
+// import PhotosPage from "./pages/PhotosPage";
+// import NotFound from "./pages/NotFound";
 
 // The sub pages for the photo
-import SportPhotoPage from "./pages/photo-pages-sections/SportPhotoPage";
-import MosaicPhotoPage from "./pages/photo-pages-sections/MosaicPhotoPage";
-import CityscapePhotoPage from "./pages/photo-pages-sections/CityscapePhotoPage";
-import LandscapePhotoPage from "./pages/photo-pages-sections/LandscapePhotoPage";
+// import SportPhotoPage from "./pages/photo-pages-sections/SportPhotoPage";
+// import MosaicPhotoPage from "./pages/photo-pages-sections/MosaicPhotoPage";
+// import CityscapePhotoPage from "./pages/photo-pages-sections/CityscapePhotoPage";
+// import LandscapePhotoPage from "./pages/photo-pages-sections/LandscapePhotoPage";
 
 // The sub pages for the books
-import CivilisationBook from "./pages/book-pages-sections/CivilisationBook";
-import WizzyEnAsieBook from "./pages/book-pages-sections/WizzyEnAsieBook";
+// import CivilisationBook from "./pages/book-pages-sections/CivilisationBook";
+// import WizzyEnAsieBook from "./pages/book-pages-sections/WizzyEnAsieBook";
 
 import ScrollToTop from "./components/ScrollToTop";
+
+import {lazy, Suspense} from "react";
+
+
+const PhotosPage = lazy(() => import("./pages/PhotosPage"));
+const ApplicationsPage = lazy(() => import("./pages/ApplicationsPage"));
+const BooksPage = lazy(() => import("./pages/BooksPage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const SportPhotoPage = lazy(() => import("./pages/photo-pages-sections/SportPhotoPage"));
+const MosaicPhotoPage = lazy(() => import("./pages/photo-pages-sections/MosaicPhotoPage"));
+const CityscapePhotoPage = lazy(() => import("./pages/photo-pages-sections/CityscapePhotoPage"));
+const LandscapePhotoPage = lazy(() => import("./pages/photo-pages-sections/LandscapePhotoPage"));
+const CivilisationBook = lazy(() => import("./pages/book-pages-sections/CivilisationBook"));
+const WizzyEnAsieBook = lazy(() => import("./pages/book-pages-sections/WizzyEnAsieBook"));
+
+
 
 function App() {
   const location = useLocation(); // Get the current location (path)
@@ -39,6 +55,7 @@ function App() {
     <>
       {isPhotosPage ? <BlackNavbar /> : <Navbar />}
       <ScrollToTop />
+      <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/applications" element={<ApplicationsPage />} />
@@ -55,6 +72,7 @@ function App() {
 
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
       <Footer noPadding={isPhotosPage} />
     </>
   );
