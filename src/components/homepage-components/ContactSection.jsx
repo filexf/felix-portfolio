@@ -1,5 +1,5 @@
 import React from "react";
-import contactIcon from "../../assets/icons/Main-icons/Contact-icon.svg"
+import contactIcon from "../../assets/icons/Main-icons/Contact-icon.svg";
 
 export default function ContactSection() {
   return (
@@ -12,11 +12,11 @@ export default function ContactSection() {
             alt="Contact-icon"
           />
         </div>
+
         <div className="frames-layouts-landing-page-content">
           <h2 className="header-layouts-landing-page">Contact me</h2>
           <div className="frame-contact-form">
             <p className="body-font">
-
               Feel free to contact me for any project at : felix.orain@gmail.com
             </p>
             <form action="https://usebasin.com/f/477736526efa" method="POST">

@@ -17,6 +17,8 @@ import websiteIconWhite from "../assets/icons/Main-icons/Website-icon-white.svg"
 import sportifyPicture from "../assets/images/Photo-projets-dev/Photo Couverture Sportify.png";
 import tyMouetPicture from "../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
 
+import Reveal from "../components/Reveal";
+
 // Tech stack data
 const techStack = [
   { name: "Ruby on Rails", icon: RailIcon },
@@ -59,6 +61,8 @@ function TechStackIcon({ name, icon }) {
 // Reusable Project Card component
 function ProjectCard({ title, description, image, githubLink, websiteLink }) {
   return (
+    <Reveal>
+
     <div className="container-photo-app">
       <img className="frame-application" src={image} alt={title} />
       <p className="font-header-applications center-title-application">
@@ -88,11 +92,15 @@ function ProjectCard({ title, description, image, githubLink, websiteLink }) {
         </div>
       </div>
     </div>
+    </Reveal>
+
   );
 }
 
 export default function ApplicationsPage() {
   return (
+    <Reveal>
+
     <div
       style={{
         display: "flex",
@@ -119,6 +127,8 @@ export default function ApplicationsPage() {
         ))}
 
         {/* Tech Stack Section */}
+        <Reveal>
+
         <div className="tech-stack">
           <p>Tech stack used</p>
           <div className="frame-icons-tech-stack">
@@ -127,7 +137,10 @@ export default function ApplicationsPage() {
             ))}
           </div>
         </div>
+        </Reveal>
       </div>
     </div>
+    </Reveal>
+
   );
 }

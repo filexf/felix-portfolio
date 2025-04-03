@@ -5,10 +5,13 @@ import SeeMore from "./SeeMore";
 import DesignIcon from "../../assets/icons/Main-icons/Designs-icon.svg"
 
 import { Link } from "react-router-dom";
+import Reveal from "../Reveal";
 
 export default function DesignSection() {
   return (
     <>
+    <Reveal>
+
       <div className="frames-layouts-landing-page-with-see-more">
         <div className="frames-layouts-landing-page">
           <div className="frames-layouts-landing-page-logo">
@@ -16,12 +19,12 @@ export default function DesignSection() {
               className="logo-layouts-landing-page"
               src={DesignIcon}
               alt="Designs-icon"
-            />
+              />
           </div>
           <div className="frames-layouts-landing-page-content">
             <h2 className="header-layouts-landing-page">Designs</h2>
             <p className="body-font">
-              During my time as a photographer I had the opportunity to make 2
+              I had the opportunity to make 2
               books depicting 5 months of adventure through south east Asia. I
               wrote the story, used my own photos and edited all by myself, they
               got sold by more than 500 copies. During these months of crafting
@@ -36,6 +39,7 @@ export default function DesignSection() {
           </div>
         </div>
       </div>
+      </Reveal>
     </>
   );
 }

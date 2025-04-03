@@ -12,7 +12,19 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  /* animation: fade-down 0.5s ease-in-out; */
 }
+
+/* @keyframes fade-down {
+  0% {
+  opacity: 0;
+  transform: translateY (-30px) scale(0.9);
+  }
+  100%{
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+  }
+}; */
 
 .group-navbar{
   width: 85%;
@@ -70,8 +82,8 @@
     transition: all 0.5s;
   }
   li :hover{
-    color: rgb(105, 105, 105);
     /* text-decoration: underline; */
+    color: rgb(105, 105, 105);
   }
 }
 

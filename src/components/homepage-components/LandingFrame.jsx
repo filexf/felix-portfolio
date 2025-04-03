@@ -3,6 +3,7 @@ import PhotoLandingPage from "../../assets/images/Photo GGB/Photo GGB-Landing pa
 import ArrowLogo from "../../assets/icons/Main-icons/Vector-arrow-white.svg";
 import SplitStrings from "../../util/regexSplitString.js";
 import { motion } from "framer-motion";
+import Reveal from "../Reveal";
 
 export default function LandingFrame() {
   const title = "Félix Orain";
@@ -17,7 +18,7 @@ export default function LandingFrame() {
 
   return (
     <>
-      <div className="frame-landingpage">
+      <section className="frame-landingpage">
         <div className="frame-title-text">
           <div className="name-profession">
             <motion.h1
@@ -59,11 +60,13 @@ export default function LandingFrame() {
             </motion.p>
           </div>
         </div>
+
         <div className="vector-arrow">
           <a href="#latest-works">
             <img src={ArrowLogo} className="blinking-arrow" alt="" />
           </a>
         </div>
+        <Reveal>
         <div className="essai-relative">
           <img
             className="photo-landing-page"
@@ -72,9 +75,10 @@ export default function LandingFrame() {
             sizes="(max-width: 600px) 500px, (max-width: 1000px) 1000px, 1500px"
             alt="Landscape photo"
             fetchPriority="high"
-          />
+            />
         </div>
-      </div>
+        </Reveal>
+      </section>
     </>
   );
 }

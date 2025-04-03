@@ -2,9 +2,14 @@ import React from "react";
 import profileImage from "../../assets/images/Important-photos/photo_profil-V2.jpg"
 import aboutIcon from "../../assets/icons/Main-icons/About-icon.svg"
 
+import Reveal from "../Reveal";
+
+
 export default function AboutSection() {
   return (
     <>
+      <Reveal>
+
       <div className="frames-layouts-landing-page">
         <div className="frames-layouts-landing-page-logo">
           <img
@@ -12,7 +17,7 @@ export default function AboutSection() {
             src={aboutIcon}
             alt="About-me-icon"
             style={{ width: "55px", height: "55px" }}
-          />
+            />
         </div>
         <div className="frames-layouts-landing-page-content">
           <h2 className="header-layouts-landing-page">About me</h2>
@@ -21,7 +26,7 @@ export default function AboutSection() {
               className="img-frame"
               src={profileImage}
               alt="Profile Image"
-            />
+              />
             <p className="body-font text-width">
             I’m a recent graduate from Le Wagon with hands-on experience in web development, having built applications from scratch. I specialize in creating user-centric, visually engaging digital products by combining my programming skills with a foundation in graphic design and visual storytelling.
             <br /> <br />
@@ -30,6 +35,7 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
+    </Reveal>
     </>
   );
 }

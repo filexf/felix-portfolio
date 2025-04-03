@@ -4,9 +4,13 @@ import coverWizzyEnAsie from "../assets/images/Couvertures magazines/WIZZY En As
 import loop from "../assets/icons/Main-icons/Loop-plus-icon.svg";
 import { Link } from "react-router-dom";
 
+import Reveal from "../components/Reveal";
+
 export default function BooksPage() {
   return (
     <>
+      <Reveal>
+
       <div
         style={{
           display: "flex",
@@ -14,6 +18,7 @@ export default function BooksPage() {
           justifyContent: "center",
         }}
       >
+
         <div className="frame-header-books-page">
           <h1 className="font-main-sections">Books</h1>
           <p className="body-font">
@@ -25,6 +30,7 @@ export default function BooksPage() {
             and mainly how to tackle a huge project like this one.
           </p>
           {/* The frame of Civilisation */}
+          <Reveal>
           <div className="frame-magazine-and-text wrap-civilisation">
             <Link to="/books/civilisation">
               <div className="container-photo">
@@ -61,7 +67,10 @@ export default function BooksPage() {
               </p>
             </div>
           </div>
+          </Reveal>
           {/* The frame of Wizzy en Asie */}
+          <Reveal>
+
           <div className="frame-magazine-and-text wrap-wizzy-en-asie">
             <div className="frame-texts-magazine">
               <h2>Wizzy en Asie</h2>
@@ -104,8 +113,12 @@ export default function BooksPage() {
               </div>
             </Link>
           </div>
+          </Reveal>
+
         </div>
+
       </div>
+      </Reveal>
     </>
   );
 }
