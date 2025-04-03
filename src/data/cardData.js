@@ -7,31 +7,19 @@ export const cardData = [
     title: "Web Development",
     icon: webDevIcon,
     text: `
-              Web development is the perfect blend of creativity and logic, which deeply
-              resonates with my passion for art and storytelling. Coming from a
-              photography background, I bring a unique perspective to creating
-              user-centric applications that are as visually compelling as they are
-              functional. `,
+              Web development blends creativity and logic, aligning with my passion for art and storytelling. With a background in photography, I bring a unique perspective to building applications that are visually compelling and highly functional. `,
     path: "/applications",
   },
   {
     title: "Photography",
     icon: photoIcon,
-    text: `When I discovered photography a few years ago, it was as if I had
-    found the perfect medium to bridge my passions. Suddenly, I could
-    freeze a moment in time, capturing not just the visual elements
-    but also the mood, the story, and the essence of what made that
-    moment extraordinary.`,
+    text: `When I discovered photography, it felt like the perfect way to bridge my passions. It allowed me to capture not only the visual elements but also the mood and essence of a moment, preserving what made it unique and extraordinary.`,
     path: "/photos",
   },
   {
     title: "Design",
     icon: designIcon,
-    text: `During my time as a photographer, I had the opportunity to make 2
-              books depicting 5 months of adventure through Southeast Asia. I
-              wrote the story, used my own photos and edited all by myself, they
-              sold by more than 500 copies. It taught me a lot about how to work
-              a very big project.`,
+    text: `As a photographer, I created two books documenting five months in Southeast Asia. I wrote the story, used my own photos, and handled all the editing. With over 500 copies sold, it taught me valuable lessons in managing large projects.`,
     path: "/books",
   },
 ];

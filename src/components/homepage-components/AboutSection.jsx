@@ -11,6 +11,7 @@ export default function AboutSection() {
             className="logo-layouts-landing-page"
             src={aboutIcon}
             alt="About-me-icon"
+            style={{ width: "55px", height: "55px" }}
           />
         </div>
         <div className="frames-layouts-landing-page-content">
@@ -22,18 +23,9 @@ export default function AboutSection() {
               alt="Profile Image"
             />
             <p className="body-font text-width">
-              I am a recent graduate from Le Wagon, where I gained hands-on
-              experience in web development and built web applications from
-              scratch. This journey not only enhanced my technical skills but
-              also gave me the confidence to tackle real-world challenges in the
-              tech industry. Coming from a photography background, I have always
-              been passionate about visual storytelling and creativity. With my
-              newfound knowledge in programming and my foundations in graphic
-              design, I am excited to merge these skills to create user-centric,
-              visually engaging digital products. I now have the tools and
-              determination to carve out a space for myself in the dynamic world
-              of tech, and I look forward to contributing to innovative projects
-              that make a difference.
+            I’m a recent graduate from Le Wagon with hands-on experience in web development, having built applications from scratch. I specialize in creating user-centric, visually engaging digital products by combining my programming skills with a foundation in graphic design and visual storytelling.
+            <br /> <br />
+            With a background in photography, I bring creativity and a unique perspective to my work. I’m excited to apply my skills to tackle real-world challenges and contribute to innovative projects in the tech industry.
             </p>
           </div>
         </div>

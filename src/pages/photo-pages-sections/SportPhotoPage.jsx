@@ -46,7 +46,7 @@ const images = [
 export default function SportPhotoPage() {
   return (
     <>
-      <Gallery title={"Sports"} images={images}/>
+      <Gallery title={"Sports"} images={images} text={`Discovering action photography felt like the perfect way to capture movement, emotion, and storytelling. Shooting parkour, climbing, or silhouettes in vast environments allowed me to showcase both human dynamism and the scale of the world around us. Each shot froze a moment of energy, where movement met the stillness of nature or architecture. Through this, I learned to embrace the unpredictability of motion and the challenge of timing, capturing not just action but the story of effort, freedom, and our connection with the world. This photography style taught me to see movement and meaning in the relationship between humans and their surroundings.`}/>
     </>
   )
 }

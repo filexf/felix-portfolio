@@ -103,9 +103,8 @@ export default function ApplicationsPage() {
       <div className="frame-header-applications-page">
         <h1 className="font-main-sections">Applications</h1>
         <p className="body-font">
-          I am a recent graduate from Le Wagon, where I gained hands-on
-          experience in web development and built web applications from
-          scratch...
+        I’m a recent Le Wagon graduate with hands-on experience in web development, where I built applications from scratch using Ruby on Rails, JavaScript, and React. Throughout the program, I developed strong problem-solving skills and learned to work with tools like Git, SQL, and API integrations. With a solid understanding of frontend and backend development, I’m excited to leverage these skills to build efficient, scalable applications and tackle real-world challenges in the tech industry.
+
         </p>
         <div className="github-account-frame">
           <p className="body-font">My GitHub account:</p>

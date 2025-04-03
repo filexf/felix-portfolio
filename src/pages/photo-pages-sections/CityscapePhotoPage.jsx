@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import Gallery from '../../components/photos-components/PhotosGallery';
+import Gallery from "../../components/photos-components/PhotosGallery";
 
 import photo1 from "../../assets/images/Photos-cityscape/HK Street photos 2-12.jpg";
 import photo2 from "../../assets/images/Photos-cityscape/HK Street photos 2-16.jpg";
@@ -25,37 +25,45 @@ import photo20 from "../../assets/images/Photos-cityscape/Feu d'artifice-2.jpg";
 import photo21 from "../../assets/images/Photos-cityscape/Feu d'artifice-3.jpg";
 import photo22 from "../../assets/images/Photos-cityscape/Feu d'artifice-4.jpg";
 
-
 const images = [
-  { src: photo1, title: "Cityscape image" },
-  { src: photo2, title: "Cityscape image" },
-  { src: photo3, title: "Cityscape image" },
-  { src: photo4, title: "Cityscape image" },
-  { src: photo5, title: "Cityscape image" },
-  { src: photo6, title: "Cityscape image" },
-  { src: photo7, title: "Cityscape image" },
-  { src: photo8, title: "Cityscape image" },
+
   { src: photo9, title: "Cityscape image" },
   { src: photo10, title: "Cityscape image" },
   { src: photo11, title: "Cityscape image" },
   { src: photo12, title: "Cityscape image" },
+
   { src: photo13, title: "Cityscape image" },
+  { src: photo1, title: "Cityscape image" },
+  { src: photo2, title: "Cityscape image" },
+  { src: photo3, title: "Cityscape image" },
+
+  { src: photo4, title: "Cityscape image" },
+  { src: photo5, title: "Cityscape image" },
+  { src: photo6, title: "Cityscape image" },
+  { src: photo7, title: "Cityscape image" },
+
   { src: photo14, title: "Cityscape image" },
   { src: photo15, title: "Cityscape image" },
-  { src: photo16, title: "Cityscape image" },
   { src: photo17, title: "Cityscape image" },
+  { src: photo8, title: "Cityscape image" },
+
   { src: photo18, title: "Cityscape image" },
   { src: photo19, title: "Cityscape image" },
   { src: photo20, title: "Cityscape image" },
+  { src: photo16, title: "Cityscape image" },
+
   { src: photo21, title: "Cityscape image" },
   { src: photo22, title: "Cityscape image" },
-
 ];
 
 export default function CityscapePhotoPage() {
   return (
     <>
-      <Gallery title={"Cityscapes"} images={images}/>
+      <Gallery
+        title={"Cityscapes"}
+        images={images}
+        text={`As a photographer, I’m drawn to the energy and vibrancy of cityscapes, especially at night in Hong Kong. The city transforms after dark, with neon signs and shimmering skyscrapers painting the skyline in vivid colors. Capturing the interplay of light and shadow in bustling streets or reflections on Victoria Harbour feels like preserving the pulse of the city. Each shot tells a story of movement, culture, and endless possibilities. The contrast between the urban glow and the quiet corners offers a unique perspective on its beauty. Through my lens, I seek to share the dynamic allure of Hong Kong’s nights with others.`}
+      />
     </>
-  )
+  );
 }

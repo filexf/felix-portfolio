@@ -52,7 +52,9 @@ const images = [
 export default function MosaicPhotoPage() {
   return (
     <>
-      <Gallery title={"Mosaics"} images={images}/>
+      <Gallery title={"Mosaics"} images={images} text={`I love capturing patterns in photography because they reveal beauty in simplicity and repetition. Whether found in nature or architecture, patterns create rhythm and harmony that draw the eye. Shooting these details—like ripples in water, tiled facades, or symmetrical shadows—feels like uncovering hidden art in the everyday. Patterns tell stories of design, structure, and balance, offering a sense of order in a chaotic world. Through my lens, I aim to celebrate these mesmerizing visuals and invite others to see the world differently.
+
+`}/>
     </>
   )
 }

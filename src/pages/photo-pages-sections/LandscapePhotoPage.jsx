@@ -46,7 +46,9 @@ const images = [
 export default function LandscapePhotoPage() {
   return (
     <>
-      <Gallery title={"Landscapes"} images={images}/>
+      <Gallery title={"Landscapes"} images={images} text={`As a photographer, I love landscapes for their ability to evoke both stillness and awe. Capturing the clouds drifting through Yosemite’s cliffs and valleys feels like preserving nature’s fleeting masterpieces. Each moment is unique, with light and weather transforming the scenery before my eyes. Shooting starry skies offers a humbling connection to the vastness of the universe, blending patience with wonder. Whether it’s misty forests or cosmic expanses, landscapes remind me of the beauty and grandeur of the world. Through my lens, I aim to share these timeless, breathtaking moments with others.
+
+`}/>
     </>
   )
 }

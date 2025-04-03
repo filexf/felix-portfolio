@@ -6,12 +6,9 @@ export default function CardsWork() {
   return (
     <>
       <div className="frame-my-latest-works">
-        <h2 className="header-landing-page">My latest works</h2>
+        <h2 className="header-landing-page">My latest projects</h2>
         <p className="font-text-latest-works" id="latest-works">
-          I’ve always been interested in technologies and photography. I’ve been
-          working as a freelance photographer / videographer for over 4 years,
-          published 2 photobooks and I’ve recently explored web development more
-          thoroughly. <br /> <br />
+        Passionate about technology and visual storytelling, I spent four years as a freelance photographer before diving into web development to craft engaging digital experiences. <br />
           Check out my work below to learn more :
         </p>
         <div className="frame-cards-latest-works">
