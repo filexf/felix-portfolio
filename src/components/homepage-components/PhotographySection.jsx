@@ -49,7 +49,7 @@ export default function PhotographySection() {
                 />
               ))}
             </div>
-            <SeeMore />
+            <SeeMore projectLink={"/photos"}/>
 
           </div>
         </div>

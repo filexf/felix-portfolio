@@ -55,7 +55,7 @@ function App() {
     <>
       {isPhotosPage ? <BlackNavbar /> : <Navbar />}
       <ScrollToTop />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div style={{textAlign: "center", fontSize: "40px", marginTop: "50px" }}>Loading...</div>}>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/applications" element={<ApplicationsPage />} />

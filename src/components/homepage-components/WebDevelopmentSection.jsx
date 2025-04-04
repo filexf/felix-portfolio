@@ -43,7 +43,7 @@ export default function WebDevelopmentSection() {
                   />
                 </Link>
               </div>
-              <SeeMore />
+              <SeeMore projectLink={"/applications"}/>
             </div>
           </div>
         </div>

@@ -35,7 +35,7 @@ export default function DesignSection() {
               <Image photo={Photo1}/>
               <Image photo={Photo2}/>
             </div>
-            <SeeMore />
+            <SeeMore projectLink={"/books"}/>
           </div>
         </div>
       </div>
