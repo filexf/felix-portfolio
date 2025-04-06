@@ -1,5 +1,5 @@
 import React from "react";
-import profileImage from "../../assets/images/Important-photos/photo_profil-V2.jpg";
+import profileImage from "../../assets/images/Important-photos/photo-profil-V2.jpg"
 import aboutIcon from "../../assets/icons/Main-icons/About-icon.svg";
 
 import Reveal from "../Reveal";

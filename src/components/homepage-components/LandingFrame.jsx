@@ -62,9 +62,8 @@ export default function LandingFrame() {
         </div>
 
         <div className="vector-arrow">
-          <a href="#latest-works">
+
             <img src={ArrowLogo} className="blinking-arrow" alt="" />
-          </a>
         </div>
         <Reveal>
         <div className="essai-relative">

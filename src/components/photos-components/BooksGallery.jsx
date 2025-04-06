@@ -27,6 +27,7 @@ const Gallery = ({ title, images }) => {
               setOpen(true);
             }}
             style={{ cursor: "pointer", width: "250px", margin: "5px" }}
+            loading="lazy"
           />
         ))}
       </div>

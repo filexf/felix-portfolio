@@ -13,9 +13,10 @@ import Reveal from "../components/Reveal";
 export default function PhotosPage() {
   return (
     <>
-      <body style={{ backgroundColor: "#15151B" }}>
+
       <div
         style={{
+          backgroundColor: "#15151B",
           display: "flex",
           flexDirection: "flex-column",
           justifyContent: "center",
@@ -46,7 +47,6 @@ export default function PhotosPage() {
           </Reveal>
         </div>
       </div>
-      </body>
     </>
   );
 }

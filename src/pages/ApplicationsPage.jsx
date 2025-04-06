@@ -11,16 +11,19 @@ import CSSIcon from "../assets/icons/Tech stack icons/CSS-icon.svg";
 import GitIcon from "../assets/icons/Tech stack icons/Git-icon.svg";
 import GithubIcon from "../assets/icons/Tech stack icons/Github-icon.svg";
 import Bootstrap from "../assets/icons/Tech stack icons/Bootstrap-icon.svg";
+import ReactIcon from "../assets/icons/Tech stack icons/React.svg";
 
 import githubIconWhite from "../assets/icons/Main-icons/Github-icon-white.svg";
 import websiteIconWhite from "../assets/icons/Main-icons/Website-icon-white.svg";
 import sportifyPicture from "../assets/images/Photo-projets-dev/Photo Couverture Sportify.png";
 import tyMouetPicture from "../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
+import portfolioPicture from "../assets/images/Photo GGB/Photo GGB-Landing page.webp";
 
 import Reveal from "../components/Reveal";
 
 // Tech stack data
 const techStack = [
+  { name: "React", icon: ReactIcon },
   { name: "Ruby on Rails", icon: RailIcon },
   { name: "Ruby", icon: Ruby },
   { name: "JavaScript", icon: JSIcon },
@@ -38,7 +41,7 @@ const projects = [
   {
     title: "SPORTIFY",
     description:
-      "Sportify is a PWA made for connecting people who don't have a sport partner. They login to the app, type which sport they want to do and they'll be offered with sport events around them. They can add an event, participate to an event but also look into a feed for all the sport news in their region.",
+    "Sportify is a PWA built with Ruby on Rails, PostgreSQL, and Javascript with AJAX to connect users with sports partners by browsing or creating local events. We designed it in Figma, used Bootstrap for the UI, and deployed it on Heroku with a custom domain. The project was then presented in front of a big crowd.",
     image: sportifyPicture,
     githubLink: "https://github.com/filexf/sportify",
     websiteLink: "#", // Add actual link if available
@@ -46,11 +49,19 @@ const projects = [
   {
     title: "TY MOUET",
     description:
-      "Ty Mouet was our first real project at Le Wagon’s bootcamp—an Airbnb clone for seagulls! We could lend, rent, or find nearby seagulls, following a many-to-many database structure. It was a fun challenge where we learned the full web development process, from building features to deploying a live app.",
+    "Ty Mouet was our first project at Le Wagon, a seagull-themed Airbnb clone built with Ruby on Rails, PostgreSQL, and AJAX. We handled a many-to-many database, deployed on Heroku, and worked in an agile team. Key features included booking logic, user authentication, and geolocation-based dynamic search.",
     image: tyMouetPicture,
     githubLink: "https://github.com/filexf/ty-mouet",
     websiteLink: "https://ty-mouet-c5897a5b74b0.herokuapp.com/",
   },
+  {
+    title: "PORTFOLIO",
+    description:
+      "This portfolio was built using React. I used React Router to implement several pages in order to host it on Github Pages and I used Framer Motion for animations. It showcases my projects, skills, and experience. I aimed for a clean and user-friendly design that I made myself.",
+    image: portfolioPicture,
+    githubLink: "https://github.com/filexf/felix-portfolio",
+    websiteLink: "https://filexf.github.io/felix-portfolio/",
+  }
 ];
 
 // Reusable Tech Stack Icon component
@@ -68,7 +79,7 @@ function ProjectCard({ title, description, image, githubLink, websiteLink }) {
       <p className="font-header-applications center-title-application">
         {title}
       </p>
-      <div className="frame-hovered-content-application">
+      <div className="frame-hovered-content-application" >
         <p className="font-header-applications">{title}</p>
         <p className="body-font font-hovered">{description}</p>
         <div className="icons-projects">
@@ -130,7 +141,7 @@ export default function ApplicationsPage() {
         <Reveal>
 
         <div className="tech-stack">
-          <p>Tech stack used</p>
+          <p>My tech stack</p>
           <div className="frame-icons-tech-stack">
             {techStack.map((tech, index) => (
               <TechStackIcon key={index} {...tech} />
