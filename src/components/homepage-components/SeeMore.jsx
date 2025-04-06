@@ -9,8 +9,6 @@ export default function SeeMore({ projectLink }) {
         <div className="see-more">
           <p>See more</p>
           <img src={arrowVector} alt="Arrow vector" />
-
-
         </div>
       </Link>
     </>

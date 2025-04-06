@@ -7,46 +7,35 @@ import sportifyPicture from "../../assets/images/Photo-projets-dev/Photo Couvert
 import tyMouetPicture from "../../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
 
 import Reveal from "../Reveal";
+import SectionWrapper from "./SectionWrapper";
 
 export default function WebDevelopmentSection() {
   return (
     <>
       <Reveal>
-        <div className="frames-layouts-landing-page-with-see-more">
-          <div className="frames-layouts-landing-page">
-            <div className="frames-layouts-landing-page-logo">
-              <img
-                className="logo-layouts-landing-page"
-                src={webDevLogo}
-                alt="Web development icon"
+        <SectionWrapper title={"Web development"} icon={webDevLogo}>
+          <p className="body-font">
+            I graduated from Le Wagon and built real-world applications from
+            scratch, gaining hands-on experience in web development. With a
+            background in photography, I bring a strong sense of design, now
+            combined with solid programming skills.{" "}
+          </p>{" "}
+          <div className="animation-carrousel">
+            <Link to="/applications">
+              <ImageText
+                nom={"sportify"}
+                image={sportifyPicture}
+                text={"SPORTIFY"}
               />
-            </div>
-            <div className="frames-layouts-landing-page-content">
-              <h2 className="header-layouts-landing-page">Web development</h2>
-              <p className="body-font">
-                I graduated from Le Wagon and built real-world applications from
-                scratch, gaining hands-on experience in web development. With a
-                background in photography, I bring a strong sense of design, now
-                combined with solid programming skills.{" "}
-              </p>{" "}
-              <div className="animation-carrousel">
-                <Link to="/applications">
-                  <ImageText
-                    nom={"sportify"}
-                    image={sportifyPicture}
-                    text={"SPORTIFY"}
-                  />
-                  <ImageText
-                    nom={"tymouet"}
-                    image={tyMouetPicture}
-                    text={"TY MOUET"}
-                  />
-                </Link>
-              </div>
-              <SeeMore projectLink={"/applications"}/>
-            </div>
+              <ImageText
+                nom={"tymouet"}
+                image={tyMouetPicture}
+                text={"TY MOUET"}
+              />
+            </Link>
           </div>
-        </div>
+          <SeeMore projectLink={"/applications"} />
+        </SectionWrapper>
       </Reveal>
     </>
   );

@@ -8,10 +8,10 @@ export default function CardsWork() {
     <>
       <Reveal>
 
-      <div className="frame-my-latest-works">
+      <div className="frame-my-latest-works" id="latest-works">
           <h2 className="header-landing-page">My latest projects</h2>
 
-        <p className="font-text-latest-works" id="latest-works">
+        <p className="font-text-latest-works" >
           Passionate about technology and visual storytelling, I spent four
           years as a freelance photographer before diving into web development
           to craft engaging digital experiences. <br />

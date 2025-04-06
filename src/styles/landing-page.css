@@ -86,7 +86,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 14%;
+    bottom: 15%;
     color: #FFF;
   }
 }
@@ -291,7 +291,6 @@
   display: flex;
   width: 80%;
   flex-direction: column;
-  align-items: center;
   gap: 48px;
 }
 
@@ -325,8 +324,8 @@
 
 .animation-carrousel{
   position: relative;
-  width: 80%;
-  height: 400px;
+  width: 100%;
+  height: 25rem;
   gap: 30px;
 
   .image-animated{
@@ -356,6 +355,7 @@
 
 .see-more{
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   p{
@@ -461,17 +461,18 @@
 .frame-contact-form{
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  justify-content: flex-start;
 
   gap: 54px 89px;
   flex-wrap: wrap;
 
   button{
     margin-top: 15px;
+    margin-bottom: 1rem;
     display: flex;
-    width: 150px;
-    height: 45.578px;
+    width: 9.375rem;
+    height: 2.8486rem;
     padding: 2px 22px ;
     justify-content: center;
     align-items: center;
@@ -499,7 +500,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -509,14 +510,14 @@
   border-radius: 15px;
   border: 2px solid #000;
   background: #FFF;
-  /* box-shadow: 0px 4.607px 4.607px 0px rgba(0, 0, 0, 0.25); */
+  box-shadow: 0px 4.607px 4.607px 0px rgba(0, 0, 0, 0.25);
   font-size: 20px;
   margin-right: 20px;
 }
 
 @media (max-width: 1150px) {
   .frame-inputs{
-    width: 100%;
+    width: 80%;
     gap: 20px;
     display: flex;
     flex-wrap: wrap;
