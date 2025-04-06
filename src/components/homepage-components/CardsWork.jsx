@@ -17,6 +17,7 @@ export default function CardsWork() {
           to craft engaging digital experiences. <br />
           Check out my work below to learn more :
         </p>
+          <Reveal>
 
           <div className="frame-cards-latest-works">
             {cardData.map((card) => (
@@ -29,6 +30,8 @@ export default function CardsWork() {
               />
             ))}
           </div>
+          </Reveal>
+
       </div>
     </Reveal>
     </>

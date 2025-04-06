@@ -8,7 +8,9 @@ const Gallery = ({ title, images, text }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <div style={{ backgroundColor: "#15151B",  width: "100%", display: "flex", justifyContent: "center", paddingTop: "40px", paddingBottom: "120px",  }}>
+    <body style={{ backgroundColor: "#15151B" }}>
+
+    <div style={{ width: "100%", display: "flex", justifyContent: "center", paddingTop: "40px", paddingBottom: "120px",  }}>
       <div style={{ width:"80%", gap: "40px", display: "flex", flexDirection: "column" }}>
       <h2 className="font-main-sections" style={{ color: "#ffffff",  }}>{title}</h2>
       <p className="body-font-white" style={{  marginBottom: "20px"   }}>
@@ -43,6 +45,8 @@ const Gallery = ({ title, images, text }) => {
       />
       </div>
     </div>
+    </body>
+
   );
 };
 

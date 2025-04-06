@@ -7,8 +7,9 @@ export default function SectionWrapper({ children, title, icon }) {
         <img className="logo-layouts-landing-page" src={icon} alt="Icon" />
       </div>
       <div className="frames-layouts-landing-page-content">
-        
+
         <h2 className="header-layouts-landing-page">{title}</h2>
+      
       {children}
       </div>
     </section>
