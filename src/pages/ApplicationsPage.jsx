@@ -128,7 +128,7 @@ export default function ApplicationsPage() {
         <div className="github-account-frame">
           <p className="body-font">My GitHub account:</p>
           <a href="https://github.com/filexf" target="_blank">
-            <img src={GithubIcon} alt="GitHub logo icon" />
+            <img src={GithubIcon} alt="GitHub logo icon"/>
           </a>
         </div>
 

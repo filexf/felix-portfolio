@@ -74,6 +74,7 @@ export default function LandingFrame() {
             sizes="(max-width: 600px) 500px, (max-width: 1000px) 1000px, 1500px"
             alt="Landscape photo"
             fetchPriority="high"
+            loading="eager"
             />
         </div>
         </Reveal>
