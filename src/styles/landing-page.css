@@ -20,8 +20,6 @@
   }
 };
 
-
-
 /* Frame title, text and buttons */
 
 .frame-title-text{
@@ -96,7 +94,6 @@
 .blinking-arrow{
   animation: blinker 3s ease-in-out infinite;
   width: 80px;
-
 }
 @keyframes blinker {
   50% {
@@ -146,7 +143,7 @@
   flex-wrap: wrap;
   /* height: 575px; */
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .card-latest-works{
@@ -155,7 +152,7 @@
   margin: 0 1rem;
   flex-direction: column;
   align-items: center;
-  gap: 1.5625rem;
+  gap: 1.5rem;
 
   border-radius: 37.428px;
   border: 3.92px solid #000;
@@ -423,7 +420,7 @@
 
   img{
     display: flex;
-    width: 75%;
+    width: 70%;
     /* height: 695.456px; */
     padding-right: 0.399px;
     flex-direction: column;

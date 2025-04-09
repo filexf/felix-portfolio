@@ -14,19 +14,17 @@ export default function DesignSection() {
       <Reveal>
         <SectionWrapper title={"Designs"} icon={DesignIcon}>
           <p className="body-font">
-            I had the opportunity to make 2 books depicting 5 months of
-            adventure through south east Asia. I wrote the story, used my own
-            photos and edited all by myself, they got sold by more than 500
-            copies. During these months of crafting I gained a lot of knowledge
-            about how to stay consistent in designing and mainly how to tackle a
-            huge project like this one.
+            I created two books showcasing five months of adventure in Southeast
+            Asia, using my own photos and writing. Self-edited and sold over 500
+            copies, this experience taught me consistency in design and how to
+            manage large-scale projects effectively.
           </p>
           <div className="frame-magazines-cover">
             <Image photo={Photo1} />
             <Image photo={Photo2} />
           </div>
 
-            <SeeMore projectLink={"/books"} />
+          <SeeMore projectLink={"/books"} />
         </SectionWrapper>
       </Reveal>
     </>

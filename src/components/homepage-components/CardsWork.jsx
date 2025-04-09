@@ -9,13 +9,11 @@ export default function CardsWork() {
       <Reveal>
 
       <div className="frame-my-latest-works" id="latest-works">
-          <h2 className="header-landing-page">My latest projects</h2>
+          <h2 className="header-landing-page">My portfolio</h2>
 
         <p className="font-text-latest-works" >
-          Passionate about technology and visual storytelling, I spent four
-          years as a freelance photographer before diving into web development
-          to craft engaging digital experiences. <br />
-          Check out my work below to learn more :
+        After four years as a freelance photographer, I ventured into web development to blend my artistic vision with technology, creating unique digital experiences. <br />
+        Dive into my projects and see what I’ve been working on!
         </p>
           <Reveal>
 

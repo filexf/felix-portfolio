@@ -62,8 +62,21 @@ export default function LandingFrame() {
         </div>
 
         <div className="vector-arrow">
-
-            <img src={ArrowLogo} className="blinking-arrow" alt="" />
+          <motion.div
+            className="blinking-arrow-container"
+            animate={{
+              y: [0, -10, 0], // Moves up and down
+            }}
+            transition={{
+              duration: 10, // Total duration of the animation
+              repeat: Infinity, // Repeat forever
+              ease: "easeOut", // Easing function for smoothness
+              repeatType: "loop", // Loop the animation smoothly
+              repeatDelay: 2, // Delay before repeating
+            }}
+          >
+            <img src={ArrowLogo} className="blinking-arrow" alt="Downward Arrow"/>
+          </motion.div>
         </div>
         <Reveal>
         <div className="essai-relative">

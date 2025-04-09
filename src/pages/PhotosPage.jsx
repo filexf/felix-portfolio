@@ -13,7 +13,6 @@ import Reveal from "../components/Reveal";
 export default function PhotosPage() {
   return (
     <>
-
       <div
         style={{
           backgroundColor: "#15151B",
@@ -22,12 +21,30 @@ export default function PhotosPage() {
           justifyContent: "center",
         }}
       >
-        <div className="frame-header-photos-page" style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: "20px" }}>
+        <div
+          className="frame-header-photos-page"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "20px",
+          }}
+        >
           <Reveal>
-            <h2 className="font-main-sections" style={{ color: "#ffffff", marginBottom: "40px", marginTop: "40px" }}>
+            <h2
+              className="font-main-sections"
+              style={{
+                color: "#ffffff",
+                marginBottom: "40px",
+                marginTop: "40px",
+              }}
+            >
               Photography
             </h2>
-            <p className="body-font" style={{ color: "#ffffff", marginBottom: "50px" }}>
+            <p
+              className="body-font"
+              style={{ color: "#ffffff", marginBottom: "50px" }}
+            >
               Since I was little, I’ve always been fascinated by art and
               adventure. I wanted to fulfill this deep need for adventure and be
               able to tell those stories in my own way. So, when I discovered
