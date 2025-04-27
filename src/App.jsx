@@ -37,7 +37,6 @@ const CityscapePhotoPage = lazy(() => import("./pages/photo-pages-sections/Citys
 const LandscapePhotoPage = lazy(() => import("./pages/photo-pages-sections/LandscapePhotoPage"));
 const CivilisationBook = lazy(() => import("./pages/book-pages-sections/CivilisationBook"));
 const WizzyEnAsieBook = lazy(() => import("./pages/book-pages-sections/WizzyEnAsieBook"));
-const TestPage = lazy(() => import("./pages/TestPage"));
 
 function App() {
   const location = useLocation(); // Get the current location (path)
@@ -65,7 +64,6 @@ function App() {
         <Route path="/photos/cityscape" element={<CityscapePhotoPage />} />
         <Route path="/photos/landscape" element={<LandscapePhotoPage />} />
         <Route path="/books" element={<BooksPage />} />
-        <Route path="/test" element={<TestPage />} />
         {/* Sub book pages */}
         <Route path="/books/civilisation" element={<CivilisationBook />} />
         <Route path="/books/wizzyenasie" element={<WizzyEnAsieBook />} />

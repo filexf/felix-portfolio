@@ -45,7 +45,7 @@ export default function BooksPage() {
                   <h2>Civilisation</h2>
                   <p className="body-font">
                     The first book I made is  “Civilisation”, narrating the
-                    behind the scenes of the eponym <a href="https://www.youtube.com/watch?v=Q-gz6qA1h14" style={{textDecoration: "underline"}}> film</a>, watched by more than
+                    behind the scenes of the eponym <a target="_blank" href="https://www.youtube.com/watch?v=Q-gz6qA1h14" style={{textDecoration: "underline"}}> film</a>, watched by more than
                     5000 people.
                     <br />
                     <br />

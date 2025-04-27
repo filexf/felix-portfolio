@@ -1,6 +1,8 @@
 import React from "react";
 import arrowVector from "../../assets/icons/Main-icons/Vector-arrow.svg";
 import { Link } from "react-router-dom";
+import { MdArrowForwardIos } from "react-icons/md";
+
 
 export default function SeeMore({ projectLink }) {
   return (
@@ -8,7 +10,10 @@ export default function SeeMore({ projectLink }) {
       <Link to={projectLink}>
         <div className="see-more">
           <p>See more</p>
-          <img src={arrowVector} alt="Arrow vector" />
+          <MdArrowForwardIos
+            className="arrow-icon"
+            />
+
         </div>
       </Link>
     </>

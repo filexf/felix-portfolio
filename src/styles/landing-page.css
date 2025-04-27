@@ -47,7 +47,7 @@
   font-family: Raleway;
   font-size: 2rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 550;
   line-height: normal;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.097);
 }
@@ -127,7 +127,7 @@
 
 .font-text-latest-works{
   color: #000;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
 
   padding: 20px;
@@ -144,6 +144,7 @@
   /* height: 575px; */
   align-items: center;
   gap: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .card-latest-works{
@@ -152,7 +153,7 @@
   margin: 0 1rem;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.4rem;
 
   border-radius: 37.428px;
   border: 3.92px solid #000;
@@ -180,15 +181,15 @@
 }
 
 .font-card-latest-works{
-  width: 16rem;
-  height: 15.5rem;
+  width: 15rem;
+  height: 15rem;
   flex-shrink: 0;
   text-align:left;
   overflow: hidden;
   color: #000;
   text-overflow: ellipsis;
   /* Font card landing page */
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 
   /* font-style: normal; */
   font-weight: 400;
@@ -217,8 +218,8 @@
 
 .btn-card-latest-works{
   display: flex;
-  width: 177.609px;
-  height: 45.994px;
+  width: 10rem;
+  height: 2.8rem;
   padding: 20px;
   justify-content: center;
   align-items: center;
@@ -231,7 +232,7 @@
   box-shadow: 0px 2.83px 2.83px 0px rgba(0, 0, 0, 0.25);
   color: #000;
   font-family: Raleway;
-  font-size: 22.133px;
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 800;
   line-height: normal;
@@ -355,18 +356,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
   p{
     color: #000;
-    font-family: Raleway;
+    font-family: Inter;
     font-size: 40px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
-  .vector-arrow{
-    width: 13.616px;
-    height: 24.757px;
+  .arrow-icon{
+    font-size: 2rem;
   }
 }
 
@@ -498,7 +498,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 70%;
+    width: 80%;
   }
 }
 
@@ -520,6 +520,14 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .inputs-style{
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+.frame-inputs{
+  display: flex;
 }
 
 .btn-cv{

@@ -76,10 +76,13 @@
   flex-direction: row;
   align-items: center;
   gap: 25px;
+
   li{
-    font-weight: 800;
-    font-size: 1.5rem;
     transition: all 0.5s;
+    a{
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
   }
   li :hover{
     /* text-decoration: underline; */

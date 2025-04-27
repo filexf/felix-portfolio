@@ -46,7 +46,7 @@ const Card = ({ icon, title, text, path }) => {
       <p className="title-card-latest-works">{title}</p>
       <p className="font-card-latest-works"> {text}</p>
       <Link to={path}>
-        <button className="btn-card-latest-works">See more</button>
+        <button className="btn-card-latest-works">Read more</button>
       </Link>
     </div>
   );

@@ -1,8 +1,7 @@
-
 /* The h1 of the landing page with my name */
 .title{
   color: #000;
-  font-family: Raleway;
+  font-family: Inter;
   font-size: 90px;
   font-style: normal;
   font-weight: 800;
@@ -16,7 +15,6 @@
   }
 }
 
-
 /* The font which is used in most of the contents descriptions */
 .body-font{
   overflow: hidden;
@@ -24,10 +22,10 @@
   text-overflow: ellipsis;
 
   /* Body font */
-  font-family: Raleway;
-  font-size: 24px;
+  font-family: Inter;
+  font-size: 22px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: normal;
 }
 
@@ -37,8 +35,8 @@
   text-overflow: ellipsis;
 
   /* Body font */
-  font-family: Raleway;
-  font-size: 24px;
+  font-family: Inter;
+  font-size: 22px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -49,8 +47,8 @@
   text-align: center;
 
   /* Font main sections */
-  font-family: Raleway;
-  font-size: 100px;
+  font-family: Inter;
+  font-size: 5.2rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -72,7 +70,7 @@
   /* -webkit-text-stroke-width: 1.3017973899841309; */
   -webkit-text-stroke-color: #000;
   font-family: Raleway;
-  font-size: 80.144px;
+  font-size: 80px;
   font-style: normal;
   font-weight: 900;
   line-height: normal;
