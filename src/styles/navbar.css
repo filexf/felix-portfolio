@@ -1,34 +1,5 @@
-.frame-navbar{
-  /* margin-top: 15px; */
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-top: 10px;
-  gap: 10px;
-  flex-shrink: 0;
-  background-color: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  /* animation: fade-down 0.5s ease-in-out; */
-}
-
-/* @keyframes fade-down {
-  0% {
-  opacity: 0;
-  transform: translateY (-30px) scale(0.9);
-  }
-  100%{
-  opacity: 1;
-  transform: translateY(0px) scale(1);
-  }
-}; */
-
-.group-navbar{
+/* .group-navbar{
   width: 85%;
-  /* height: 64px; */
   flex-shrink: 0;
 }
 
@@ -37,10 +8,7 @@
   height: 1px;
   display: flex;
   justify-content: center;
-
   background: #000;
-  /* box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1); */
-
 }
 
 .logo-navbar{
@@ -55,7 +23,7 @@
     zoom: 101%;
     transition: 0.5s;
   }
-}
+} */
 
 .row-navbar{
   display: flex;
@@ -68,7 +36,6 @@
     border-radius: 20px;
     font-size: large;
   }
-
 }
 
 .list-navbar{
@@ -101,7 +68,6 @@
 .checkbtn {
   font-size: 1.5rem;
   color: white;
-  cursor: pointer;
 }
 
 .nav-mobile {

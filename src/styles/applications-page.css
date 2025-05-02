@@ -22,12 +22,12 @@
   position: relative;
   aspect-ratio: 16/9;
   width: 100%;
-  height: 446.755px;
+  height: 445px;
   object-fit: cover;
   justify-content: center;
   overflow: hidden;
   align-items: center;
-  gap: 13.018px;
+  gap: 13px;
   flex-shrink: 0;
 
   border-radius: 65.09px;
@@ -116,11 +116,9 @@
   gap: 48px;
 
   p{
-    color: #000;
+
     text-align: center;
-    font-family: Raleway;
     font-size: 50px;
-    font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
@@ -132,14 +130,13 @@
   justify-content: center;
   align-items: center;
 
-  gap: 57.023px;
+  gap: 57px;
   flex-wrap: wrap;
 }
 
 .layout-icons-tech-stack{
-  width: 97px;
-  height: 97px;
-  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
 }
 
 /* -------------------------------------- */
@@ -147,6 +144,5 @@
 
 .gallery-icon{
   cursor: "pointer";
-  width: 4.5rem;
-  
+  width: 5rem;
 }

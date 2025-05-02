@@ -19,7 +19,7 @@ export default function DesignSection() {
             copies, this experience taught me consistency in design and how to
             manage large-scale projects effectively.
           </p>
-          <div className="frame-magazines-cover">
+          <div className="flex items-center justify-center">
             <Image photo={Photo1} />
             <Image photo={Photo2} />
           </div>
@@ -33,9 +33,13 @@ export default function DesignSection() {
 
 function Image({ photo }) {
   return (
-    <div className="zoom-effect-photos">
-      <Link to="/books">
-        <img src={photo} alt="Photos Magazines" />
+    <div className="overflow-hidden flex justify-center items-center w-full h-auto">
+      <Link to="/books" className="block w-[70%] ">
+        <img
+          className="w-full h-auto object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+          src={photo}
+          alt="Photos Magazines"
+        />
       </Link>
     </div>
   );

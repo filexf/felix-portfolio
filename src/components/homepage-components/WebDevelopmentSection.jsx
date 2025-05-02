@@ -18,8 +18,8 @@ export default function WebDevelopmentSection() {
             I graduated from Le Wagon and built real-world applications from
             scratch, gaining hands-on experience in web development. With a
             background in photography, I bring a strong sense of design, now
-            combined with solid programming skills.{" "}
-          </p>{" "}
+            combined with solid programming skills.
+          </p>
           <div className="animation-carrousel">
             <Link to="/applications">
               <ImageText
@@ -44,7 +44,7 @@ export default function WebDevelopmentSection() {
 function ImageText({ nom, image, text }) {
   return (
     <div className={`image-animated ${nom}-animation`}>
-      <img className="img-web-dev" src={image} alt="Photos web dev project" />
+      <img className="flex [aspect-ratio:16_/_9] h-[48vh] object-cover items-center gap-[11px] mr-[40px] rounded-[55px] border-[5px] border-black shadow-md" src={image} alt="Photos web dev project" />
       <p className="font-header-applications"> {text} </p>
     </div>
   );

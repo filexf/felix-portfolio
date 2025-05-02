@@ -46,7 +46,7 @@ export default function ApplicationsPage() {
         }}
       >
         <div className="frame-header-applications-page">
-          <h1 className="font-main-sections">Applications</h1>
+          <h1 className="font-main-sections ">Applications</h1>
           <p className="body-font">
             I’m a recent Le Wagon graduate with hands-on experience in web
             development, where I built applications from scratch using Ruby on

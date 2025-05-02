@@ -2,15 +2,15 @@ import React from "react";
 
 export default function SectionWrapper({ children, title, icon }) {
   return (
-    <section className="frames-layouts-landing-page">
-      <div className="frames-layouts-landing-page-logo">
-        <img className="logo-layouts-landing-page" src={icon} alt="Icon" />
+    <section className="flex justify-center items-start gap-[35px] self-stretch">
+      <div className="flex items-center gap-[35px]">
+        <img className="mt-[5px] w-[58px] h-[60px]" src={icon} alt="Icon" />
       </div>
-      <div className="frames-layouts-landing-page-content">
+      <div className="flex w-4/5 flex-col gap-[48px]">
 
-        <h2 className="header-layouts-landing-page">{title}</h2>
-      
-      {children}
+        <h2 className="self-stretch text-6xl font-semibold leading-[normal] bg-gradient-to-tr from-zinc-600 to-sky-800 bg-clip-text text-transparent text-shadow-sm">{title}</h2>
+
+        {children}
       </div>
     </section>
   );

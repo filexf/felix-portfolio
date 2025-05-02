@@ -17,7 +17,6 @@
 /* The 3 main pages : Apps, photos, books */
 @import url(applications-page.css);
 @import url(books-page.css);
-@import url(photos-page.css);
 
 /* The pages for photos sections */
 @import url(photos-sections-pages.css);
@@ -27,5 +26,5 @@
 /* The lightbox css properties */
 @import url(lightbox.css);
 
-/* The footer file  */
-@import url(footer.css);
+
+@import "tailwindcss";

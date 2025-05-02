@@ -11,7 +11,7 @@ const Gallery = ({ title, images }) => {
     <div style={{ width: "100%", display: "flex", justifyContent: "center", paddingTop: "40px",   }}>
       <div style={{ width:"80%", gap: "40px", display: "flex", flexDirection: "column" }}>
       <h2 className="font-main-sections" >{title}</h2>
-      <p className="body-font" style={{  marginBottom: "20px", textAlign: "center" }}>
+      <p className="mb-[20px] text-center text-2xl" >
         Here are a few pages of the magazine I wrote and illustrated.
       </p>
 

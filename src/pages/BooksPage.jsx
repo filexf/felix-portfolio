@@ -29,24 +29,38 @@ export default function BooksPage() {
             <Reveal>
               <div className="frame-magazine-and-text wrap-civilisation">
                 <Link to="/books/civilisation">
-                  <div className="container-photo">
+                  <div className="container-photo group relative overflow-hidden">
                     <img
-                      className="main-photo-magazine"
+                      className="main-photo-magazine transition-transform duration-300 group-hover:scale-105"
                       src={coverCivilisation}
-                      alt=""
+                      alt="Civilisation cover"
                     />
-                    <div className="frame-loop-title">
-                      <p className="font-hover-photo">Read more</p>
-                      <img className="loop-plus-icon" src={loop} alt="" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-[20px] bg-[rgba(23,_23,_23,_0.752)] text-[white] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <p className="text-[50px] leading-[normal] font-bold text-[#F5F5F5] [text-shadow:0px_4.546px_4.546px_rgba(0,_0,_0,_0.25)]">
+                        Read more
+                      </p>
+                      <img
+                        className="h-[70px] w-[70px] hover:[transition:200ms_ease-in-out]"
+                        src={loop}
+                        alt="Loupe icon"
+                      />
                     </div>
                   </div>
                 </Link>
                 <div className="frame-texts-magazine">
                   <h2>Civilisation</h2>
                   <p className="body-font">
-                    The first book I made is  “Civilisation”, narrating the
-                    behind the scenes of the eponym <a target="_blank" href="https://www.youtube.com/watch?v=Q-gz6qA1h14" style={{textDecoration: "underline"}}> film</a>, watched by more than
-                    5000 people.
+                    The first book I made is “Civilisation”, narrating the
+                    behind the scenes of the eponym{" "}
+                    <a
+                      target="_blank"
+                      href="https://www.youtube.com/watch?v=Q-gz6qA1h14"
+                      style={{ textDecoration: "underline" }}
+                    >
+                      {" "}
+                      film
+                    </a>
+                    , watched by more than 5000 people.
                     <br />
                     <br />
                     Civilization is the adventure of 9 friends who travel to the
@@ -92,19 +106,22 @@ export default function BooksPage() {
                     Click on it to read a few pages !
                   </p>
                 </div>
-                {/* <div class="magazine-dimensions zoom-effect-photos">
-    <a href=""> <img src="/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg" alt="Couverture magazine Civilisation"> </a>
-  </div> */}
                 <Link to="/books/wizzyenasie">
-                  <div className="container-photo">
+                  <div className="container-photo group relative overflow-hidden">
                     <img
-                      className="main-photo-magazine"
+                      className="main-photo-magazine transition-transform duration-300 group-hover:scale-105"
                       src={coverWizzyEnAsie}
-                      alt=""
+                      alt="Wizzy en Asie cover"
                     />
-                    <div className="frame-loop-title">
-                      <p className="font-hover-photo">Read more</p>
-                      <img className="loop-plus-icon" src={loop} alt="" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-[20px] bg-[rgba(23,_23,_23,_0.752)] text-[white] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <p className="text-[50px] leading-[normal] font-bold text-[#F5F5F5] [text-shadow:0px_4.546px_4.546px_rgba(0,_0,_0,_0.25)]">
+                        Read more
+                      </p>
+                      <img
+                        className="h-[70px] w-[70px] hover:[transition:200ms_ease-in-out]"
+                        src={loop}
+                        alt="Loupe icon"
+                      />
                     </div>
                   </div>
                 </Link>

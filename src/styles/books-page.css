@@ -55,8 +55,7 @@
   overflow: hidden;
   position:relative;
   .main-photo-magazine{
-    width: 438.662px;
-    /* height: 629.786px; */
+    width: 25rem;
     object-fit: cover;
     transition: all 0.3s;
   }

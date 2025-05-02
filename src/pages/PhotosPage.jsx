@@ -13,38 +13,18 @@ import Reveal from "../components/Reveal";
 export default function PhotosPage() {
   return (
     <>
-      <div
-        style={{
-          backgroundColor: "#15151B",
-          display: "flex",
-          flexDirection: "flex-column",
-          justifyContent: "center",
-        }}
-      >
-        <div
-          className="frame-header-photos-page"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            gap: "20px",
-          }}
-        >
+      <div className="flex justify-center bg-[#15151B]">
+        <div className="mb-12 flex w-4/5 flex-col items-center gap-[60px] p-8">
           <Reveal>
             <h2
-              className="font-main-sections"
+              className="font-main-sections my-10 text-white"
               style={{
                 color: "#ffffff",
-                marginBottom: "40px",
-                marginTop: "40px",
               }}
             >
               Photography
             </h2>
-            <p
-              className="body-font"
-              style={{ color: "#ffffff", marginBottom: "50px" }}
-            >
+            <p className="body-font mb-16" style={{ color: "#ffffff" }}>
               Since I was little, I’ve always been fascinated by art and
               adventure. I wanted to fulfill this deep need for adventure and be
               able to tell those stories in my own way. So, when I discovered
@@ -55,7 +35,7 @@ export default function PhotosPage() {
             </p>
             {/* The frame showcasing all the photos */}
 
-            <div className="frame-page-photos">
+            <div className="flex flex-wrap items-center justify-center gap-24">
               <Photo title={"Sport"} photo={Photo1} />
               <Photo title={"Mosaic"} photo={Photo2} />
               <Photo title={"Cityscape"} photo={Photo3} />
@@ -72,11 +52,23 @@ function Photo({ photo, title }) {
   return (
     <>
       <Link to={`/photos/${title.toLowerCase()}`}>
-        <div className="container-photo">
-          <img className="main-photo" src={photo} alt="Photo" />
-          <div className="frame-loop-title">
-            <p className="font-hover-photo">{title}</p>
-            <img className="loop-plus-icon" src={iconLoupe} alt="Loupe icon" />
+        <div className="group relative overflow-hidden">
+          {/* L'image va "scaler" quand on survole la div parent */}
+          <img
+            className="h-[34rem] w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            src={photo}
+            alt="Photo"
+          />
+          {/* Contenu visible lors du hover */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 bg-[rgba(23,_23,_23,_0.752)] text-[white] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p className="text-[50px] leading-[normal] font-bold text-[#F5F5F5] [text-shadow:0px_4.546px_4.546px_rgba(0,_0,_0,_0.25)]">
+              {title}
+            </p>
+            <img
+              className="h-[70px] w-[70px]"
+              src={iconLoupe}
+              alt="Loupe icon"
+            />
           </div>
         </div>
       </Link>

@@ -1,53 +1,48 @@
-import React from "react";
+import React from 'react';
 
-import logoSiteWhite from "../assets/icons/Main-icons/Logo-white-website-icon.svg";
-import dropdown from "../assets/icons/Main-icons/Dropdwon-menu-white.svg";
+import logoSiteWhite from '../assets/icons/Main-icons/Logo-white-website-icon.svg';
+import dropdown from '../assets/icons/Main-icons/Dropdwon-menu-white.svg';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export default function BlackNavbar() {
   return (
     <>
-      <nav className="frame-navbar" style={{ backgroundColor: "#15151B" }}>
-        <div className="group-navbar">
-          <div className="row-navbar">
-            <div className="navbar-row-items">
-              <div className="logo-navbar">
+      <nav
+        className="sticky top-[0] z-10 flex w-full flex-col items-center justify-end gap-[10px] bg-[white] pt-2"
+        style={{ backgroundColor: '#15151B' }}
+      >
+        <div className="w-[85%]">
+          <div className="flex flex-row justify-between gap-[20px] p-[10px]">
+            <div className="flex flex-row items-center gap-[25px]">
+              <div className="flex size-[2.4rem] transform items-center transition hover:scale-102">
                 <Link to="/">
                   <img
                     src={logoSiteWhite}
                     alt="Logo website"
                     className="white-elements"
-                    style={{ color: "#ffffff" }}
+                    style={{ color: '#ffffff' }}
                   />
                 </Link>
               </div>
-              <ul className="list-navbar">
+              <ul className="flex flex-row items-center gap-[25px] text-2xl text-white">
                 <li>
-                  <Link to="/" className="body-font-white">
-                    Home
-                  </Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/applications" className="body-font-white">
-                    Applications
-                  </Link>
+                  <Link to="/applications">Applications</Link>
                 </li>
                 <li>
-                  <Link to="/photos" className="body-font-white">
-                    Photos
-                  </Link>
+                  <Link to="/photos">Photos</Link>
                 </li>
                 <li>
-                  <Link to="/books" className="body-font-white">
-                    Books
-                  </Link>
+                  <Link to="/books">Books</Link>
                 </li>
               </ul>
             </div>
             {/*-------------------- The new burger menu  --------------------*/}
             {/* <div class="hamburger"> </div> */}
-            <input type="checkbox" id="check" style={{ display: "none" }} />
+            <input type="checkbox" id="check" style={{ display: 'none' }} />
             <label htmlFor="check" className="checkbtn">
               <img src={dropdown} className="" alt="Dropdown-menu" />
             </label>
@@ -57,7 +52,10 @@ export default function BlackNavbar() {
             </div>
             {/*-------------------- End of the new burger menu  --------------------*/}
           </div>
-          <div className="line-navbar " style={{ backgroundColor: "#ffffff" }}>
+          <div
+            className="flex h-px w-full justify-center bg-[#000]"
+            style={{ backgroundColor: '#ffffff' }}
+          >
             {/* The line of the navbar */}
           </div>
         </div>

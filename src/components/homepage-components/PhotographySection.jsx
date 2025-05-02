@@ -24,12 +24,12 @@ export default function PhotographySection() {
             able to tell those stories in my own way. So, when I discovered
             photography a few years ago, an entirely new world opened up to me.
           </p>
-          <div className="img-list">
+          <div className="flex flex-row justify-center gap-[30px] w-full h-[400px]">
             {photos.map((photo, index) => (
               <Photo
                 key={index}
                 photo={photo}
-                className={index % 2 === 0 ? "img1" : "img2"}
+                className={index % 2 === 0 ? "pb-12" : "pt-12"}
               />
             ))}
           </div>
@@ -42,9 +42,9 @@ export default function PhotographySection() {
 
 function Photo({ photo, className }) {
   return (
-    <div className="zoom-effect-photos">
+    <div className="overflow-hidden ">
       <Link to="/photos">
-        <img className={className} src={photo} alt="Photography" />
+        <img className={`${className} overflow-hidden w-full h-full object-cover [transition:all_0.3s] hover:scale-105`} src={photo} alt="Photography" />
       </Link>
     </div>
   );
