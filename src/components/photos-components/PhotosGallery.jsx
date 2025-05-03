@@ -7,12 +7,12 @@ const Gallery = ({ title, images, text }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
-    <div className="flex w-full justify-center bg-[#15151B] pt-[40px] pb-[120px]">
+    <div className="flex w-full justify-center pt-[40px] pb-[120px]">
       <div className="flex w-4/5 flex-col gap-[40px]">
-        <h2 className="font-main-sections" style={{ color: "#ffffff" }}>
+        <h2 className="font-main-sections">
           {title}
         </h2>
-        <p className="body-font-white mb-20px">{text}</p>
+        <p className="body-font mb-20px">{text}</p>
 
         <div className="photos-grid">
           {images.map((image, index) => (

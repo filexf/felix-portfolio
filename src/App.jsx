@@ -3,7 +3,6 @@ import "./styles/index.css";
 import { Routes, Route } from "react-router-dom";
 import Footer from "./layouts/Footer";
 import Navbar from "./layouts/Navbar";
-import BlackNavbar from "./layouts/BlackNavbar";
 import { useLocation } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage";
@@ -62,13 +61,13 @@ function App() {
 
   return (
     <>
-      {isPhotosPage ? <BlackNavbar /> : <Navbar />}
+      <Navbar />
       <ScrollToTop />
       <Suspense
         fallback={
-          <div class="flex items-center justify-center min-h-screen bg-gray-100">
+          <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <p className="mr-6">Processing...</p>
-            <div class="h-16 w-16 border-5 border-b-zinc-900 border-t-transparent rounded-full animate-spin"></div>
+            <div className="h-16 w-16 border-5 border-b-zinc-900 border-t-transparent rounded-full animate-spin"></div>
           </div>
         }
       >

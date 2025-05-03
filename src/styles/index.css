@@ -8,15 +8,11 @@
 /* File for fonts */
 @import url(font-styles.css);
 
-/* The navbar file */
-@import url(navbar.css);
-
 /* The landing page / index */
 @import url(landing-page.css);
 
 /* The 3 main pages : Apps, photos, books */
 @import url(applications-page.css);
-@import url(books-page.css);
 
 /* The pages for photos sections */
 @import url(photos-sections-pages.css);
@@ -28,3 +24,10 @@
 
 
 @import "tailwindcss";
+
+
+@layer components {
+  .text-gradient{
+    @apply bg-gradient-to-tr from-zinc-600 to-sky-700 bg-clip-text text-transparent text-shadow-sm
+  }
+}

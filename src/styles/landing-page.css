@@ -16,12 +16,7 @@
 
 /* 1st frame on the left */
 
-/* This is for animating the arrow blinking and also its size */
-.blinking-arrow{
-  animation: blinker 3s ease-in-out infinite;
-  width: 80px;
-}
-
+/* This is for animating the arrow blinking, cta to scroll down*/
 @keyframes blinker {
   0% {
     opacity: 1;

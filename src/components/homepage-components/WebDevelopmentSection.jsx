@@ -45,7 +45,7 @@ function ImageText({ nom, image, text }) {
   return (
     <div className={`image-animated ${nom}-animation`}>
       <img className="flex [aspect-ratio:16_/_9] h-[48vh] object-cover items-center gap-[11px] mr-[40px] rounded-[55px] border-[5px] border-black shadow-md" src={image} alt="Photos web dev project" />
-      <p className="font-header-applications"> {text} </p>
+      <p className="text-white text-center text-[80px] font-raleway font-black leading-normal text-shadow-lg"> {text} </p>
     </div>
   );
 }

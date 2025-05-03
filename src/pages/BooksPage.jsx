@@ -10,45 +10,28 @@ export default function BooksPage() {
   return (
     <>
       <Reveal>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "flex-column",
-            justifyContent: "center",
-          }}
-        >
-          <div className="frame-header-books-page">
-            <h1 className="font-main-sections">Books</h1>
+        <div className="flex justify-center p-8">
+          <div className="mt-[30px] flex w-4/5 flex-col items-center gap-[50px]">
+            <h1 className="text-center text-7xl font-bold leading-normal text-gradient">Books</h1>
             <p className="body-font">
               I created two books showcasing five months of adventure in
               Southeast Asia, using my own photos and writing. Self-edited and
               sold over 500 copies, this experience taught me consistency in
               design and how to manage large-scale projects effectively.
             </p>
+
             {/* The frame of Civilisation */}
+
             <Reveal>
-              <div className="frame-magazine-and-text wrap-civilisation">
-                <Link to="/books/civilisation">
-                  <div className="container-photo group relative overflow-hidden">
-                    <img
-                      className="main-photo-magazine transition-transform duration-300 group-hover:scale-105"
-                      src={coverCivilisation}
-                      alt="Civilisation cover"
-                    />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-[20px] bg-[rgba(23,_23,_23,_0.752)] text-[white] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <p className="text-[50px] leading-[normal] font-bold text-[#F5F5F5] [text-shadow:0px_4.546px_4.546px_rgba(0,_0,_0,_0.25)]">
-                        Read more
-                      </p>
-                      <img
-                        className="h-[70px] w-[70px] hover:[transition:200ms_ease-in-out]"
-                        src={loop}
-                        alt="Loupe icon"
-                      />
-                    </div>
-                  </div>
-                </Link>
-                <div className="frame-texts-magazine">
-                  <h2>Civilisation</h2>
+              <div className="flex flex-wrap-reverse justify-center gap-[64px] self-stretch">
+                <PhotoMagazine
+                  link="/books/civilisation"
+                  src={coverCivilisation}
+                />
+                <div className="flex flex-shrink-0 flex-grow basis-0 flex-col gap-[72px]">
+                  <h2 className="pt-2 text-center text-6xl font-bold text-[#000]">
+                    Civilisation
+                  </h2>
                   <p className="body-font">
                     The first book I made is “Civilisation”, narrating the
                     behind the scenes of the eponym{" "}
@@ -79,11 +62,15 @@ export default function BooksPage() {
                 </div>
               </div>
             </Reveal>
+
             {/* The frame of Wizzy en Asie */}
+
             <Reveal>
-              <div className="frame-magazine-and-text wrap-wizzy-en-asie">
-                <div className="frame-texts-magazine">
-                  <h2>Wizzy en Asie</h2>
+              <div className="flex flex-wrap justify-center gap-[64px] self-stretch">
+                <div className="flex flex-shrink-0 flex-grow basis-0 flex-col gap-[72px]">
+                  <h2 className="pt-2 text-center text-6xl font-bold text-[#000]">
+                    Wizzy en Asie
+                  </h2>
                   <p className="body-font">
                     The second book I made is “Wizzy en Asie”, following the
                     journey of Civilisation.
@@ -106,30 +93,39 @@ export default function BooksPage() {
                     Click on it to read a few pages !
                   </p>
                 </div>
-                <Link to="/books/wizzyenasie">
-                  <div className="container-photo group relative overflow-hidden">
-                    <img
-                      className="main-photo-magazine transition-transform duration-300 group-hover:scale-105"
-                      src={coverWizzyEnAsie}
-                      alt="Wizzy en Asie cover"
-                    />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-[20px] bg-[rgba(23,_23,_23,_0.752)] text-[white] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <p className="text-[50px] leading-[normal] font-bold text-[#F5F5F5] [text-shadow:0px_4.546px_4.546px_rgba(0,_0,_0,_0.25)]">
-                        Read more
-                      </p>
-                      <img
-                        className="h-[70px] w-[70px] hover:[transition:200ms_ease-in-out]"
-                        src={loop}
-                        alt="Loupe icon"
-                      />
-                    </div>
-                  </div>
-                </Link>
+                <PhotoMagazine
+                  link="/books/wizzyenasie"
+                  src={coverWizzyEnAsie}
+                />
               </div>
             </Reveal>
           </div>
         </div>
       </Reveal>
     </>
+  );
+}
+
+function PhotoMagazine({ link, src }) {
+  return (
+    <Link to={link}>
+      <div className="container-photo group relative mx-4 overflow-hidden">
+        <img
+          className="w-[25rem] object-cover transition-transform duration-300 [transition:all_0.3s] group-hover:scale-105"
+          src={src}
+          alt="Wizzy en Asie cover"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-[20px] bg-[rgba(23,_23,_23,_0.752)] text-[white] opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <p className="text-[50px] leading-[normal] font-bold text-[#F5F5F5] text-shadow-md">
+            Read more
+          </p>
+          <img
+            className="h-[70px] w-[70px] hover:[transition:200ms_ease-in-out]"
+            src={loop}
+            alt="Loupe icon"
+          />
+        </div>
+      </div>
+    </Link>
   );
 }

@@ -16,7 +16,7 @@ export default function Navbar() {
                   <img src={logoSite} alt="Logo website" />
                 </Link>
               </div>
-              <ul className="flex flex-row items-center gap-[25px] text-2xl font-medium">
+              <ul className="flex flex-row items-center gap-[25px] text-2xl font-medium ">
                 <li className="hover:text-[#888]">
                   <Link to="/">Home</Link>
                 </li>
@@ -63,7 +63,7 @@ export default function Navbar() {
             </div>
             {/*-------------------- End of the new burger menu  --------------------*/}
           </div>
-          <div className="flex h-px w-full justify-center bg-[#000]"></div>
+          {/* <div className="flex h-px w-full justify-center bg-[#000]"></div> */}
         </div>
       </nav>
     </>

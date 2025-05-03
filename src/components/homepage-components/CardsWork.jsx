@@ -11,7 +11,7 @@ export default function CardsWork() {
           className="mt-14 flex w-full flex-col items-center justify-center gap-8"
           id="latest-works"
         >
-          <h2 className="text-center text-7xl font-bold leading-[normal] bg-gradient-to-tr from-slate-600 to-slate-700 bg-clip-text text-transparent text-shadow-sm">My portfolio</h2>
+          <h2 className="text-center text-7xl font-bold leading-[normal] text-gradient">My portfolio</h2>
 
           <p className="text-[22px] text-center p-[20px] w-3/4">
             After four years as a freelance photographer, I ventured into web

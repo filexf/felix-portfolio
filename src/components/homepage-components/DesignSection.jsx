@@ -34,7 +34,7 @@ export default function DesignSection() {
 function Image({ photo }) {
   return (
     <div className="overflow-hidden flex justify-center items-center w-full h-auto">
-      <Link to="/books" className="block w-[70%] ">
+      <Link to="/books" className="block w-[65%] ">
         <img
           className="w-full h-auto object-cover transition-transform duration-300 ease-in-out hover:scale-105"
           src={photo}

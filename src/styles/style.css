@@ -23,9 +23,8 @@ body {
   flex-direction: column;
   align-items: center;
 
-  
-}
 
+}
 
 #root{
   height: 100%;
@@ -36,17 +35,6 @@ button{
   cursor: pointer;
 }
 
-/* Used on the landing photos from the landing page */
-.zoom-effect-photos{
-  overflow: hidden;
-  img{
-    transition: all 0.3s;
-  }
-  img:hover{
-    transform: scale(1.05);
-
-  }
-}
 
 
 /* To style the lightbox galleries */

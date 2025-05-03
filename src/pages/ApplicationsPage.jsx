@@ -1,4 +1,7 @@
-import { projects,ProjectCard } from "../components/applications-components/ProjectCard";
+import {
+  projects,
+  ProjectCard,
+} from "../components/applications-components/ProjectCard";
 
 // Importing assets
 import RailIcon from "../assets/icons/Tech stack icons/Rails-icon.svg";
@@ -14,6 +17,9 @@ import Bootstrap from "../assets/icons/Tech stack icons/Bootstrap-icon.svg";
 import ReactIcon from "../assets/icons/Tech stack icons/React.svg";
 
 import Reveal from "../components/Reveal";
+
+import PhotoSportify from "../assets/images/Photo-projets-dev/Photo Couverture Sportify.png";
+import PhotoTyMouet from "../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
 
 // Tech stack data
 const techStack = [
@@ -38,15 +44,9 @@ function TechStackIcon({ name, icon }) {
 export default function ApplicationsPage() {
   return (
     <Reveal>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "flex-column",
-          justifyContent: "center",
-        }}
-      >
+      <div className="mt-4 flex flex-row justify-center">
         <div className="frame-header-applications-page">
-          <h1 className="font-main-sections ">Applications</h1>
+          <h1 className="text-center text-7xl font-bold leading-normal text-gradient">Applications</h1>
           <p className="body-font">
             I’m a recent Le Wagon graduate with hands-on experience in web
             development, where I built applications from scratch using Ruby on
@@ -63,7 +63,6 @@ export default function ApplicationsPage() {
               <img src={GithubIcon} alt="GitHub logo icon" />
             </a>
           </div>
-
           {/* Projects Section */}
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />

@@ -8,7 +8,7 @@ export default function SectionWrapper({ children, title, icon }) {
       </div>
       <div className="flex w-4/5 flex-col gap-[48px]">
 
-        <h2 className="self-stretch text-6xl font-semibold leading-[normal] bg-gradient-to-tr from-zinc-600 to-sky-800 bg-clip-text text-transparent text-shadow-sm">{title}</h2>
+        <h2 className="self-stretch text-6xl font-semibold leading-[normal] text-gradient">{title}</h2>
 
         {children}
       </div>

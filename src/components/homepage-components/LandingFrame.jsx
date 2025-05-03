@@ -76,7 +76,7 @@ export default function LandingFrame() {
           >
             <img
               src={ArrowLogo}
-              className="blinking-arrow"
+              className="animate-[blinker_3s_ease-in-out_infinite] w-[80px] "
               alt="Downward Arrow"
             />
           </motion.div>
