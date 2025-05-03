@@ -11,16 +11,18 @@ export default function CardsWork() {
           className="mt-14 flex w-full flex-col items-center justify-center gap-8"
           id="latest-works"
         >
-          <h2 className="text-center text-7xl font-bold leading-[normal] text-gradient">My portfolio</h2>
+          <h2 className="text-gradient text-center text-7xl leading-[normal] font-bold">
+            My portfolio
+          </h2>
 
-          <p className="text-[22px] text-center p-[20px] w-3/4">
+          <p className="w-3/4 p-[20px] text-center text-[22px]">
             After four years as a freelance photographer, I ventured into web
             development to blend my artistic vision with technology, creating
             unique digital experiences. <br />
             Dive into my projects and see what I’ve been working on!
           </p>
           <Reveal>
-            <div className="flex justify-center flex-wrap items-center gap-6 mb-4">
+            <div className="my-2 flex flex-col flex-wrap items-center justify-center gap-4 md:flex-row md:gap-2">
               {cardData.map((card) => (
                 <Card
                   key={card.title}
@@ -40,16 +42,44 @@ export default function CardsWork() {
 
 const Card = ({ icon, title, text, path }) => {
   return (
-    <div
-      className="flex px-8 py-6 mx-3 flex-col items-center gap-[1.4rem] rounded-[2.5rem] border-[0.20rem] border-black shadow-md"
-      id={title === "Photography" ? "black-card" : undefined}
-    >
-      <img className="w-[50px] h-[50px]" src={icon} alt={title} />
-      <p className="text-center text-[23px] font-extrabold">{title}</p>
-      <p className="w-60 h-60 flex-shrink-0 text-left overflow-hidden text-[#000] overflow-ellipsis max-w-prose hyphens-auto text-[17px] "> {text}</p>
-      <Link to={path}>
-        <button className="flex w-38 h-[2.8rem] p-[15px] justify-center items-center rounded-[18px] border-[0.18rem] border-black shadow-lg text-[#000] text-[1.1rem] font-extrabold hover:bg-[black] hover:text-[white] hover:[transition:ease-in-out_300ms]">Read more</button>
-      </Link>
-    </div>
+    <Link to={path}>
+      <div className="group mx-4 my-2 flex h-auto w-72 flex-col items-center justify-center gap-8 rounded-3xl border border-gray-200 bg-gradient-to-br from-white via-gray-50 to-gray-100 p-5 shadow-md backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gradient-to-br hover:from-gray-50 hover:via-white hover:to-gray-100 hover:shadow-xl hover:shadow-gray-200/50 dark:border-gray-800 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 dark:hover:from-gray-800 dark:hover:via-gray-900 dark:hover:to-gray-800">
+        <div className="rounded-full bg-gray-100 p-2.5 transition-colors duration-300 group-hover:bg-gray-200 dark:bg-gray-800">
+          <img
+            className="h-11 w-10 transition-transform duration-300 group-hover:scale-110"
+            src={icon}
+            alt={title}
+          />
+        </div>
+
+        <div className="flex flex-col items-center justify-center gap-3 text-center">
+          <h3 className="text-gradient text-xl font-bold">{title}</h3>
+
+          <p className="h-25 leading-relaxed text-gray-600 dark:text-gray-400">
+            {text}
+          </p>
+
+          <button className="mt-2 w-full rounded-xl border border-gray-300 bg-white px-5 py-2 text-sm font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white md:w-3/4 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700">
+            <span className="flex items-center justify-center gap-2">
+              Read more
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </Link>
   );
 };

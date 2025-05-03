@@ -127,7 +127,7 @@ export function ProjectCard({
                 <img
                   src={githubIcon}
                   alt="GitHub"
-                  className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-17 md:w-17"
+                  className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15"
                 />
               </a>
               {images && (
@@ -135,7 +135,7 @@ export function ProjectCard({
                   <img
                     src={galleryIcon}
                     alt="Gallery Icon"
-                    className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-17 md:w-17 "
+                    className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15 "
                   />
                 </div>
               )}
@@ -154,7 +154,7 @@ export function ProjectCard({
               {websiteLink && (
                 <a href={websiteLink} target="_blank">
                   <img
-                    className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-17 md:w-17 "
+                    className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15 "
                     src={websiteIcon}
                     alt="Website"
                   />

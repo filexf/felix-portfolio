@@ -38,15 +38,24 @@ const techStack = [
 
 // Reusable Tech Stack Icon component
 function TechStackIcon({ name, icon }) {
-  return <img src={icon} alt={name} className="layout-icons-tech-stack" />;
+  return (
+    <>
+      <div className="flex gap-4 items-center border-2px rounded-3xl border-slate-800 bg-gray-50 px-6 py-2 shadow-md hover:bg-gray-200 mb-1">
+        <p className="font-bold text-gradient">{name} </p>
+        <img src={icon} alt={name} className="w-9" />
+      </div>
+    </>
+  );
 }
 
 export default function ApplicationsPage() {
   return (
     <Reveal>
       <div className="mt-4 flex flex-row justify-center">
-        <div className="frame-header-applications-page">
-          <h1 className="text-center text-7xl font-bold leading-normal text-gradient">Applications</h1>
+        <div className="mt-[30px] flex w-4/5 flex-col items-center gap-[70px] px-12 py-[0]">
+          <h1 className="text-gradient text-center text-7xl leading-normal font-bold">
+            Applications
+          </h1>
           <p className="body-font">
             I’m a recent Le Wagon graduate with hands-on experience in web
             development, where I built applications from scratch using Ruby on
@@ -57,12 +66,18 @@ export default function ApplicationsPage() {
             skills to build efficient, scalable applications and tackle
             real-world challenges in the tech industry.
           </p>
-          <div className="github-account-frame">
-            <p className="body-font">My GitHub account:</p>
-            <a href="https://github.com/filexf" target="_blank">
-              <img src={GithubIcon} alt="GitHub logo icon" />
-            </a>
-          </div>
+          <a href="https://github.com/filexf" target="_blank">
+            <div className="border-2px flex items-center gap-5 rounded-3xl border-slate-800 bg-gray-50 px-6 py-3 shadow-md hover:bg-gray-200">
+              <p className="text-gradient text-bold text-xl">
+                My GitHub account
+              </p>
+              <img
+                src={GithubIcon}
+                alt="GitHub logo icon"
+                className="w-10 hover:scale-102"
+              />
+            </div>
+          </a>
           {/* Projects Section */}
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
@@ -70,9 +85,9 @@ export default function ApplicationsPage() {
 
           {/* Tech Stack Section */}
           <Reveal>
-            <div className="tech-stack">
-              <p>My tech stack</p>
-              <div className="frame-icons-tech-stack">
+            <div className="flex justify-center items-center w-full flex-col gap-[48px]">
+              <p className="text-gradient text-6xl font-bold pb-1 mb-4">My tech stack</p>
+              <div className="flex w-4/5 justify-center items-center gap-10 flex-wrap">
                 {techStack.map((tech, index) => (
                   <TechStackIcon key={index} {...tech} />
                 ))}

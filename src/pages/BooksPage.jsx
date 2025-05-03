@@ -29,7 +29,7 @@ export default function BooksPage() {
                   src={coverCivilisation}
                 />
                 <div className="flex flex-shrink-0 flex-grow basis-0 flex-col gap-[72px]">
-                  <h2 className="pt-2 text-center text-6xl font-bold text-[#000]">
+                  <h2 className="pt-2 text-center text-6xl font-bold text-gradient">
                     Civilisation
                   </h2>
                   <p className="body-font">
@@ -68,7 +68,7 @@ export default function BooksPage() {
             <Reveal>
               <div className="flex flex-wrap justify-center gap-[64px] self-stretch">
                 <div className="flex flex-shrink-0 flex-grow basis-0 flex-col gap-[72px]">
-                  <h2 className="pt-2 text-center text-6xl font-bold text-[#000]">
+                  <h2 className="pt-2 text-center text-6xl font-bold text-gradient">
                     Wizzy en Asie
                   </h2>
                   <p className="body-font">
