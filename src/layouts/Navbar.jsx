@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <>
-      <nav className="sticky top-[0] z-100 flex w-full flex-col items-center justify-end gap-[10px] bg-[white] pt-2 shadow-md">
+      <nav className="sticky top-[0] z-100 flex w-full flex-col items-center justify-end gap-[10px] bg-[white] py-1.5 shadow-md">
         <div className="w-[85%] ">
           <div className="flex flex-row justify-between gap-[20px] p-[10px]">
             <div className="flex flex-row items-center gap-[25px]">

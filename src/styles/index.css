@@ -11,13 +11,6 @@
 /* The landing page / index */
 @import url(landing-page.css);
 
-/* The 3 main pages : Apps, photos, books */
-@import url(applications-page.css);
-
-/* The pages for photos sections */
-@import url(photos-sections-pages.css);
-
-/* The pages for books sections */
 
 /* The lightbox css properties */
 @import url(lightbox.css);

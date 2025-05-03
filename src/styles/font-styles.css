@@ -21,23 +21,8 @@
   text-overflow: ellipsis;
 
   /* Body font */
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   line-height: normal;
 }
 
-.font-main-sections{
-  color: #000;
-  text-align: center;
-
-  /* Font main sections */
-  font-size: 5rem;
-  font-weight: 700;
-  line-height: normal;
-}
-
-@media (max-width: 768px) {
-  .font-main-sections{
-    font-size: 80px;
-  }
-}

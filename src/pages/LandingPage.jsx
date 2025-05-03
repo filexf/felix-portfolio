@@ -12,7 +12,7 @@ export default function LandingPage() {
     <>
       <LandingFrame />
       <CardsWork />
-      <div className="mt-20 flex flex-col w-[98%] items-start gap-[80px] px-[20px]">
+      <div className="mt-20 flex flex-col justify-center items-center gap-[80px] px-[20px]">
         <WebDevelopmentSection />
         <PhotographySection />
         <DesignSection />

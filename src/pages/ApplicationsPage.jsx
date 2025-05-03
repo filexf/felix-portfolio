@@ -56,15 +56,12 @@ export default function ApplicationsPage() {
           <h1 className="text-gradient text-center text-7xl leading-normal font-bold">
             Applications
           </h1>
-          <p className="body-font">
+          <p className="body-font mx-auto max-w-4xl text-center">
             I’m a recent Le Wagon graduate with hands-on experience in web
             development, where I built applications from scratch using Ruby on
             Rails, JavaScript, and React. Throughout the program, I developed
             strong problem-solving skills and learned to work with tools like
-            Git, SQL, and API integrations. With a solid understanding of
-            frontend and backend development, I’m excited to leverage these
-            skills to build efficient, scalable applications and tackle
-            real-world challenges in the tech industry.
+            Git, SQL, and API integrations. This way I got a solid understanding of both frontend and backend development. 
           </p>
           <a href="https://github.com/filexf" target="_blank">
             <div className="border-2px flex items-center gap-5 rounded-3xl border-slate-800 bg-gray-50 px-6 py-3 shadow-md hover:bg-gray-200">

@@ -26,57 +26,10 @@
   }
 }
 
-/* The 2nd, frame my latest works */
 
-
-#black-card{
-  background: #1f1f25;
-  color: white;
-  p{
-    color: white;
-  }
-  button{
-    border: solid white 2.19px;
-    background : #1f1f25;
-    color: white;
-  }
-  button:hover{
-    background: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
-    transition: ease-in-out 300ms;
-  }
-}
-
-
-/* The frames for all the sections : web, photos, designs, about, contact */
 /* These frames are handled in the section wrapper component */
 
 /* The third frame : web development */
-
-.animation-carrousel{
-  position: relative;
-  width: 100%;
-  height: 25rem;
-  gap: 30px;
-
-  .image-animated{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    inset: 0;
-    opacity: 1;
-  }
-
-  p{
-    /* z-index: 1; */
-    position: absolute;
-  }
-}
-
-.tymouet-animation{
-  animation: fadeIn 4s ease-in-out infinite alternate;
-}
 
 @keyframes fadeIn {
   from { opacity: 0; }

@@ -1,15 +1,12 @@
 import React from "react";
 
-export default function SectionWrapper({ children, title, icon }) {
+export default function SectionWrapper({ children, title }) {
   return (
-    <section className="flex justify-center items-start gap-[35px] self-stretch">
-      <div className="flex items-center gap-[35px]">
-        <img className="mt-[5px] w-[58px] h-[60px]" src={icon} alt="Icon" />
-      </div>
-      <div className="flex w-4/5 flex-col gap-[48px]">
-
-        <h2 className="self-stretch text-6xl font-semibold leading-[normal] text-gradient">{title}</h2>
-
+    <section className="flex justify-center">
+      <div className="flex w-4/5 flex-col justify-center gap-15">
+        <h2 className="text-gradient text-center text-6xl leading-[normal] font-semibold">
+          {title}
+        </h2>
         {children}
       </div>
     </section>

@@ -9,18 +9,18 @@ const Gallery = ({ title, images, text }) => {
   return (
     <div className="flex w-full justify-center pt-[40px] pb-[120px]">
       <div className="flex w-4/5 flex-col gap-[40px]">
-        <h2 className="font-main-sections">
+        <h2 className="text-center text-6xl font-bold leading-normal md:text-7xl text-gradient">
           {title}
         </h2>
-        <p className="body-font mb-20px">{text}</p>
+        <p className="body-font mx-auto max-w-4xl text-center">{text}</p>
 
-        <div className="photos-grid">
+        <div className="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] gap-[10px] overflow-hidden">
           {images.map((image, index) => (
             <img
               key={index}
               src={image.src}
               alt={image.title}
-              className="thumbnail"
+              className="thumbnail w-full [transition:all_0.2s] hover:scale-[0.97]"
               onClick={() => {
                 setCurrentIndex(index);
                 setOpen(true);

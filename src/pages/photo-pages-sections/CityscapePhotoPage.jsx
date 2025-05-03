@@ -17,8 +17,6 @@ import photo12 from "../../assets/images/Photos-cityscape/Photos HK chill-111.jp
 import photo13 from "../../assets/images/Photos-cityscape/Photos HK chill-112.jpg";
 import photo14 from "../../assets/images/Photos-cityscape/Photos HK chill-113.jpg";
 import photo15 from "../../assets/images/Photos-cityscape/Photos HK chill-114.jpg";
-import photo16 from "../../assets/images/Photos-cityscape/Photos HK chill-115.jpg";
-import photo17 from "../../assets/images/Photos-cityscape/Photos HK chill-125.jpg";
 import photo18 from "../../assets/images/Photos-cityscape/Photos HK chill-132.jpg";
 import photo19 from "../../assets/images/Photos-cityscape/Feu d'artifice-1.jpg";
 import photo20 from "../../assets/images/Photos-cityscape/Feu d'artifice-2.jpg";
@@ -44,16 +42,14 @@ const images = [
 
   { src: photo14, title: "Cityscape image" },
   { src: photo15, title: "Cityscape image" },
-  { src: photo17, title: "Cityscape image" },
   { src: photo8, title: "Cityscape image" },
-
   { src: photo18, title: "Cityscape image" },
+
   { src: photo19, title: "Cityscape image" },
   { src: photo20, title: "Cityscape image" },
-  { src: photo16, title: "Cityscape image" },
-
   { src: photo21, title: "Cityscape image" },
   { src: photo22, title: "Cityscape image" },
+
 ];
 
 export default function CityscapePhotoPage() {
