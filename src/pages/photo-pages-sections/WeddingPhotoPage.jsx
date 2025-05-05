@@ -7,7 +7,7 @@ import photo2 from "../../assets/images/Photos-wedding/Wedding-photos 2.jpg";
 import photo3 from "../../assets/images/Photos-wedding/Wedding-photos 3.jpg";
 import photo4 from "../../assets/images/Photos-wedding/Wedding-photos 4.jpg";
 import photo5 from "../../assets/images/Photos-wedding/Wedding-photos 5.jpg";
-import photo6 from "../../assets/images/Photos-wedding/Wedding-photos 6.jpg";
+
 import photo7 from "../../assets/images/Photos-wedding/Wedding-photos 7.jpg";
 import photo8 from "../../assets/images/Photos-wedding/Wedding-photos 8.jpg";
 import photo9 from "../../assets/images/Photos-wedding/Wedding-photos 9.jpg";
