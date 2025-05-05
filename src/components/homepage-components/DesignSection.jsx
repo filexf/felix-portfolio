@@ -2,7 +2,6 @@ import React from "react";
 import Photo1 from "../../assets/images/Couvertures magazines/Civilisation Mag.jpg";
 import Photo2 from "../../assets/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg";
 import SeeMore from "./SeeMore";
-import DesignIcon from "../../assets/icons/Main-icons/Designs-icon.svg";
 
 import { Link } from "react-router-dom";
 import Reveal from "../Reveal";
@@ -11,10 +10,10 @@ import SectionWrapper from "./SectionWrapper";
 export default function DesignSection() {
   return (
     <Reveal>
-      <SectionWrapper title={"Designs"} icon={DesignIcon}>
+      <SectionWrapper title={"Designs"}>
         <div className="flex flex-col gap-12">
           {/* Texte d'introduction */}
-          <p className="body-font max-w-6xl mx-auto text-center">
+          <p className="body-font mx-auto max-w-6xl text-center">
             I created two books showcasing five months of adventure in Southeast
             Asia, using my own photos and writing. Self-edited and sold over 500
             copies, this experience taught me consistency in design and how to
@@ -22,7 +21,7 @@ export default function DesignSection() {
           </p>
 
           {/* Grille de designs */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             <DesignCard photo={Photo1} />
             <DesignCard photo={Photo2} />
           </div>
@@ -39,21 +38,19 @@ function DesignCard({ photo }) {
     <Link to="/books">
       <div className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1">
         {/* Container d'image avec ratio fixe */}
-        <div className="aspect-[2/3] w-full h-[600px] ">
+        <div className="aspect-[2/3] h-[600px] w-full">
           <img
             src={photo}
             alt="Book Cover"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>
 
         {/* Overlay au hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent
-          opacity-0 group-hover:opacity-100 transition-opacity duration-300
-          flex items-center justify-center">
-          <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <div className="translate-y-4 transform transition-transform duration-300 group-hover:translate-y-0">
             <svg
-              className="w-16 h-16 text-white"
+              className="h-16 w-16 text-white"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

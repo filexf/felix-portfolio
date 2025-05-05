@@ -29,6 +29,7 @@ const PhotosPage = lazy(() => import("./pages/PhotosPage"));
 const ApplicationsPage = lazy(() => import("./pages/ApplicationsPage"));
 const BooksPage = lazy(() => import("./pages/BooksPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+
 const SportPhotoPage = lazy(() =>
   import("./pages/photo-pages-sections/SportPhotoPage")
 );
@@ -41,6 +42,12 @@ const CityscapePhotoPage = lazy(() =>
 const LandscapePhotoPage = lazy(() =>
   import("./pages/photo-pages-sections/LandscapePhotoPage")
 );
+const WeddingPhotoPage = lazy(() =>
+  import("./pages/photo-pages-sections/WeddingPhotoPage")
+);
+
+
+
 const CivilisationBook = lazy(() =>
   import("./pages/book-pages-sections/CivilisationBook")
 );
@@ -56,6 +63,7 @@ function App() {
     "/photos/mosaic",
     "/photos/cityscape",
     "/photos/landscape",
+    "/photos/wedding",
   ];
   const isPhotosPage = photoPaths.includes(location.pathname);
 
@@ -73,13 +81,17 @@ function App() {
       >
         <Routes>
           <Route path="/" element={<LandingPage />} />
+
           <Route path="/applications" element={<ApplicationsPage />} />
+
           <Route path="/photos" element={<PhotosPage />} />
           {/* Sub photo pages  */}
           <Route path="/photos/sport" element={<SportPhotoPage />} />
           <Route path="/photos/mosaic" element={<MosaicPhotoPage />} />
           <Route path="/photos/cityscape" element={<CityscapePhotoPage />} />
           <Route path="/photos/landscape" element={<LandscapePhotoPage />} />
+          <Route path="/photos/wedding" element={<WeddingPhotoPage />} />
+
           <Route path="/books" element={<BooksPage />} />
           {/* Sub book pages */}
           <Route path="/books/civilisation" element={<CivilisationBook />} />

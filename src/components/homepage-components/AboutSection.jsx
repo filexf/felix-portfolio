@@ -1,6 +1,5 @@
 import React from "react";
 import profileImage from "../../assets/images/Important-photos/photo-profil-V2.jpg";
-import aboutIcon from "../../assets/icons/Main-icons/About-icon.svg";
 
 import Reveal from "../Reveal";
 import SectionWrapper from "./SectionWrapper";
@@ -10,7 +9,7 @@ export default function AboutSection() {
   return (
     <>
       <Reveal>
-        <SectionWrapper title={"About me"} icon={aboutIcon}>
+        <SectionWrapper title={"About me"}>
           <div className="lg:width-[80%] lg:pl-12 mt-2 flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:justify-center lg:gap-10">
             <img
               className="mb-2 h-[400px] w-auto rounded-4xl shadow-md lg:h-[400px]"
@@ -40,7 +39,7 @@ export default function AboutSection() {
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 transform transition-transform duration-300 group-hover:translate-y-[2px]"
+                  className="h-6 w-6 transform transition-transform duration-300 group-hover:translate-y-[2px]"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >

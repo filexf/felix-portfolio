@@ -20,15 +20,14 @@ export default function LandingFrame() {
     <>
       <section className="relative flex animate-[fade-up_1s_ease-in-out] flex-col items-center gap-[40px]">
         <div className="absolute z-10 mt-[30px] ml-[140px] flex items-start justify-center gap-60 self-stretch pl-[20px]">
-          <div className="flex flex-col items-start gap-[16px] ">
+          <div className="flex flex-col items-start gap-[16px]">
             <motion.h1
-              className="text-[60px] leading-[normal] font-extrabold text-shadow-lg md:text-[90px] "
+              className="text-[60px] leading-[normal] font-extrabold text-shadow-lg md:text-[90px]"
               initial="hidden"
               whileInView={"reveal"}
               viewport={{ once: true }}
               transition={{ staggerChildren: 0.05 }}
             >
-              {" "}
               {splitTitle.map((char, index) => (
                 <motion.span
                   key={index}
@@ -61,7 +60,7 @@ export default function LandingFrame() {
           </div>
         </div>
 
-        <div className="absolute flex justify-center items-center bottom-[15%] z-20">
+        <div className="absolute bottom-[15%] z-20 flex items-center justify-center">
           <motion.div
             animate={{
               y: [0, -10, 0], // Moves up and down
@@ -76,7 +75,7 @@ export default function LandingFrame() {
           >
             <img
               src={ArrowLogo}
-              className="animate-[blinker_3s_ease-in-out_infinite] w-[80px] "
+              className="w-[80px] animate-[blinker_3s_ease-in-out_infinite]"
               alt="Downward Arrow"
             />
           </motion.div>

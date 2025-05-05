@@ -2,7 +2,6 @@ import React from "react";
 import SeeMore from "./SeeMore";
 import { Link } from "react-router-dom";
 
-import webDevLogo from "../../assets/icons/Main-icons/Web-development-icon.svg";
 import sportifyPicture from "../../assets/images/Photo-projets-dev/Photo Couverture Sportify.png";
 import tyMouetPicture from "../../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
 import GoldenGatePicture from "../../assets/images/Photo GGB/Photo-GGB-Squared.jpg"
@@ -14,7 +13,7 @@ import SectionWrapper from "./SectionWrapper";
 export default function WebDevelopmentSection() {
   return (
     <Reveal>
-      <SectionWrapper title={"Web development"} icon={webDevLogo}>
+      <SectionWrapper title={"Web development"}>
         <div className="flex flex-col gap-12">
           <p className="body-font max-w-3xl mx-auto text-center">
           I graduated from Le Wagon and built real-world applications from scratch, gaining hands-on experience in web development. With a background in photography, I bring a strong sense of design, now combined with solid programming skills.

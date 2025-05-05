@@ -56,7 +56,7 @@ export default function BooksPage() {
                         <img
                           src={loop}
                           alt="View more"
-                          className="h-4 w-4 transform transition-transform duration-300 group-hover:scale-110 invert"
+                          className="h-5 w-5 transform transition-transform duration-300 group-hover:scale-110 invert"
                         />
                       </div>
                     </Link>
@@ -72,7 +72,7 @@ export default function BooksPage() {
                         See the movie
                       </span>
                       <svg
-                        className="h-4 w-4 transform transition-transform duration-300 group-hover:scale-110"
+                        className="h-5 w-5 transform transition-transform duration-300 group-hover:scale-110"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -126,7 +126,7 @@ export default function BooksPage() {
                       <img
                         src={loop}
                         alt="View more"
-                        className="h-4 w-4 transform transition-transform duration-300 group-hover:scale-110 invert"
+                        className="h-5 w-5 transform transition-transform duration-300 group-hover:scale-110 invert"
                       />
                     </div>
                   </Link>

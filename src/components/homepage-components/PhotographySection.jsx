@@ -1,5 +1,4 @@
 import React from "react";
-import photoIcon from "../../assets/icons/Main-icons/Photography-icon.svg";
 import SeeMore from "./SeeMore";
 import { Link } from "react-router-dom";
 
@@ -14,9 +13,18 @@ import SectionWrapper from "./SectionWrapper";
 export default function PhotographySection() {
   const photos = [Photo1, Photo2, Photo3, Photo4];
 
+
+
+
+
+
+
+
+  
+
   return (
     <Reveal>
-      <SectionWrapper title={"Photography"} icon={photoIcon}>
+      <SectionWrapper title={"Photography"}>
         <div className="flex flex-col gap-12 items">
           {/* Texte d'introduction */}
           <p className="body-font max-w-3xl mx-auto text-center">

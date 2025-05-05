@@ -3,6 +3,7 @@ import Photo1 from "../assets/images/Photos-sport/Photo_dub_roofgap.jpg";
 import Photo2 from "../assets/images/Important-photos/Photos Bangkok V1-33.jpg";
 import Photo3 from "../assets/images/Important-photos/Photos HK chill-109.jpg";
 import Photo4 from "../assets/images/Important-photos/Tests photos USA-147.jpg";
+import Photo5 from "../assets/images/Photos-wedding/Wedding-photos 14.jpg"
 
 import iconLoupe from "../assets/icons/Main-icons/Loop-plus-icon.svg";
 
@@ -27,11 +28,12 @@ export default function PhotosPage() {
             </p>
 
             {/* Grille de photos */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 ">
               <PhotoCard title="Sport" photo={Photo1} />
               <PhotoCard title="Mosaic" photo={Photo2} />
               <PhotoCard title="Cityscape" photo={Photo3} />
               <PhotoCard title="Landscape" photo={Photo4} />
+              <PhotoCard title="Wedding" photo={Photo5} />
             </div>
           </Reveal>
         </div>

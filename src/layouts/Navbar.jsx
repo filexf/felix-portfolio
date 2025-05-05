@@ -33,7 +33,7 @@ export default function Navbar() {
             </div>
             {/*-------------------- The new burger menu  --------------------*/}
             {/* <div class="hamburger"> </div> */}
-            <div className="relative">
+            <div className="relative flex items-center">
               {/* Checkbox cachée avec `peer` */}
               <input type="checkbox" id="check" className="peer hidden" />
 
@@ -46,7 +46,7 @@ export default function Navbar() {
               </label>
 
               {/* Menu conditionnellement affiché */}
-              <div className="absolute top-[126%] right-[-27%] hidden w-[200px] bg-[#232425] peer-checked:block">
+              <div className="absolute top-[142%] right-[-27%] hidden w-[200px] bg-[#232425] peer-checked:block">
                 <a
                   href="#"
                   className="flex justify-center px-6 py-4 font-[raleway] font-extrabold text-[#fff] hover:scale-[1.01] hover:text-[#b2b2b3] hover:[transition:0.2s_ease-in-out]"

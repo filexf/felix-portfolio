@@ -4,19 +4,18 @@
 
 @keyframes fade-up {
   0% {
-  opacity: 0.3;
-  transform: translateY (30px) scale(0.9);
+    opacity: 0.3;
+    transform: translateY (30px) scale(0.9);
   }
-  100%{
-  opacity: 1;
-  transform: translateY(0px) scale(1);
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
   }
-};
+}
 
-
-/* 1st frame on the left */
 
 /* This is for animating the arrow blinking, cta to scroll down*/
+
 @keyframes blinker {
   0% {
     opacity: 1;
@@ -26,11 +25,10 @@
   }
 }
 
-
-/* These frames are handled in the section wrapper component */
-
 /* The third frame : web development */
 
 @keyframes fadeIn {
-  from { opacity: 0; }
+  from {
+    opacity: 0;
+  }
 }

@@ -8,7 +8,7 @@ export default function Footer({ noPadding }) {
   return (
     // To make sure that there isn't the padding on the bottom of the page
     <div className={noPadding ? undefined : "bg-transparent pt-[15vh]"}>
-      <div className="bottom-0 flex h-[20vh] w-full flex-col items-center justify-center gap-[20px] bg-[rgb(47,_47,_47)]">
+      <div className="bottom-0 flex h-[20vh] w-full flex-col items-center justify-center gap-[20px] bg-[#2e2e32]">
         <ul className="flex gap-[25px]">
           <SocialIcon icon={githubIcon} link="https://github.com/filexf" />
           <SocialIcon
