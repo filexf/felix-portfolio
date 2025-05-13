@@ -21,6 +21,6 @@
 
 @layer components {
   .text-gradient{
-    @apply bg-gradient-to-tr from-zinc-600 to-sky-700 bg-clip-text text-transparent text-shadow-sm
+    @apply bg-gradient-to-tr from-slate-500 via-sky-700 to-sky-600 bg-clip-text text-transparent text-shadow-sm
   }
 }

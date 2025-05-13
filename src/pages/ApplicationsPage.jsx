@@ -15,6 +15,7 @@ import GitIcon from "../assets/icons/Tech stack icons/Git-icon.svg";
 import GithubIcon from "../assets/icons/Tech stack icons/Github-icon.svg";
 import Bootstrap from "../assets/icons/Tech stack icons/Bootstrap-icon.svg";
 import ReactIcon from "../assets/icons/Tech stack icons/React.svg";
+import TailwindIcon from "../assets/icons/Tech stack icons/Tailwind-icon.svg";
 
 import Reveal from "../components/Reveal";
 
@@ -25,6 +26,7 @@ import PhotoTyMouet from "../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg"
 const techStack = [
   { name: "React", icon: ReactIcon },
   { name: "Ruby on Rails", icon: RailIcon },
+  { name: "Tailwind", icon: TailwindIcon },
   { name: "Ruby", icon: Ruby },
   { name: "JavaScript", icon: JSIcon },
   { name: "PostgreSQL", icon: PostgreIcon },
@@ -42,7 +44,7 @@ function TechStackIcon({ name, icon }) {
     <>
       <div className="flex gap-4 items-center border-2px rounded-3xl border-slate-800 bg-gray-50 px-6 py-2 shadow-md hover:bg-gray-200 mb-1">
         <p className="font-bold text-gradient">{name} </p>
-        <img src={icon} alt={name} className="w-9" />
+        <img src={icon} alt={name} className="w-10 h-8" />
       </div>
     </>
   );
@@ -61,7 +63,7 @@ export default function ApplicationsPage() {
             development, where I built applications from scratch using Ruby on
             Rails, JavaScript, and React. Throughout the program, I developed
             strong problem-solving skills and learned to work with tools like
-            Git, SQL, and API integrations. This way I got a solid understanding of both frontend and backend development. 
+            Git, SQL, and API integrations. This way I got a solid understanding of both frontend and backend development.
           </p>
           <a href="https://github.com/filexf" target="_blank">
             <div className="border-2px flex items-center gap-5 rounded-3xl border-slate-800 bg-gray-50 px-6 py-3 shadow-md hover:bg-gray-200">

@@ -11,6 +11,7 @@ import galleryIcon from "../../assets/icons/Main-icons/Gallery-icon.svg";
 import sportifyPicture from "../../assets/images/Photo-projets-dev/Photo Couverture Sportify.png";
 import tyMouetPicture from "../../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
 import portfolioPicture from "../../assets/images/Photo GGB/Photo-GGB-Squared.jpg";
+import gisProject from "../../assets/images/Photo-projets-dev/Web Gis Cover Picture.jpg"
 
 // Screenshots Sportify
 import screenshotSportify1 from "../../assets/images/Screenshots-Sportify/Screenshots-Sportify-1.jpg";
@@ -32,6 +33,11 @@ import screenshotTyMouet6 from "../../assets/images/Screenshots-Tymouet/Tymouet-
 import screenshotTyMouet7 from "../../assets/images/Screenshots-Tymouet/Tymouet-screenshot-7.jpeg";
 import screenshotTyMouet8 from "../../assets/images/Screenshots-Tymouet/Tymouet-screenshot-8.jpeg";
 import screenshotTyMouet9 from "../../assets/images/Screenshots-Tymouet/Tymouet-screenshot-9.jpeg";
+
+// Screenshots GIS Project
+import screenshotGisProject1 from "../../assets/images/Screenshots-GIS-Project/WebGIS-project-screenshot-1.jpg";
+import screenshotGisProject2 from "../../assets/images/Screenshots-GIS-Project/WebGIS-project-screenshot-2.jpg";
+
 
 import Reveal from "../Reveal";
 
@@ -56,6 +62,27 @@ export const projects = [
     ],
   },
   {
+    title: "GIS PROJECT",
+    description:
+      "This project is a web GIS application that allows users to visualize and interact with geospatial data. It was built using React, Leaflet, and Mapbox, and it includes features such as map layers, markers, and popups. The application is designed to be user-friendly and responsive.",
+    image: gisProject,
+    githubLink: "https://github.com/filexf/webGIS-app", // Add actual link if available
+    websiteLink: "https://data-visualizer-mocha.vercel.app/",
+    images: [
+      { src: screenshotGisProject1, alt: "Screenshot 1" },
+      { src: screenshotGisProject2, alt: "Screenshot 2" },
+    ],
+
+  },
+  {
+    title: "PORTFOLIO",
+    description:
+      "This portfolio was built using React. I used React Router to implement several pages in order to host it on Github Pages and I used Framer Motion for animations. It showcases my projects, skills, and experience. I aimed for a clean and user-friendly design that I made myself.",
+    image: portfolioPicture,
+    githubLink: "https://github.com/filexf/felix-portfolio",
+    websiteLink: "https://filexf.github.io/felix-portfolio/",
+  },
+  {
     title: "TY MOUET",
     description:
       "Ty Mouet was our first project at Le Wagon, a seagull-themed Airbnb clone built with Ruby on Rails, PostgreSQL, and AJAX. We handled a many-to-many database, deployed on Heroku, and worked in an agile team. Key features included booking logic, user authentication, and geolocation-based dynamic search.",
@@ -73,14 +100,6 @@ export const projects = [
       { src: screenshotTyMouet8, alt: "Screenshot 8" },
       { src: screenshotTyMouet9, alt: "Screenshot 9" },
     ],
-  },
-  {
-    title: "PORTFOLIO",
-    description:
-      "This portfolio was built using React. I used React Router to implement several pages in order to host it on Github Pages and I used Framer Motion for animations. It showcases my projects, skills, and experience. I aimed for a clean and user-friendly design that I made myself.",
-    image: portfolioPicture,
-    githubLink: "https://github.com/filexf/felix-portfolio",
-    websiteLink: "https://filexf.github.io/felix-portfolio/",
   },
 ];
 
