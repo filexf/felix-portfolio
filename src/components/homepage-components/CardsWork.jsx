@@ -7,8 +7,9 @@ export default function CardsWork() {
   return (
     <>
       <Reveal>
+
         <div
-          className="mt-14 flex w-full flex-col items-center justify-center gap-8"
+          className="mt-14 flex flex-col items-center justify-center gap-8"
           id="latest-works"
         >
           <h2 className="text-gradient text-center text-7xl leading-[normal] font-bold">
@@ -35,6 +36,7 @@ export default function CardsWork() {
             </div>
           </Reveal>
         </div>
+
       </Reveal>
     </>
   );
