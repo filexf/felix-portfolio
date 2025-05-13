@@ -17,7 +17,7 @@ export default function AboutSection() {
               alt="Profile Image"
             />
             <div className="mt-4 flex flex-col items-center justify-center gap-10">
-              <p className="body-font max-width-md w-[80%] text-start lg:text-left">
+              <p className="body-font max-width-md w-[80%] text-start lg:text-left max-w-6xl">
                 I’m a creative web developer with a strong background in
                 photography and design. For years, I’ve loved exploring ways to
                 bring ideas to life through visuals and storytelling, honing my

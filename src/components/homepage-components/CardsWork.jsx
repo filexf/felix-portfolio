@@ -45,7 +45,7 @@ export default function CardsWork() {
 const Card = ({ icon, title, text, path }) => {
   return (
     <Link to={path}>
-      <div className="group mx-4 my-2 flex h-auto w-72 flex-col items-center justify-center gap-8 rounded-3xl border border-gray-200 bg-gradient-to-br from-white via-gray-50 to-gray-100 p-5 shadow-md backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gradient-to-br hover:from-gray-50 hover:via-white hover:to-gray-100 hover:shadow-xl hover:shadow-gray-200/50 dark:border-gray-800 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 dark:hover:from-gray-800 dark:hover:via-gray-900 dark:hover:to-gray-800">
+      <div className="group mx-4 my-3 flex h-auto w-72 flex-col items-center justify-center gap-8 rounded-3xl border border-gray-200 bg-gradient-to-br from-white via-gray-50 to-gray-100 p-5 shadow-md backdrop-blur-sm transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gradient-to-br hover:from-gray-50 hover:via-white hover:to-gray-100">
         <div className="rounded-full bg-gray-100 p-2.5 transition-colors duration-300 group-hover:bg-gray-200 dark:bg-gray-800">
           <img
             className="h-12 w-12 transition-transform duration-300 group-hover:scale-110"

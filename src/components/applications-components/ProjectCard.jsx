@@ -126,7 +126,7 @@ export function ProjectCard({
   return (
     <>
       <Reveal>
-        <div className="mb-2 flex flex-col rounded-2xl border-1 border-gray-200 bg-slate-50 shadow-md hover:bg-gray-100 md:flex md:items-center lg:flex-row dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+        <div className="mb-2 flex flex-col rounded-2xl border-1 border-gray-200 bg-slate-50 shadow-md hover:bg-gray-100 hover:-translate-y-2 transition-all duration-300 ease-in-out md:flex md:items-center lg:flex-row dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-2">
           <img
             className="h-64 w-full rounded-2xl object-cover md:flex md:h-96 md:w-96 md:justify-center"
             src={image}

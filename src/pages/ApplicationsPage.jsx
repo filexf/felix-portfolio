@@ -42,7 +42,7 @@ const techStack = [
 function TechStackIcon({ name, icon }) {
   return (
     <>
-      <div className="flex gap-4 items-center border-2px rounded-3xl border-slate-800 bg-gray-50 px-6 py-2 shadow-md hover:bg-gray-200 mb-1">
+      <div className="flex gap-4 items-center border-2px rounded-3xl border-slate-800 bg-gray-50 px-6 py-2 shadow-md hover:bg-gray-200 mb-1 hover:-translate-y-1 transition-all duration-300 ease-in-out">
         <p className="font-bold text-gradient">{name} </p>
         <img src={icon} alt={name} className="w-10 h-8" />
       </div>
@@ -66,7 +66,7 @@ export default function ApplicationsPage() {
             Git, SQL, and API integrations. This way I got a solid understanding of both frontend and backend development.
           </p>
           <a href="https://github.com/filexf" target="_blank">
-            <div className="border-2px flex items-center gap-5 rounded-3xl border-slate-800 bg-gray-50 px-6 py-3 shadow-md hover:bg-gray-200">
+            <div className="border-2px flex items-center gap-5 rounded-3xl border-slate-800 bg-gray-50 px-6 py-3 shadow-md hover:bg-gray-200 hover:-translate-y-1 transition-all duration-300 ease-in-out">
               <p className="text-gradient text-bold text-xl">
                 My GitHub account
               </p>
