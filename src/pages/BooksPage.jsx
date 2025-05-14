@@ -63,14 +63,17 @@ function BookCard({
   filmLink,
   darkMode,
 }) {
+  // On définit les classes de mise en page en fonction de reverseLayout
+  const layoutClasses = reverseLayout
+    ? "vertical-animation my-3 flex flex-col lg:flex-row-reverse w-full items-center justify-center gap-8 rounded-2xl border-1 border-gray-200 bg-slate-50 p-4 shadow-lg transition-all duration-300 hover:bg-gray-100 sm:p-6 md:gap-[64px]"
+    : "vertical-animation my-3 flex flex-col lg:flex-row w-full items-center justify-center gap-8 rounded-2xl border-1 border-gray-200 bg-slate-50 p-4 shadow-lg transition-all duration-300 hover:bg-gray-100 sm:p-6 md:gap-[64px]";
+
   return (
     <Reveal>
-      <div
-        className={`vertical-animation my-3 flex flex-col lg:flex-${reverseLayout ? "row-reverse" : "row"} w-full items-center justify-center gap-8 rounded-2xl border-1 border-gray-200 bg-slate-50 p-4 shadow-lg transition-all duration-300 hover:bg-gray-100 sm:p-6 md:gap-[64px]`}
-      >
+      <div className={layoutClasses}>
         {/* Le contenu texte */}
         <div className="flex w-full flex-col items-center justify-center gap-5 px-2 sm:gap-7 sm:px-4 lg:w-1/2">
-          <h2 className="text-gradient pt-2 text-center text-3xl font-bold sm:pt-5 sm:text-5xl">
+          <h2 className="text-gradient pt-2 text-center text-3xl font-bold sm:pt-5 sm:text-5xl py-1">
             {title}
           </h2>
           <p

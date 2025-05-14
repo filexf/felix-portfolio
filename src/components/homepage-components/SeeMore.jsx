@@ -8,8 +8,8 @@ export default function SeeMore({ projectLink }) {
 
     <Link to={projectLink}>
       <div className="group inline-flex items-center gap-3 px-5 py-2
-        border border-gray-300 rounded-full
-          
+        border border-gray-300 rounded-full bg-slate-50
+
         transition-all duration-300 ease-in-out">
         <span className="text-sm font-medium tracking-wide">
           See more
