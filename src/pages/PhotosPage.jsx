@@ -45,7 +45,7 @@ export default function PhotosPage() {
 function PhotoCard({ photo, title }) {
   return (
     <Link to={`/photos/${title.toLowerCase()}`}>
-      <div className="group flex flex-col bg-white/5 rounded-2xl overflow-hidden border border-gray-200/10 hover:bg-white/10 transition-all duration-300 shadow-lg mb-4">
+      <div className="vertical-animation my-3 group flex flex-col bg-white/5 rounded-2xl overflow-hidden border border-gray-200/10 hover:bg-white/10 transition-all duration-300 shadow-lg">
 
         <div className="relative overflow-hidden">
           <div className="h-[500px] w-full">
@@ -74,7 +74,7 @@ function PhotoCard({ photo, title }) {
         </div>
 
         {/* Titre en bas de carte */}
-        <div className="p-4 bg-gray-50">
+        <div className="p-4 bg-slate-50">
           <h3 className="text-3xl font-bold text-center text-gradient">
             {title}
           </h3>

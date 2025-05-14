@@ -24,11 +24,3 @@
     opacity: 0;
   }
 }
-
-/* The third frame : web development */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-}

@@ -1,17 +1,18 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css"; // Opt
+import { useTheme } from "../../context/ThemeContext"; // Import du contexte de thème
 
 // Icons & pictures
-import githubIcon from "../../assets/icons/Tech stack icons/Github-icon.svg";
-import websiteIcon from "../../assets/icons/Main-icons/Website-icon.svg";
 import galleryIcon from "../../assets/icons/Main-icons/Gallery-icon.svg";
+import githubIconWhite from "../../assets/icons/Main-icons/Github-icon-white.svg"; // Icône GitHub blanche
+import websiteIcon from "../../assets/icons/Main-icons/Website-icon.svg";
+import githubIcon from "../../assets/icons/Tech stack icons/Github-icon.svg";
 
+import portfolioPicture from "../../assets/images/Photo GGB/Photo-GGB-Squared.jpg";
 import sportifyPicture from "../../assets/images/Photo-projets-dev/Photo Couverture Sportify.png";
 import tyMouetPicture from "../../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
-import portfolioPicture from "../../assets/images/Photo GGB/Photo-GGB-Squared.jpg";
-import gisProject from "../../assets/images/Photo-projets-dev/Web Gis Cover Picture.jpg"
+import gisProject from "../../assets/images/Photo-projets-dev/Web Gis Cover Picture.jpg";
 
 // Screenshots Sportify
 import screenshotSportify1 from "../../assets/images/Screenshots-Sportify/Screenshots-Sportify-1.jpg";
@@ -37,7 +38,6 @@ import screenshotTyMouet9 from "../../assets/images/Screenshots-Tymouet/Tymouet-
 // Screenshots GIS Project
 import screenshotGisProject1 from "../../assets/images/Screenshots-GIS-Project/WebGIS-project-screenshot-1.jpg";
 import screenshotGisProject2 from "../../assets/images/Screenshots-GIS-Project/WebGIS-project-screenshot-2.jpg";
-
 
 import Reveal from "../Reveal";
 
@@ -72,7 +72,6 @@ export const projects = [
       { src: screenshotGisProject1, alt: "Screenshot 1" },
       { src: screenshotGisProject2, alt: "Screenshot 2" },
     ],
-
   },
   {
     title: "PORTFOLIO",
@@ -113,6 +112,7 @@ export function ProjectCard({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { darkMode } = useTheme(); // Récupération du mode sombre depuis le contexte
 
   const openLightbox = () => {
     setCurrentImageIndex(0);
@@ -126,7 +126,7 @@ export function ProjectCard({
   return (
     <>
       <Reveal>
-        <div className="mb-2 flex flex-col rounded-2xl border-1 border-gray-200 bg-slate-50 shadow-md hover:bg-gray-100 hover:-translate-y-2 transition-all duration-300 ease-in-out md:flex md:items-center lg:flex-row dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 my-2">
+        <div className="my-2 mb-2 flex flex-col rounded-2xl border-1 border-gray-200 bg-slate-50 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-100 md:flex md:items-center lg:flex-row">
           <img
             className="h-64 w-full rounded-2xl object-cover md:flex md:h-96 md:w-96 md:justify-center"
             src={image}
@@ -134,17 +134,17 @@ export function ProjectCard({
           />
 
           <div className="flex flex-col gap-4 p-4 leading-normal md:p-7">
-            <h5 className="text-gradient mb-2 text-center text-2xl font-bold tracking-tight md:text-4xl dark:text-white">
+            <h5 className="text-gradient mb-2 text-center text-2xl font-bold tracking-tight md:text-4xl">
               {title}
             </h5>
 
-            <p className="mb-3 p-2 text-center text-sm font-normal text-gray-700 md:p-3 md:text-base dark:text-gray-400">
+            <p className="mb-3 p-2 text-center text-sm font-normal md:p-3 md:text-base">
               {description}
             </p>
             <div className="flex justify-center gap-5 md:gap-10">
               <a href={githubLink} target="_blank" rel="noopener noreferrer">
                 <img
-                  src={githubIcon}
+                  src={darkMode ? githubIconWhite : githubIcon}
                   alt="GitHub"
                   className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15"
                 />
@@ -154,7 +154,7 @@ export function ProjectCard({
                   <img
                     src={galleryIcon}
                     alt="Gallery Icon"
-                    className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15 "
+                    className={`h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15 ${darkMode ? "invert filter" : ""}`}
                   />
                 </div>
               )}
@@ -173,7 +173,7 @@ export function ProjectCard({
               {websiteLink && (
                 <a href={websiteLink} target="_blank">
                   <img
-                    className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15 "
+                    className={`h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15 ${darkMode ? "invert filter" : ""}`}
                     src={websiteIcon}
                     alt="Website"
                   />

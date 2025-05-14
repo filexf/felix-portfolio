@@ -22,7 +22,7 @@ export default function LandingFrame() {
         <div className="absolute z-10 mt-[30px] ml-[140px] flex items-start justify-center gap-60 self-stretch pl-[20px]">
           <div className="flex flex-col items-start gap-[16px]">
             <motion.h1
-              className="text-[60px] leading-[normal] font-extrabold text-shadow-lg md:text-[90px]"
+              className="text-[4rem] leading-[normal] font-extrabold text-shadow-lg md:text-[90px]"
               initial="hidden"
               whileInView={"reveal"}
               viewport={{ once: true }}

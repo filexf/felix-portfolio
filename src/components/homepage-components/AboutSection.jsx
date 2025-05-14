@@ -32,7 +32,7 @@ export default function AboutSection() {
               <a
                 href={Resume}
                 download
-                className="group inline-flex items-center gap-3 rounded-full border-2 border-gray-400 px-5 py-2 text-gray-600 transition-all duration-300 ease-in-out hover:border-gray-900 hover:text-gray-900"
+                className="group inline-flex items-center gap-3 rounded-full border-2 border-gray-400 px-5 py-2  transition-all duration-300 ease-in-out hover:border-gray-900 "
               >
                 <span className="text-sm font-medium tracking-wide">
                   My resume

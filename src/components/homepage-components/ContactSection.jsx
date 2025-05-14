@@ -19,7 +19,7 @@ export default function ContactSection() {
           >
             <div className="flex flex-col gap-6 md:flex-row">
               <input
-                className="w-full rounded-xl border border-gray-300 bg-white/50 p-3 text-gray-600 placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ease-in-out focus:border-gray-900 focus:ring-0 focus:outline-none dark:border-gray-700 dark:bg-gray-800/50 dark:text-gray-300 shadow-md"
+                className="w-full rounded-xl border border-gray-300 bg-white/50 p-3 text-gray-600 placeholder-slate-300 backdrop-blur-sm transition-all duration-300 ease-in-out focus:border-gray-900 focus:ring-0 focus:outline-none shadow-md"
                 type="text"
                 id="name"
                 name="name"
@@ -27,7 +27,7 @@ export default function ContactSection() {
                 required
               />
               <input
-                className="w-full rounded-xl border border-gray-300 bg-white/50 p-3 text-gray-600 placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ease-in-out focus:border-gray-900 focus:ring-0 focus:outline-none dark:border-gray-700 dark:bg-gray-800/50 dark:text-gray-300 shadow-md"
+                className="w-full rounded-xl border border-gray-300 bg-white/50 p-3 text-gray-600 placeholder-slate-300 backdrop-blur-sm transition-all duration-300 ease-in-out focus:border-gray-900 focus:ring-0 focus:outline-none  shadow-md"
                 type="email"
                 id="email"
                 name="email"
@@ -37,7 +37,7 @@ export default function ContactSection() {
             </div>
 
             <textarea
-              className="w-full rounded-xl border border-gray-300 bg-white/50 p-3 text-gray-600 placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ease-in-out focus:border-gray-900 focus:ring-0 focus:outline-none dark:border-gray-700 dark:bg-gray-800/50 dark:text-gray-300 shadow-md"
+              className="w-full rounded-xl border border-gray-300 bg-white/50 p-3 text-gray-600 placeholder-slate-300 backdrop-blur-sm transition-all duration-300 ease-in-out focus:border-gray-900 focus:ring-0 focus:outline-none shadow-md"
               id="message"
               name="message"
               rows={5}
@@ -48,7 +48,7 @@ export default function ContactSection() {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="group inline-flex items-center gap-3 self-start rounded-full border border-gray-300 px-5 py-2 text-gray-600 transition-all duration-300 ease-in-out hover:border-gray-900 hover:text-gray-900 shadow-md mb-2"
+                className="group inline-flex items-center gap-3 self-start rounded-full border border-gray-300 px-5 py-2 transition-all duration-300 ease-in-out hover:border-gray-900  shadow-md mb-2"
               >
                 <span className="text-sm font-medium tracking-wide">
                   Send message

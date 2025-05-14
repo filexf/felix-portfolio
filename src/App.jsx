@@ -1,9 +1,8 @@
 import "./styles/index.css";
 
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./layouts/Footer";
 import Navbar from "./layouts/Navbar";
-import { useLocation } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage";
 // import ApplicationsPage from "./pages/ApplicationsPage";
@@ -22,6 +21,7 @@ import LandingPage from "./pages/LandingPage";
 // import WizzyEnAsieBook from "./pages/book-pages-sections/WizzyEnAsieBook";
 
 import ScrollToTop from "./components/ScrollToTop";
+import { ThemeProvider } from "./context/ThemeContext";
 
 import { lazy, Suspense } from "react";
 
@@ -30,29 +30,27 @@ const ApplicationsPage = lazy(() => import("./pages/ApplicationsPage"));
 const BooksPage = lazy(() => import("./pages/BooksPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
-const SportPhotoPage = lazy(() =>
-  import("./pages/photo-pages-sections/SportPhotoPage")
+const SportPhotoPage = lazy(
+  () => import("./pages/photo-pages-sections/SportPhotoPage"),
 );
-const MosaicPhotoPage = lazy(() =>
-  import("./pages/photo-pages-sections/MosaicPhotoPage")
+const MosaicPhotoPage = lazy(
+  () => import("./pages/photo-pages-sections/MosaicPhotoPage"),
 );
-const CityscapePhotoPage = lazy(() =>
-  import("./pages/photo-pages-sections/CityscapePhotoPage")
+const CityscapePhotoPage = lazy(
+  () => import("./pages/photo-pages-sections/CityscapePhotoPage"),
 );
-const LandscapePhotoPage = lazy(() =>
-  import("./pages/photo-pages-sections/LandscapePhotoPage")
+const LandscapePhotoPage = lazy(
+  () => import("./pages/photo-pages-sections/LandscapePhotoPage"),
 );
-const WeddingPhotoPage = lazy(() =>
-  import("./pages/photo-pages-sections/WeddingPhotoPage")
+const WeddingPhotoPage = lazy(
+  () => import("./pages/photo-pages-sections/WeddingPhotoPage"),
 );
 
-
-
-const CivilisationBook = lazy(() =>
-  import("./pages/book-pages-sections/CivilisationBook")
+const CivilisationBook = lazy(
+  () => import("./pages/book-pages-sections/CivilisationBook"),
 );
-const WizzyEnAsieBook = lazy(() =>
-  import("./pages/book-pages-sections/WizzyEnAsieBook")
+const WizzyEnAsieBook = lazy(
+  () => import("./pages/book-pages-sections/WizzyEnAsieBook"),
 );
 
 function App() {
@@ -68,14 +66,14 @@ function App() {
   const isPhotosPage = photoPaths.includes(location.pathname);
 
   return (
-    <>
+    <ThemeProvider>
       <Navbar />
       <ScrollToTop />
       <Suspense
         fallback={
-          <div className="flex items-center justify-center min-h-screen bg-gray-100">
+          <div className="flex min-h-screen items-center justify-center bg-gray-100">
             <p className="mr-6">Processing...</p>
-            <div className="h-16 w-16 border-5 border-b-zinc-900 border-t-transparent rounded-full animate-spin"></div>
+            <div className="h-16 w-16 animate-spin rounded-full border-5 border-t-transparent border-b-zinc-900"></div>
           </div>
         }
       >
@@ -101,7 +99,7 @@ function App() {
         </Routes>
       </Suspense>
       <Footer noPadding={isPhotosPage} />
-    </>
+    </ThemeProvider>
   );
 }
 
