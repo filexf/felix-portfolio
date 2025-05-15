@@ -1,0 +1,35 @@
+{
+  "navbar": {
+    "home": "Home",
+    "applications": "Applications",
+    "photos": "Photos",
+    "books": "Books"
+  },
+  "landing": {
+    "title": "Félix Orain",
+    "profession": "Developer and photographer"
+  },
+  "portfolio": {
+    "title": "My portfolio",
+    "intro": "After four years as a freelance photographer, I ventured into web development to blend my artistic vision with technology, creating unique digital experiences. <br />Dive into my projects and see what I’ve been working on!"
+  },
+  "about": {
+    "title": "About me",
+    "resume": "My resume"
+  },
+  "readMore": "Read more",
+  "seeMore": "See more",
+  "contact": {
+    "title": "Contact me",
+    "text": "Feel free to contact me for any project at : felix.orain@gmail.com",
+    "send": "Send message"
+  },
+  "notFound": {
+    "title": "404 - Page not found",
+    "subtitle": "You may have gotten lost, go back to the main page:",
+    "back": "Back home"
+  },
+  "footer": {
+    "copyright": "Copyright Felix Orain © All rights reserved."
+  }
+}

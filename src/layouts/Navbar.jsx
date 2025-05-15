@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import logoSite from "../assets/icons/Main-icons/Logo-website-icon.svg";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import ThemeToggle from "../components/ThemeToggle";
 
 import { Link } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
+import { t } from "../i18n/i18n";
 
 export default function Navbar() {
   const { darkMode } = useTheme();
-  const [currentLanguage, setCurrentLanguage] = useState("en");
+  const { language, setLanguage } = useLanguage();
 
   const handleLanguageChange = (lang) => {
-    setCurrentLanguage(lang);
-    // Ici, nous ajouterons plus tard la logique pour changer la langue avec i18n
-    console.log(`Langue changée à: ${lang}`);
+    setLanguage(lang);
   };
 
   return (
@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="w-[85%]">
           <div className="flex flex-row justify-between gap-[20px] p-[10px]">
             <div className="flex flex-row items-center gap-[25px]">
-              <div className="flex size-[2rem] md:size-[2.4rem] transform items-center transition hover:scale-102">
+              <div className="flex size-[2rem] transform items-center transition hover:scale-102 md:size-[2.4rem]">
                 <Link to="/">
                   <img
                     src={logoSite}
@@ -34,18 +34,20 @@ export default function Navbar() {
                   />
                 </Link>
               </div>
-              <ul className="flex flex-row items-center gap-[18px] md:gap-[25px] text-xl md:text-2xl font-medium">
+              <ul className="flex flex-row items-center gap-[18px] text-xl font-medium md:gap-[25px] md:text-2xl">
                 <li className="transition-opacity hover:opacity-70">
-                  <Link to="/">Home</Link>
+                  <Link to="/">{t("navbar.home", language)}</Link>
                 </li>
                 <li className="transition-opacity hover:opacity-70">
-                  <Link to="/applications">Applications</Link>
+                  <Link to="/applications">
+                    {t("navbar.applications", language)}
+                  </Link>
                 </li>
                 <li className="transition-opacity hover:opacity-70">
-                  <Link to="/photos">Photos</Link>
+                  <Link to="/photos">{t("navbar.photos", language)}</Link>
                 </li>
                 <li className="transition-opacity hover:opacity-70">
-                  <Link to="/books">Books</Link>
+                  <Link to="/books">{t("navbar.books", language)}</Link>
                 </li>
               </ul>
             </div>
@@ -56,7 +58,7 @@ export default function Navbar() {
 
               {/* Nouveau sélecteur de langue */}
               <LanguageSwitcher
-                currentLanguage={currentLanguage}
+                currentLanguage={language}
                 onLanguageChange={handleLanguageChange}
               />
             </div>

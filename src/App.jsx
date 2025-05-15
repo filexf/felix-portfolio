@@ -21,6 +21,7 @@ import LandingPage from "./pages/LandingPage";
 // import WizzyEnAsieBook from "./pages/book-pages-sections/WizzyEnAsieBook";
 
 import ScrollToTop from "./components/ScrollToTop";
+import { LanguageProvider } from "./context/LanguageContext";
 import { ThemeProvider } from "./context/ThemeContext";
 
 import { lazy, Suspense } from "react";
@@ -67,38 +68,40 @@ function App() {
 
   return (
     <ThemeProvider>
-      <Navbar />
-      <ScrollToTop />
-      <Suspense
-        fallback={
-          <div className="flex min-h-screen items-center justify-center bg-gray-100">
-            <p className="mr-6">Processing...</p>
-            <div className="h-16 w-16 animate-spin rounded-full border-5 border-t-transparent border-b-zinc-900"></div>
-          </div>
-        }
-      >
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
+      <LanguageProvider>
+        <Navbar />
+        <ScrollToTop />
+        <Suspense
+          fallback={
+            <div className="flex min-h-screen items-center justify-center bg-gray-100">
+              <p className="mr-6">Processing...</p>
+              <div className="h-16 w-16 animate-spin rounded-full border-5 border-t-transparent border-b-zinc-900"></div>
+            </div>
+          }
+        >
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
 
-          <Route path="/applications" element={<ApplicationsPage />} />
+            <Route path="/applications" element={<ApplicationsPage />} />
 
-          <Route path="/photos" element={<PhotosPage />} />
-          {/* Sub photo pages  */}
-          <Route path="/photos/sport" element={<SportPhotoPage />} />
-          <Route path="/photos/mosaic" element={<MosaicPhotoPage />} />
-          <Route path="/photos/cityscape" element={<CityscapePhotoPage />} />
-          <Route path="/photos/landscape" element={<LandscapePhotoPage />} />
-          <Route path="/photos/wedding" element={<WeddingPhotoPage />} />
+            <Route path="/photos" element={<PhotosPage />} />
+            {/* Sub photo pages  */}
+            <Route path="/photos/sport" element={<SportPhotoPage />} />
+            <Route path="/photos/mosaic" element={<MosaicPhotoPage />} />
+            <Route path="/photos/cityscape" element={<CityscapePhotoPage />} />
+            <Route path="/photos/landscape" element={<LandscapePhotoPage />} />
+            <Route path="/photos/wedding" element={<WeddingPhotoPage />} />
 
-          <Route path="/books" element={<BooksPage />} />
-          {/* Sub book pages */}
-          <Route path="/books/civilisation" element={<CivilisationBook />} />
-          <Route path="/books/wizzyenasie" element={<WizzyEnAsieBook />} />
+            <Route path="/books" element={<BooksPage />} />
+            {/* Sub book pages */}
+            <Route path="/books/civilisation" element={<CivilisationBook />} />
+            <Route path="/books/wizzyenasie" element={<WizzyEnAsieBook />} />
 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
-      <Footer noPadding={isPhotosPage} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+        <Footer noPadding={isPhotosPage} />
+      </LanguageProvider>
     </ThemeProvider>
   );
 }

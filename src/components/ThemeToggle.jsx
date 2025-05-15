@@ -7,7 +7,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className={`flex h-10 w-10 transition-all duration-300 hover:shadow-md items-center justify-center rounded-full transition-all duration-300 ${
+      className={`flex h-10 w-10 transition-all hover:shadow-md items-center justify-center rounded-full duration-300 ${
         darkMode
           ? "bg-slate-700 hover:bg-slate-600"
           : "bg-sky-100 hover:bg-sky-200"

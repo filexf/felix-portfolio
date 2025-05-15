@@ -1,9 +1,12 @@
 import React from "react";
-import { cardData } from "../../data/cardData";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../context/LanguageContext";
+import { cardData } from "../../data/cardData";
+import { t } from "../../i18n/i18n";
 import Reveal from "../Reveal";
 
 export default function CardsWork() {
+  const { language } = useLanguage();
   return (
     <>
       <Reveal>
@@ -12,15 +15,13 @@ export default function CardsWork() {
           id="latest-works"
         >
           <h2 className="text-gradient text-center text-7xl leading-[normal] font-bold">
-            My portfolio
+            {t("portfolio.title", language)}
           </h2>
 
-          <p className="w-3/4 p-[20px] text-center text-[22px] max-w-6xl">
-            After four years as a freelance photographer, I ventured into web
-            development to blend my artistic vision with technology, creating
-            unique digital experiences. <br />
-            Dive into my projects and see what I’ve been working on!
-          </p>
+          <p
+            className="w-3/4 max-w-6xl p-[20px] text-center text-[22px]"
+            dangerouslySetInnerHTML={{ __html: t("portfolio.intro", language) }}
+          />
           <Reveal>
             <div className="my-2 flex flex-col flex-wrap items-center justify-center gap-4 md:flex-row md:gap-2">
               {cardData.map((card) => (
@@ -30,6 +31,7 @@ export default function CardsWork() {
                   icon={card.icon}
                   text={card.text}
                   path={card.path}
+                  language={language}
                 />
               ))}
             </div>
@@ -40,7 +42,7 @@ export default function CardsWork() {
   );
 }
 
-const Card = ({ icon, title, text, path }) => {
+const Card = ({ icon, title, text, path, language }) => {
   return (
     <Link to={path}>
       <div className="group from-gray_50 vertical-animation mx-4 my-3 flex h-auto w-72 flex-col items-center justify-center gap-8 rounded-3xl border border-gray-200 bg-gradient-to-br to-gray-100 p-5 shadow-md backdrop-blur-sm">
@@ -59,7 +61,7 @@ const Card = ({ icon, title, text, path }) => {
 
           <button className="mt-2 mb-2 w-full rounded-2xl border border-gray-200 px-5 py-2 text-sm font-semibold text-slate-800 transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white md:w-3/4">
             <span className="flex items-center justify-center gap-2">
-              Read more
+              {t("readMore", language)}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2"

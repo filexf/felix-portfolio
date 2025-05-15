@@ -39,7 +39,7 @@ export default function LanguageSwitcher({
     <div className="relative" ref={dropdownRef}>
       {/* Bouton principal avec la langue actuelle et le drapeau */}
       <button
-        className={`flex items-center justify-center gap-2 rounded-full border ${isOpen ? "ring-opacity-50 ring-2" : ""} px-3 py-1.5 transition-all duration-300 hover:shadow-md`}
+        className={`flex items-center justify-center gap-2 rounded-full  ${isOpen ? "ring-opacity-50 ring-2" : ""} px-3 py-1.5 transition-all duration-300 hover:shadow-md`}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-haspopup="true"
