@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="w-[85%]">
           <div className="flex flex-row justify-between gap-[20px] p-[10px]">
             <div className="flex flex-row items-center gap-[25px]">
-              <div className="flex size-[2.4rem] transform items-center transition hover:scale-102">
+              <div className="flex size-[2rem] md:size-[2.4rem] transform items-center transition hover:scale-102">
                 <Link to="/">
                   <img
                     src={logoSite}
@@ -34,7 +34,7 @@ export default function Navbar() {
                   />
                 </Link>
               </div>
-              <ul className="flex flex-row items-center gap-[25px] text-2xl font-medium">
+              <ul className="flex flex-row items-center gap-[18px] md:gap-[25px] text-xl md:text-2xl font-medium">
                 <li className="transition-opacity hover:opacity-70">
                   <Link to="/">Home</Link>
                 </li>
