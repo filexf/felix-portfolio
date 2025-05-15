@@ -23,6 +23,9 @@ import photo20 from "../../assets/images/Photos-cityscape/Feu d'artifice-2.jpg";
 import photo21 from "../../assets/images/Photos-cityscape/Feu d'artifice-3.jpg";
 import photo22 from "../../assets/images/Photos-cityscape/Feu d'artifice-4.jpg";
 
+import { useLanguage } from "../../context/LanguageContext";
+import { t } from "../../i18n/i18n";
+
 const images = [
 
   { src: photo9, title: "Cityscape image" },
@@ -53,12 +56,13 @@ const images = [
 ];
 
 export default function CityscapePhotoPage() {
+  const { language } = useLanguage();
   return (
     <>
       <Gallery
-        title={"Cityscapes"}
+        title={t("cityscapephotopage.title", language)}
         images={images}
-        text={`As a photographer, I’m drawn to the energy and vibrancy of cityscapes, especially at night in Hong Kong. The city transforms after dark, with neon signs and shimmering skyscrapers painting the skyline in vivid colors. Capturing the interplay of light and shadow in bustling streets or reflections on Victoria Harbour feels like preserving the pulse of the city. Each shot tells a story of movement, culture, and endless possibilities. The contrast between the urban glow and the quiet corners offers a unique perspective on its beauty. Through my lens, I seek to share the dynamic allure of Hong Kong’s nights with others.`}
+        text={t("cityscapephotopage.desc", language)}
       />
     </>
   );

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import Gallery from '../../components/photos-components/PhotosGallery';
+import Gallery from "../../components/photos-components/PhotosGallery";
 
 // Import images properly
 import photo1 from "../../assets/images/Photos-landscape/Tests photos USA-126.jpg";
@@ -21,6 +21,8 @@ import photo16 from "../../assets/images/Photos-landscape/Tests photos USA-233.j
 import photo17 from "../../assets/images/Photos-landscape/Tests photos USA-234.jpg";
 import photo18 from "../../assets/images/Photos-landscape/Tests photos USA-291.jpg";
 
+import { useLanguage } from "../../context/LanguageContext";
+import { t } from "../../i18n/i18n";
 
 const images = [
   { src: photo6, title: "Landscape image" },
@@ -42,13 +44,16 @@ const images = [
   { src: photo18, title: "Landscape image" },
 ];
 
-
 export default function LandscapePhotoPage() {
+  const { language } = useLanguage();
   return (
     <>
-      <Gallery title={"Landscapes"} images={images} text={`As a photographer, I love landscapes for their ability to evoke both stillness and awe. Capturing the clouds drifting through Yosemite’s cliffs and valleys feels like preserving nature’s fleeting masterpieces. Each moment is unique, with light and weather transforming the scenery before my eyes. Shooting starry skies offers a humbling connection to the vastness of the universe, blending patience with wonder. Whether it’s misty forests or cosmic expanses, landscapes remind me of the beauty and grandeur of the world. Through my lens, I aim to share these timeless, breathtaking moments with others.
+      <Gallery
+        title={t("landscapephotopage.title", language)}
+        images={images}
+        text={t("landscapephotopage.desc", language)}
 
-`}/>
+      />
     </>
-  )
+  );
 }

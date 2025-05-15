@@ -4,20 +4,20 @@ import Photo2 from "../../assets/images/Couvertures magazines/WIZZY En Asie BONN
 import SeeMore from "./SeeMore";
 
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../context/LanguageContext";
+import { t } from "../../i18n/i18n";
 import Reveal from "../Reveal";
 import SectionWrapper from "./SectionWrapper";
 
 export default function DesignSection() {
+  const { language } = useLanguage();
   return (
     <Reveal>
-      <SectionWrapper title={"Designs"}>
+      <SectionWrapper title={t("design.title", language)}>
         <div className="flex flex-col gap-12">
           {/* Texte d'introduction */}
           <p className="body-font mx-auto max-w-6xl text-center">
-            I created two books showcasing five months of adventure in Southeast
-            Asia, using my own photos and writing. Self-edited and sold over 500
-            copies, this experience taught me consistency in design and how to
-            manage large-scale projects effectively.
+            {t("design.desc", language)}
           </p>
 
           {/* Grille de designs */}

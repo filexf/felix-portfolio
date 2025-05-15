@@ -1,5 +1,5 @@
-import React from 'react'
-import Gallery from '../../components/photos-components/PhotosGallery';
+import React from "react";
+import Gallery from "../../components/photos-components/PhotosGallery";
 
 // Import images properly
 import photo1 from "../../assets/images/Photos-sport/Photo_dub_roofgap.jpg";
@@ -20,6 +20,9 @@ import photo16 from "../../assets/images/Photos-sport/Photo_Avoriaz.jpg";
 import photo17 from "../../assets/images/Photos-sport/Photo_city_London.jpg";
 import photo18 from "../../assets/images/Photos-sport/Photo_roofgap_Leo.jpg";
 import photo19 from "../../assets/images/Photos-sport/Paris_Saint_Eustache.jpg";
+
+import { useLanguage } from "../../context/LanguageContext";
+import { t } from "../../i18n/i18n";
 
 // Define images array with proper imports
 const images = [
@@ -44,9 +47,16 @@ const images = [
 ];
 
 export default function SportPhotoPage() {
+  const { language } = useLanguage();
+
   return (
     <>
-      <Gallery title={"Sports"} images={images} text={`Discovering action photography felt like the perfect way to capture movement, emotion, and storytelling. Shooting parkour, climbing, or silhouettes in vast environments allowed me to showcase both human dynamism and the scale of the world around us. Each shot froze a moment of energy, where movement met the stillness of nature or architecture. Through this, I learned to embrace the unpredictability of motion and the challenge of timing, capturing not just action but the story of effort, freedom, and our connection with the world. This photography style taught me to see movement and meaning in the relationship between humans and their surroundings.`}/>
+      <Gallery
+        title={t("sportphotopage.title", language)}
+        images={images}
+        text={t("sportphotopage.desc", language)}
+
+      />
     </>
-  )
+  );
 }

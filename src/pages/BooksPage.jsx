@@ -4,11 +4,14 @@ import loop from "../assets/icons/Main-icons/Loop-plus-icon.svg";
 import coverCivilisation from "../assets/images/Couvertures magazines/Civilisation Mag.jpg";
 import coverWizzyEnAsie from "../assets/images/Couvertures magazines/WIZZY En Asie BONNE VERSION.jpg";
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
+import { t } from "../i18n/i18n";
 
 import Reveal from "../components/Reveal";
 
 export default function BooksPage() {
   const { darkMode } = useTheme();
+  const { language } = useLanguage();
 
   return (
     <>
@@ -16,19 +19,17 @@ export default function BooksPage() {
         <div className="flex justify-center p-4 sm:p-8">
           <div className="mt-[30px] flex w-full flex-col items-center gap-8 sm:w-[90%] sm:gap-12 lg:w-4/5">
             <h1 className="text-gradient text-center text-5xl leading-normal font-bold sm:text-7xl">
-              Books
+              {t("books.title", language)}
             </h1>
             <p className="body-font mx-auto max-w-4xl px-4 text-center">
-              I created two books showcasing five months of adventure in
-              Southeast Asia, using my own photos and writing. Self-edited and
-              sold over 500 copies, this experience taught me consistency in
-              design and how to manage large-scale projects effectively.
+              {t("books.description", language)}
+
             </p>
 
             {/* Civilisation Book */}
             <BookCard
-              title="Civilisation"
-              description="The first book I made is Civilisation, narrating the behind the scenes of the eponym film, watched by more than 5000 people. Civilisation is the adventure of 9 friends who travel to the other side of the world to shoot a parkour and adventure film in Southeast Asia. Follow them through their filming journey across three different countries and environments, where they faced a multitude of challenges. Travel with them through this story and their breathtaking photos. <br /> <br /> This book is 80 pages long and was entirely edited by me. <br /> <br /> Click on it to read a few pages !"
+              title={t("books.civilisation.title", language)}
+              description={t("books.civilisation.description", language)}
               coverImage={coverCivilisation}
               galleryLink="/books/civilisation"
               reverseLayout={true}
@@ -39,8 +40,8 @@ export default function BooksPage() {
 
             {/* Wizzy en Asie Book */}
             <BookCard
-              title="Wizzy en Asie"
-              description="The second book I made is Wizzy en Asie, following the journey of Civilisation. Wizzy in Asia is the adventure of 9 friends traveling to the other side of the world for several months with the goal of practicing Parkour on the rooftops of Asia's megacities. Follow them on their journey as they face a multitude of challenges. From leaping across the massive rooftops of Bangkok to exploring a ghost town in Malaysia and even being stranded together in Hong Kong for a month, it's an adventure packed with adrenaline. Experience their story and breathtaking photos as you travel along with them. <br /> <br /> This book is 112 pages long and was entirely edited by me. <br /> <br /> Click on it to read a few pages !"
+              title={t("books.wizzy.title", language)}
+              description={t("books.wizzy.description", language)}
               coverImage={coverWizzyEnAsie}
               galleryLink="/books/wizzyenasie"
               reverseLayout={false}
@@ -67,6 +68,8 @@ function BookCard({
   const layoutClasses = reverseLayout
     ? "vertical-animation my-3 flex flex-col lg:flex-row-reverse w-full items-center justify-center gap-8 rounded-2xl border-1 border-gray-200 bg-slate-50 p-4 shadow-lg transition-all duration-300 hover:bg-gray-100 sm:p-6 md:gap-[64px]"
     : "vertical-animation my-3 flex flex-col lg:flex-row w-full items-center justify-center gap-8 rounded-2xl border-1 border-gray-200 bg-slate-50 p-4 shadow-lg transition-all duration-300 hover:bg-gray-100 sm:p-6 md:gap-[64px]";
+  const { language } = useLanguage();
+
 
   return (
     <Reveal>
@@ -85,7 +88,7 @@ function BookCard({
             <Link to={galleryLink}>
               <div className="group inline-flex items-center gap-2 rounded-full border px-4 py-2 transition-all duration-300 ease-in-out hover:bg-gray-300 sm:gap-3 sm:px-5">
                 <span className="text-xs font-medium tracking-wide sm:text-sm">
-                  See the gallery
+                  {t("books.galleryphoto", language)}
                 </span>
                 <img
                   src={loop}
@@ -104,7 +107,7 @@ function BookCard({
                 className="group inline-flex items-center gap-2 rounded-full border px-4 py-2 transition-all duration-300 ease-in-out hover:bg-gray-300 sm:gap-3 sm:px-5"
               >
                 <span className="text-xs font-medium tracking-wide sm:text-sm">
-                  See the movie
+                {t("books.watchmovie", language)}
                 </span>
                 <svg
                   className="h-4 w-4 transform transition-transform duration-300 group-hover:scale-110 sm:h-5 sm:w-5"
@@ -144,6 +147,8 @@ function BookCard({
 }
 
 function PhotoMagazine({ link, src }) {
+    const { language } = useLanguage();
+
   return (
     <Link to={link}>
       <div className="group relative overflow-hidden rounded-2xl shadow-md">
@@ -157,7 +162,7 @@ function PhotoMagazine({ link, src }) {
             <div className="flex items-center justify-center rounded-full bg-white/10 backdrop-blur-sm">
               <div className="flex justify-center gap-3 px-3 py-2 sm:gap-6 sm:px-4 sm:py-3">
                 <p className="text-xl font-bold text-white sm:text-3xl">
-                  See gallery
+                  {t("books.seegallery", language)}
                 </p>
                 <img
                   src={loop}

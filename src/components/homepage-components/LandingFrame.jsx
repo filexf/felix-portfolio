@@ -5,10 +5,14 @@ import SplitStrings from "../../util/regexSplitString.js";
 import { motion } from "framer-motion";
 import Reveal from "../Reveal";
 
+import { useLanguage } from "../../context/LanguageContext";
+import { t } from "../../i18n/i18n";
+
 export default function LandingFrame() {
   const title = "Félix Orain";
   const splitTitle = SplitStrings(title);
-  const profession = "Developer and photographer";
+  const { language } = useLanguage();
+  const profession = t("landing.profession", language);
   const splitProfession = SplitStrings(profession);
 
   const charVariants = {

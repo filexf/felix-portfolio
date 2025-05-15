@@ -2,7 +2,9 @@ import {
   ProjectCard,
   projects,
 } from "../components/applications-components/ProjectCard";
+import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from "../context/ThemeContext";
+import { t } from "../i18n/i18n";
 
 // Importing assets
 import GithubIconWhite from "../assets/icons/Main-icons/Github-icon-white.svg";
@@ -51,26 +53,22 @@ function TechStackIcon({ name, icon }) {
 
 export default function ApplicationsPage() {
   const { darkMode } = useTheme();
+  const { language } = useLanguage();
 
   return (
     <Reveal>
       <div className="mt-4 flex flex-row justify-center">
         <div className="mt-[30px] flex w-4/5 flex-col items-center gap-[70px] px-12 py-[0]">
           <h1 className="text-gradient text-center text-7xl leading-normal font-bold">
-            Applications
+            {t("applications.title", language)}
           </h1>
           <p className="body-font mx-auto max-w-4xl text-center">
-            I'm a recent Le Wagon graduate with hands-on experience in web
-            development, where I built applications from scratch using Ruby on
-            Rails, JavaScript, and React. Throughout the program, I developed
-            strong problem-solving skills and learned to work with tools like
-            Git, SQL, and API integrations. This way I got a solid understanding
-            of both frontend and backend development.
+            {t("applications.desc", language)}
           </p>
           <a href="https://github.com/filexf" target="_blank">
             <div className="border-2px flex items-center gap-5 rounded-3xl border-slate-800 bg-slate-50 px-6 py-3 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200">
               <p className="text-gradient text-bold text-xl">
-                My GitHub account
+                {t("applications.github", language)}
               </p>
               <img
                 src={darkMode ? GithubIconWhite : GithubIcon}
@@ -89,7 +87,7 @@ export default function ApplicationsPage() {
           <Reveal>
             <div className="flex w-full flex-col items-center justify-center gap-[64px]">
               <p className="text-gradient my-4 pb-1 text-6xl font-bold">
-                My tech stack
+                {t("applications.techstack", language)}
               </p>
               <div className="flex w-4/5 flex-wrap items-center justify-center gap-10">
                 {techStack.map((tech, index) => (

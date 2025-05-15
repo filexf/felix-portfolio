@@ -1,12 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
+import photoIcon from "../../assets/icons/Main-icons/Photography-icon.svg";
+import webDevIcon from "../../assets/icons/Main-icons/Web-development-icon.svg";
+import designIcon from "../../assets/icons/Main-icons/Designs-icon.svg";
+
 import { useLanguage } from "../../context/LanguageContext";
-import { cardData } from "../../data/cardData";
 import { t } from "../../i18n/i18n";
+
 import Reveal from "../Reveal";
 
 export default function CardsWork() {
   const { language } = useLanguage();
+
+  const cardData = [
+    {
+      title: t("cardData.webDevelopment.title", language),
+      icon: webDevIcon,
+      text: t("cardData.webDevelopment.text", language),
+      path: "/applications",
+    },
+    {
+      title: t("cardData.photography.title", language),
+      icon: photoIcon,
+      text: t("cardData.photography.text", language),
+      path: "/photos",
+    },
+    {
+      title: t("cardData.design.title", language),
+      icon: designIcon,
+      text: t("cardData.design.text", language),
+      path: "/books",
+    },
+  ];
+
   return (
     <>
       <Reveal>

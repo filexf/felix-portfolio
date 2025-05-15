@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css"; // Opt
+import { useLanguage } from "../../context/LanguageContext";
 import { useTheme } from "../../context/ThemeContext"; // Import du contexte de thème
+import { t } from "../../i18n/i18n";
 
 // Icons & pictures
 import galleryIcon from "../../assets/icons/Main-icons/Gallery-icon.svg";
@@ -44,9 +46,8 @@ import Reveal from "../Reveal";
 // Project data
 export const projects = [
   {
-    title: "SPORTIFY",
-    description:
-      "Sportify is a PWA built with Ruby on Rails, PostgreSQL, and Javascript with AJAX to connect users with sports partners by browsing or creating local events. We designed it in Figma, used Bootstrap for the UI, and deployed it on Heroku with a custom domain. The project was then presented in front of a big crowd.",
+    title: "sportify",
+    description: "sportify",
     image: sportifyPicture,
     githubLink: "https://github.com/filexf/sportify",
     websiteLink: "#", // Add actual link if available
@@ -62,9 +63,8 @@ export const projects = [
     ],
   },
   {
-    title: "GIS PROJECT",
-    description:
-      "This project is a web GIS application that allows users to visualize and interact with geospatial data. It was built using React, Leaflet, and Mapbox, and it includes features such as map layers, markers, and popups. The application is designed to be user-friendly and responsive.",
+    title: "gis",
+    description: "gis",
     image: gisProject,
     githubLink: "https://github.com/filexf/webGIS-app", // Add actual link if available
     websiteLink: "https://data-visualizer-mocha.vercel.app/",
@@ -74,17 +74,15 @@ export const projects = [
     ],
   },
   {
-    title: "PORTFOLIO",
-    description:
-      "This portfolio was built using React. I used React Router to implement several pages in order to host it on Github Pages and I used Framer Motion for animations. It showcases my projects, skills, and experience. I aimed for a clean and user-friendly design that I made myself.",
+    title: "portfolio",
+    description: "portfolio",
     image: portfolioPicture,
     githubLink: "https://github.com/filexf/felix-portfolio",
     websiteLink: "https://filexf.github.io/felix-portfolio/",
   },
   {
-    title: "TY MOUET",
-    description:
-      "Ty Mouet was our first project at Le Wagon, a seagull-themed Airbnb clone built with Ruby on Rails, PostgreSQL, and AJAX. We handled a many-to-many database, deployed on Heroku, and worked in an agile team. Key features included booking logic, user authentication, and geolocation-based dynamic search.",
+    title: "tymouet",
+    description: "tymouet",
     image: tyMouetPicture,
     githubLink: "https://github.com/filexf/ty-mouet",
     websiteLink: "https://ty-mouet-c5897a5b74b0.herokuapp.com/",
@@ -113,6 +111,7 @@ export function ProjectCard({
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { darkMode } = useTheme(); // Récupération du mode sombre depuis le contexte
+  const { language } = useLanguage();
 
   const openLightbox = () => {
     setCurrentImageIndex(0);
@@ -135,11 +134,11 @@ export function ProjectCard({
 
           <div className="flex flex-col gap-4 p-4 leading-normal md:p-7">
             <h5 className="text-gradient mb-2 text-center text-2xl font-bold tracking-tight md:text-4xl">
-              {title}
+              {t(`projects.${title}.title`, language)}
             </h5>
 
             <p className="mb-3 p-2 text-center text-sm font-normal md:p-3 md:text-base">
-              {description}
+              {t(`projects.${description}.desc`, language)}
             </p>
             <div className="flex justify-center gap-5 md:gap-10">
               <a href={githubLink} target="_blank" rel="noopener noreferrer">

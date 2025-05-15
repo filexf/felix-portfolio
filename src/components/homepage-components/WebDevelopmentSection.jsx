@@ -1,26 +1,29 @@
 import React from "react";
-import SeeMore from "./SeeMore";
 import { Link } from "react-router-dom";
+import SeeMore from "./SeeMore";
 
+import GoldenGatePicture from "../../assets/images/Photo GGB/Photo-GGB-Squared.jpg";
 import sportifyPicture from "../../assets/images/Photo-projets-dev/Photo Couverture Sportify.png";
 import tyMouetPicture from "../../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
-import GoldenGatePicture from "../../assets/images/Photo GGB/Photo-GGB-Squared.jpg"
 
+import { useLanguage } from "../../context/LanguageContext";
+import { t } from "../../i18n/i18n";
 import Reveal from "../Reveal";
 import SectionWrapper from "./SectionWrapper";
 
-
 export default function WebDevelopmentSection() {
+  const { language } = useLanguage();
+
   return (
     <Reveal>
-      <SectionWrapper title={"Web development"}>
+      <SectionWrapper title={t("webdev.title", language)}>
         <div className="flex flex-col gap-12">
-          <p className="body-font max-w-3xl mx-auto text-center">
-          I graduated from Le Wagon and built real-world applications from scratch, gaining hands-on experience in web development. With a background in photography, I bring a strong sense of design, now combined with solid programming skills.
+          <p className="body-font mx-auto max-w-3xl text-center">
+            {t("webdev.desc", language)}
           </p>
 
           {/* Grille de projets mise à jour */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <ProjectCard
               image={sportifyPicture}
               title="SPORTIFY"
@@ -45,24 +48,16 @@ export default function WebDevelopmentSection() {
   );
 }
 
-
 function ProjectCard({ image, title, path }) {
   return (
     <Link to={path}>
-      <div className="group relative overflow-hidden rounded-2xl h-[300px] transition-all duration-300 hover:-translate-y-1 shadow-lg">
+      <div className="group relative h-[300px] overflow-hidden rounded-2xl shadow-lg transition-all duration-300 hover:-translate-y-1">
         {/* Image */}
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover"
-        />
+        <img src={image} alt={title} className="h-full w-full object-cover" />
 
         {/* Overlay avec titre qui apparaît au hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent
-          opacity-0 group-hover:opacity-100 transition-opacity duration-300
-          flex items-center justify-center p-8">
-          <h3 className="text-4xl font-bold text-white tracking-wider transform translate-y-4
-            group-hover:translate-y-0 transition-transform duration-300">
+        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent p-8 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <h3 className="translate-y-4 transform text-4xl font-bold tracking-wider text-white transition-transform duration-300 group-hover:translate-y-0">
             {title}
           </h3>
         </div>
@@ -70,5 +65,3 @@ function ProjectCard({ image, title, path }) {
     </Link>
   );
 }
-
-// Mise à jour du container des cartes dans le composant principal

@@ -1,5 +1,5 @@
-import React from 'react'
-import Gallery from '../../components/photos-components/PhotosGallery';
+import React from "react";
+import Gallery from "../../components/photos-components/PhotosGallery";
 
 // Import images properly
 import photo1 from "../../assets/images/Photos-mosaics/HK_Street_photos-18.jpg";
@@ -23,6 +23,8 @@ import photo23 from "../../assets/images/Photos-mosaics/Photos_HK_chill-44.jpg";
 import photo24 from "../../assets/images/Photos-mosaics/Photos_HK_chill-64.jpg";
 import photo25 from "../../assets/images/Photos-mosaics/Photos_HK_chill-72.jpg";
 
+import { useLanguage } from "../../context/LanguageContext";
+import { t } from "../../i18n/i18n";
 
 const images = [
   { src: photo10, title: "Mosaics image" },
@@ -46,15 +48,17 @@ const images = [
   { src: photo15, title: "Mosaics image" },
   { src: photo16, title: "Mosaics image" },
   { src: photo1, title: "Mosaics image" },
-
 ];
 
 export default function MosaicPhotoPage() {
+  const { language } = useLanguage();
   return (
     <>
-      <Gallery title={"Mosaics"} images={images} text={`I love capturing patterns in photography because they reveal beauty in simplicity and repetition. Whether found in nature or architecture, patterns create rhythm and harmony that draw the eye. Shooting these details—like ripples in water, tiled facades, or symmetrical shadows—feels like uncovering hidden art in the everyday. Patterns tell stories of design, structure, and balance, offering a sense of order in a chaotic world. Through my lens, I aim to celebrate these mesmerizing visuals and invite others to see the world differently.
-
-`}/>
+      <Gallery
+        title={t("mosaicphotopage.title", language)}
+        images={images}
+        text={t("mosaicphotopage.desc", language)}
+      />
     </>
-  )
+  );
 }

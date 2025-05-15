@@ -5,8 +5,13 @@ import linkedinIcon from "../assets/icons/Main-icons/Linkedin-icon-white.svg";
 import { useTheme } from "../context/ThemeContext";
 import "../styles/index.css";
 
+import { useLanguage } from "../context/LanguageContext";
+import { t } from "../i18n/i18n";
+
 export default function Footer({ noPadding }) {
   const { darkMode } = useTheme();
+
+  const { language } = useLanguage();
 
   return (
     // To make sure that there isn't the padding on the bottom of the page
@@ -28,7 +33,7 @@ export default function Footer({ noPadding }) {
           />
         </ul>
         <p className="text-center" style={{ color: "var(--footer-text)" }}>
-          Copyright Felix Orain © All rights reserved.
+          {t("footer.copyright", language)}
         </p>
       </div>
     </div>

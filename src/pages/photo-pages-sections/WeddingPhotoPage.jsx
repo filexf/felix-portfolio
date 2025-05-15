@@ -20,6 +20,9 @@ import photo16 from "../../assets/images/Photos-wedding/Wedding-photos 16.jpg";
 import photo17 from "../../assets/images/Photos-wedding/Wedding-photos 17.jpg";
 import photo18 from "../../assets/images/Photos-wedding/Wedding-photos 18.jpg";
 
+import { useLanguage } from "../../context/LanguageContext";
+import { t } from "../../i18n/i18n";
+
 // Define images array with proper imports
 const images = [
   { src: photo14, title: "Wedding image" },
@@ -44,14 +47,13 @@ const images = [
 ];
 
 export default function WeddingPhotoPage() {
+  const { language } = useLanguage();
   return (
     <>
       <Gallery
-        title={"Wedding"}
+        title={t("weddingphotopage.title", language)}
         images={images}
-        text={`Your wedding day is a unique story, and my goal is to capture it authentically and beautifully.
-
-I focus on candid moments and genuine emotions while ensuring every detail, from the décor to the small gestures, is thoughtfully documented. My style combines natural photojournalism with creative storytelling, shaped by my background in filmmaking.  Here is a glimpse of the love and joy that fills the day.`}
+        text={t("weddingphotopage.desc", language)}
       />
     </>
   );

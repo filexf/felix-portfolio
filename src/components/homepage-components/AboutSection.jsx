@@ -1,41 +1,36 @@
 import React from "react";
 import profileImage from "../../assets/images/Important-photos/photo-profil-V2.jpg";
 
+import { useLanguage } from "../../context/LanguageContext";
+import { t } from "../../i18n/i18n";
 import Reveal from "../Reveal";
 import SectionWrapper from "./SectionWrapper";
 import Resume from "/FelixOrain-CV.pdf";
 
 export default function AboutSection() {
+  const { language } = useLanguage();
   return (
     <>
       <Reveal>
-        <SectionWrapper title={"About me"}>
-          <div className="lg:width-[80%] lg:pl-12 mt-2 flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:justify-center lg:gap-10">
+        <SectionWrapper title={t("about.title", language)}>
+          <div className="lg:width-[80%] mt-2 flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:justify-center lg:gap-10 lg:pl-12">
             <img
               className="mb-2 h-[400px] w-auto rounded-4xl shadow-md lg:h-[400px]"
               src={profileImage}
               alt="Profile Image"
             />
             <div className="mt-4 flex flex-col items-center justify-center gap-10">
-              <p className="body-font max-width-md w-[80%] text-start lg:text-left max-w-6xl">
-                I’m a creative web developer with a strong background in
-                photography and design. For years, I’ve loved exploring ways to
-                bring ideas to life through visuals and storytelling, honing my
-                eye for detail and aesthetics.
-                <br /> <br />
-                Now, I’m channeling that passion into crafting intuitive,
-                user-friendly digital experiences. I’m currently expanding my
-                skills by learning Ruby on Rails and React, eager to combine my
-                creative background with new technical expertise to build
-                meaningful and engaging products.
-              </p>
+              <p
+                className="body-font max-width-md w-[80%] max-w-6xl text-start lg:text-left"
+                dangerouslySetInnerHTML={{ __html: t("about.desc", language) }}
+              />
               <a
                 href={Resume}
                 download
-                className="group inline-flex items-center gap-3 rounded-full border-2 border-gray-400 px-5 py-2  transition-all duration-300 ease-in-out hover:border-gray-900 "
+                className="group inline-flex items-center gap-3 rounded-full border-2 border-gray-400 bg-slate-50 px-5 py-2 transition-all duration-300 ease-in-out hover:border-gray-900"
               >
                 <span className="text-sm font-medium tracking-wide">
-                  My resume
+                  {t("about.resume", language)}
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
