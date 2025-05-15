@@ -1,7 +1,8 @@
 import en from "./locales/en.json";
+import es from "./locales/es.json";
 import fr from "./locales/fr.json";
 
-const translations = { en, fr };
+const translations = { en, fr, es };
 
 export function t(key, lang = "en") {
   const keys = key.split(".");
