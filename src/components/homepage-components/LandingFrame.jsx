@@ -1,8 +1,7 @@
-import React from "react";
-import PhotoLandingPage from "../../assets/images/Photo GGB/Photo GGB-Landing page.webp";
-import ArrowLogo from "../../assets/icons/Main-icons/Vector-arrow-white.svg";
-import SplitStrings from "../../util/regexSplitString.js";
 import { motion } from "framer-motion";
+import ArrowLogo from "../../assets/icons/Main-icons/Vector-arrow-white.svg";
+import PhotoLandingPage from "../../assets/images/Photo GGB/Photo GGB-Landing page.webp";
+import SplitStrings from "../../util/regexSplitString.js";
 import Reveal from "../Reveal";
 
 import { useLanguage } from "../../context/LanguageContext";
@@ -12,12 +11,13 @@ export default function LandingFrame() {
   const title = "Félix Orain";
   const splitTitle = SplitStrings(title);
   const { language } = useLanguage();
-  const profession = t("landing.profession", language);
+  const profession =
+    t("landing.profession", language) || "Developer and photographer";
   const splitProfession = SplitStrings(profession);
 
   const charVariants = {
     hidden: { opacity: 0 },
-    reveal: { opacity: 1 },
+    reveal: { opacity: 1, transition: { duration: 1 } },
   };
 
   return (
@@ -28,6 +28,7 @@ export default function LandingFrame() {
             <motion.h1
               className="text-[4rem] leading-[normal] font-extrabold text-shadow-lg md:text-[90px]"
               initial="hidden"
+              animate="reveal"
               whileInView={"reveal"}
               viewport={{ once: true }}
               transition={{ staggerChildren: 0.05 }}
@@ -36,7 +37,6 @@ export default function LandingFrame() {
                 <motion.span
                   key={index}
                   variants={charVariants}
-                  transition={{ duration: 2 }}
                   className="bg-gradient-to-t from-slate-600 to-slate-700 bg-clip-text text-transparent text-shadow-md"
                 >
                   {char}
@@ -46,16 +46,16 @@ export default function LandingFrame() {
             <motion.p
               className="text-2xl font-semibold text-shadow-md md:text-3xl"
               initial="hidden"
+              animate="reveal"
               whileInView={"reveal"}
               viewport={{ once: true }}
-              transition={{ staggerChildren: 0.05 }}
+              transition={{ staggerChildren: 0.05, delayChildren: 0.4 }}
             >
               {splitProfession.map((char, index) => (
                 <motion.span
                   key={index}
                   variants={charVariants}
-                  transition={{ duration: 2 }}
-                  className="bg-gradient-to-tr from-slate-600 to-slate-700 bg-clip-text text-transparent text-shadow-md"
+                  className="bg-gradient-to-tr from-slate-600 to-slate-700 bg-clip-text text-transparent opacity-100 text-shadow-md"
                 >
                   {char}
                 </motion.span>
