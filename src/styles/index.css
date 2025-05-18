@@ -30,6 +30,7 @@
   --gradient-middle: #0369a1;
   --gradient-end: #0284c7;
   --dot-color: #e5e7eb; /* Couleur des points en mode clair */
+  --sidebar-bg: #ffffff;
 }
 
 /* Mode sombre */
@@ -50,6 +51,7 @@
   --gradient-middle: #7dd3fc;
   --gradient-end: #38bdf8;
   --dot-color: #232c3a; /* Couleur des points en mode sombre */
+  --sidebar-bg: #1f2937; /* Couleur de fond de la sidebar en mode sombre */
 }
 
 /* Appliquer les variables aux classes principales */
@@ -66,6 +68,11 @@ body {
 
 }
 
+.bg-sidebar {
+  background-color: var(--sidebar-bg);
+  transition: background-color 0.3s ease-in-out;
+}
+
 /* ‼️ Les motif à points de fond */
 body > div {
   background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
@@ -76,13 +83,16 @@ body > div {
   background-color: var(--background-secondary) !important;
 }
 
-
+.border-card {
+  border-color: var(--text-primary) !important;
+}
 
 .border-gray-200,
 .border-gray-300,
 .border-gray-400 {
   border-color: var(--border-color) !important;
 }
+
 
 @layer components {
   .text-gradient {

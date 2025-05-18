@@ -18,7 +18,7 @@ export default function BooksPage() {
       <Reveal>
         <div className="flex justify-center p-4 sm:p-8">
           <div className="mt-[30px] flex w-full flex-col items-center gap-8 sm:w-[90%] sm:gap-12 lg:w-4/5">
-            <h1 className="text-gradient text-center text-5xl leading-normal font-bold sm:text-7xl">
+            <h1 className="text-gradient text-center text-7xl leading-normal font-bold ">
               {t("books.title", language)}
             </h1>
             <p className="body-font mx-auto max-w-4xl px-4 text-center">
