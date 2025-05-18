@@ -43,7 +43,7 @@ const techStack = [
 function TechStackIcon({ name, icon }) {
   return (
     <>
-      <div className="border-2px mb-1 flex items-center gap-3 rounded-3xl border-slate-800 bg-slate-50 px-6 py-2 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200">
+      <div className="border-2px mb-1 flex items-center gap-3 rounded-3xl border-1 border-gray-200 bg-slate-50 px-6 py-2 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200">
         <p className="text-gradient font-bold">{name} </p>
         <img src={icon} alt={name} className="h-8 w-10" />
       </div>
@@ -66,7 +66,7 @@ export default function ApplicationsPage() {
             {t("applications.desc", language)}
           </p>
           <a href="https://github.com/filexf" target="_blank">
-            <div className="border-2px flex items-center gap-5 rounded-3xl border-slate-800 bg-slate-50 px-6 py-3 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200">
+            <div className="border-2px flex items-center gap-5 rounded-3xl border-1 border-gray-200 bg-slate-50 px-6 py-3 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:bg-gray-200">
               <p className="text-gradient text-bold text-xl">
                 {t("applications.github", language)}
               </p>
@@ -86,9 +86,9 @@ export default function ApplicationsPage() {
           {/* Tech Stack Section */}
           <Reveal>
             <div className="flex w-full flex-col items-center justify-center gap-[64px]">
-              <p className="text-gradient my-4 pb-1 text-6xl font-bold">
+              <h2 className="text-gradient my-4 pb-1 text-6xl text-center font-bold">
                 {t("applications.techstack", language)}
-              </p>
+              </h2>
               <div className="flex w-4/5 flex-wrap items-center justify-center gap-10">
                 {techStack.map((tech, index) => (
                   <TechStackIcon key={index} {...tech} />

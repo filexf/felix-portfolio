@@ -72,7 +72,7 @@ export default function CardsWork() {
 const Card = ({ icon, title, text, path, language }) => {
   return (
     <Link to={path}>
-      <div className="group from-gray_50 vertical-animation mx-4 my-3 flex h-auto w-72 flex-col items-center justify-center gap-8 rounded-3xl border border-gray-200 bg-gradient-to-br to-gray-100 p-5 shadow-md backdrop-blur-sm">
+      <div className="group from-gray_50 vertical-animation mx-4 my-3 flex h-auto w-72 flex-col items-center justify-center gap-8 rounded-3xl border border-gray-200 bg-gradient-to-br to-gray-200 p-5 shadow-md backdrop-blur-sm">
         <div className="rounded-full bg-gray-100 p-2.5 transition-colors duration-300 group-hover:bg-gray-200">
           <img
             className="h-12 w-12 transition-transform duration-300 group-hover:scale-110"
@@ -86,7 +86,7 @@ const Card = ({ icon, title, text, path, language }) => {
 
           <p className="h-25 text-base leading-relaxed">{text}</p>
 
-          <button className="mt-2 mb-2 w-full rounded-2xl border border-gray-200 px-5 py-2 text-sm font-semibold text-slate-800 transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white md:w-3/4">
+          <button className="mt-2 mb-2 w-full rounded-2xl border-1  px-5 py-2 text-sm font-semibold transition-all duration-300 ease-in-out hover:border-transparent hover:bg-gray-900 hover:text-white md:w-3/4">
             <span className="flex items-center justify-center gap-2">
               {t("readMore", language)}
               <svg
