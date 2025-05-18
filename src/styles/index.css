@@ -13,6 +13,7 @@
 
 /* Dark mode and light mode - CSS variables customized */
 :root {
+  color-scheme: light;
   /* Variables mode clair */
   --background-primary: #fffffff7;
   --background-secondary: #f9fafb;
@@ -35,6 +36,7 @@
 
 /* Mode sombre */
 .dark {
+  color-scheme: dark;
   --background-primary: #111827;
   --background-secondary: #1f2937;
   --background-tertiary: #374151;
@@ -54,6 +56,19 @@
   --sidebar-bg: #1f2937; /* Couleur de fond de la sidebar en mode sombre */
 }
 
+/* Désactiver l'auto dark mode du système */
+@media (prefers-color-scheme: dark) {
+  :root:not(.dark) {
+    color-scheme: light;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root.dark {
+    color-scheme: dark;
+  }
+}
+
 /* Appliquer les variables aux classes principales */
 body {
   color: var(--text-primary);
@@ -65,7 +80,6 @@ body {
   font-size: 20px;
   font-weight: 400;
   line-height: normal;
-
 }
 
 .bg-sidebar {
@@ -93,7 +107,6 @@ body > div {
   border-color: var(--border-color) !important;
 }
 
-
 @layer components {
   .text-gradient {
     @apply bg-gradient-to-tr from-slate-500 via-sky-700 to-sky-600 bg-clip-text text-transparent text-shadow-sm;
@@ -104,7 +117,7 @@ body > div {
       var(--gradient-end)
     );
   }
-  .vertical-animation{
-    @apply transition-all duration-300 ease-in-out hover:-translate-y-1
+  .vertical-animation {
+    @apply transition-all duration-300 ease-in-out hover:-translate-y-1;
   }
 }

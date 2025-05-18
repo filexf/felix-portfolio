@@ -99,7 +99,7 @@
     },
     "portfolio": {
       "title": "PORTFOLIO",
-      "desc": "Ce portfolio a été réalisé avec React. J'ai utilisé React Router pour gérer plusieurs pages et l'ai hébergé sur Github Pages. Les animations sont faites avec Framer Motion. Il met en avant mes projets, compétences et expériences, avec un design épuré et personnel."
+      "desc": "Ce portfolio a été réalisé avec React. J'ai utilisé React Router pour gérer plusieurs pages et l'ai hébergé sur Github Pages. Les animations sont faites avec Framer Motion. J'ai finalement implémenté un Dark Mode pour une UI plus agréable ainsi qu'un système de gestion des langues. Il met en avant mes projets, compétences et expériences, avec un design épuré et personnel."
     },
     "tymouet": {
       "title": "TY MOUET",

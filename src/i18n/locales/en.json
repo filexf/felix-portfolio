@@ -100,7 +100,7 @@
     },
     "portfolio": {
       "title": "PORTFOLIO",
-      "desc": "This portfolio was built using React. I used React Router to implement several pages in order to host it on Github Pages and I used Framer Motion for animations. It showcases my projects, skills, and experience. I aimed for a clean and user-friendly design that I made myself."
+      "desc": "This portfolio was built using React. I used React Router to manage multiple pages and hosted it on Github Pages. The animations are made with Framer Motion. I finally implemented a Dark Mode for a more pleasant UI as well as a language management system. It showcases my projects, skills, and experiences, with a clean and personal design."
     },
     "tymouet": {
       "title": "TY MOUET",

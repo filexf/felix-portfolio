@@ -97,7 +97,7 @@
     },
     "portfolio": {
       "title": "PORTAFOLIO",
-      "desc": "Este portafolio fue construido utilizando React. Utilicé React Router para implementar varias páginas con el fin de alojarlo en Github Pages y utilicé Framer Motion para las animaciones. Muestra mis proyectos, habilidades y experiencia. Apunté a un diseño limpio y fácil de usar que hice yo mismo."
+      "desc": "Este portafolio fue construido con React. Utilicé React Router para gestionar múltiples páginas y lo alojé en Github Pages. Las animaciones están hechas con Framer Motion. Finalmente implementé un Modo Oscuro para una interfaz más agradable, así como un sistema de gestión de idiomas. Muestra mis proyectos, habilidades y experiencias, con un diseño limpio y personal."
     },
     "tymouet": {
       "title": "TY MOUET",
