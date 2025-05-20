@@ -34,7 +34,8 @@
     "back": "Back home"
   },
   "footer": {
-    "copyright": "Copyright Felix Orain © All rights reserved."
+    "copyright": "Copyright Felix Orain © All rights reserved.",
+    "madeby": "Developed with ❤️ by Félix Orain"
   },
   "webdev": {
     "title": "Web development",
