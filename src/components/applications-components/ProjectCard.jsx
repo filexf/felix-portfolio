@@ -15,6 +15,7 @@ import portfolioPicture from "../../assets/images/Photo GGB/Photo-GGB-Squared.jp
 import sportifyPicture from "../../assets/images/Photo-projets-dev/Photo Couverture Sportify.png";
 import tyMouetPicture from "../../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
 import gisProject from "../../assets/images/Photo-projets-dev/Web Gis Cover Picture.jpg";
+import moviesWatchlistPicture from "../../assets/images/Photo-projets-dev/Watchlist Cover.jpg";
 
 // Screenshots Sportify
 import screenshotSportify1 from "../../assets/images/Screenshots-Sportify/Screenshots-Sportify-1.jpg";
@@ -40,6 +41,13 @@ import screenshotTyMouet9 from "../../assets/images/Screenshots-Tymouet/Tymouet-
 // Screenshots GIS Project
 import screenshotGisProject1 from "../../assets/images/Screenshots-GIS-Project/WebGIS-project-screenshot-1.jpg";
 import screenshotGisProject2 from "../../assets/images/Screenshots-GIS-Project/WebGIS-project-screenshot-2.jpg";
+
+// Screenshots Movies Watchlist
+import screenshotMoviesWatchlist1 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-1.jpg";
+import screenshotMoviesWatchlist2 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-2.jpg";
+import screenshotMoviesWatchlist3 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-3.jpg";
+import screenshotMoviesWatchlist4 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-4.jpg";
+import screenshotMoviesWatchlist5 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-5.jpg";
 
 import Reveal from "../Reveal";
 
@@ -79,6 +87,23 @@ export const projects = [
     image: portfolioPicture,
     githubLink: "https://github.com/filexf/felix-portfolio",
     websiteLink: "https://filexf.github.io/felix-portfolio/",
+  },
+  {
+    title: "movieWatchlist",
+    description: "movieWatchlist",
+    image: moviesWatchlistPicture,
+    githubLink: "https://github.com/filexf/movies-watchlist",
+    websiteLink: "https://movies-watchlist.vercel.app/",
+    images: [
+      { src: screenshotMoviesWatchlist1, alt: "Screenshot 1" },
+      { src: screenshotMoviesWatchlist2, alt: "Screenshot 2" },
+      { src: screenshotMoviesWatchlist3, alt: "Screenshot 3" },
+      { src: screenshotMoviesWatchlist4, alt: "Screenshot 4" },
+      { src: screenshotMoviesWatchlist5, alt: "Screenshot 5" },
+
+
+
+    ],
   },
   {
     title: "tymouet",
@@ -145,7 +170,7 @@ export function ProjectCard({
                 <img
                   src={darkMode ? githubIconWhite : githubIcon}
                   alt="GitHub"
-                  className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15"
+                  className="h-12 w-12 hover:scale-102 vertical-animation opacity-80 hover:opacity-100 md:h-15 md:w-15"
                 />
               </a>
               {images && (
@@ -153,7 +178,7 @@ export function ProjectCard({
                   <img
                     src={galleryIcon}
                     alt="Gallery Icon"
-                    className={`h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15 ${darkMode ? "invert filter" : ""}`}
+                    className={`h-12 w-12 hover:scale-102 vertical-animation opacity-80 hover:opacity-100 md:h-15 md:w-15 ${darkMode ? "invert filter" : ""}`}
                   />
                 </div>
               )}
@@ -172,7 +197,7 @@ export function ProjectCard({
               {websiteLink && (
                 <a href={websiteLink} target="_blank">
                   <img
-                    className={`h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15 ${darkMode ? "invert filter" : ""}`}
+                    className={`h-12 w-12 hover:scale-102 vertical-animation opacity-80 hover:opacity-100 md:h-15 md:w-15 ${darkMode ? "invert filter" : ""}`}
                     src={websiteIcon}
                     alt="Website"
                   />
