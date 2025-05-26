@@ -103,6 +103,10 @@
     "tymouet": {
       "title": "TY MOUET",
       "desc": "Ty Mouet fue nuestro primer proyecto en Le Wagon, un clon de Airbnb con temática de gaviotas construido con Ruby on Rails, PostgreSQL y AJAX. Gestionamos una base de datos de muchos a muchos, lo implementamos en Heroku y trabajamos en un equipo ágil. Las características clave incluyeron lógica de reservas, autenticación de usuarios y búsqueda dinámica basada en geolocalización."
+    },
+    "movieWatchlist": {
+      "title": "MOVIES WATCHLIST",
+      "desc": "Movies Watchlist es una aplicación web React y Redux que permite a los usuarios descubrir y organizar sus películas favoritas utilizando la base de datos de TMDB. Las características incluyen búsqueda en tiempo real, navegación categorizada y una lista de reproducción personalizada donde los usuarios pueden calificar y comentar películas, con caché local para la persistencia de las selecciones."
     }
   },
   "books": {

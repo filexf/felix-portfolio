@@ -15,6 +15,7 @@ import portfolioPicture from "../../assets/images/Photo GGB/Photo-GGB-Squared.jp
 import sportifyPicture from "../../assets/images/Photo-projets-dev/Photo Couverture Sportify.png";
 import tyMouetPicture from "../../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
 import gisProject from "../../assets/images/Photo-projets-dev/Web Gis Cover Picture.jpg";
+import moviesWatchlistPicture from "../../assets/images/Photo-projets-dev/Watchlist Cover.jpg";
 
 // Screenshots Sportify
 import screenshotSportify1 from "../../assets/images/Screenshots-Sportify/Screenshots-Sportify-1.jpg";
@@ -41,27 +42,17 @@ import screenshotTyMouet9 from "../../assets/images/Screenshots-Tymouet/Tymouet-
 import screenshotGisProject1 from "../../assets/images/Screenshots-GIS-Project/WebGIS-project-screenshot-1.jpg";
 import screenshotGisProject2 from "../../assets/images/Screenshots-GIS-Project/WebGIS-project-screenshot-2.jpg";
 
+// Screenshots Movies Watchlist
+import screenshotMoviesWatchlist1 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-1.jpg";
+import screenshotMoviesWatchlist2 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-2.jpg";
+import screenshotMoviesWatchlist3 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-3.jpg";
+import screenshotMoviesWatchlist4 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-4.jpg";
+import screenshotMoviesWatchlist5 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-5.jpg";
+
 import Reveal from "../Reveal";
 
 // Project data
 export const projects = [
-  {
-    title: "sportify",
-    description: "sportify",
-    image: sportifyPicture,
-    githubLink: "https://github.com/filexf/sportify",
-    websiteLink: "#", // Add actual link if available
-    images: [
-      { src: screenshotSportify1, alt: "Screenshot 1" },
-      { src: screenshotSportify2, alt: "Screenshot 2" },
-      { src: screenshotSportify3, alt: "Screenshot 3" },
-      { src: screenshotSportify4, alt: "Screenshot 4" },
-      { src: screenshotSportify5, alt: "Screenshot 5" },
-      { src: screenshotSportify6, alt: "Screenshot 6" },
-      { src: screenshotSportify7, alt: "Screenshot 7" },
-      { src: screenshotSportify8, alt: "Screenshot 8" },
-    ],
-  },
   {
     title: "gis",
     description: "gis",
@@ -79,6 +70,37 @@ export const projects = [
     image: portfolioPicture,
     githubLink: "https://github.com/filexf/felix-portfolio",
     websiteLink: "https://filexf.github.io/felix-portfolio/",
+  },
+  {
+    title: "movieWatchlist",
+    description: "movieWatchlist",
+    image: moviesWatchlistPicture,
+    githubLink: "https://github.com/filexf/movies-watchlist",
+    websiteLink: "https://movies-watchlist.vercel.app/",
+    images: [
+      { src: screenshotMoviesWatchlist1, alt: "Screenshot 1" },
+      { src: screenshotMoviesWatchlist2, alt: "Screenshot 2" },
+      { src: screenshotMoviesWatchlist3, alt: "Screenshot 3" },
+      { src: screenshotMoviesWatchlist4, alt: "Screenshot 4" },
+      { src: screenshotMoviesWatchlist5, alt: "Screenshot 5" },
+    ],
+  },
+  {
+    title: "sportify",
+    description: "sportify",
+    image: sportifyPicture,
+    githubLink: "https://github.com/filexf/sportify",
+    websiteLink: "#", // Add actual link if available
+    images: [
+      { src: screenshotSportify1, alt: "Screenshot 1" },
+      { src: screenshotSportify2, alt: "Screenshot 2" },
+      { src: screenshotSportify3, alt: "Screenshot 3" },
+      { src: screenshotSportify4, alt: "Screenshot 4" },
+      { src: screenshotSportify5, alt: "Screenshot 5" },
+      { src: screenshotSportify6, alt: "Screenshot 6" },
+      { src: screenshotSportify7, alt: "Screenshot 7" },
+      { src: screenshotSportify8, alt: "Screenshot 8" },
+    ],
   },
   {
     title: "tymouet",
@@ -127,7 +149,7 @@ export function ProjectCard({
       <Reveal>
         <div className="my-2 mb-2 flex flex-col rounded-2xl border-1 border-gray-200 bg-slate-50 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 hover:bg-gray-100 md:flex md:items-center lg:flex-row">
           <img
-            className="h-64 w-full rounded-2xl object-cover md:flex md:h-96 md:w-96 md:justify-center"
+            className="h-64 w-full rounded-2xl object-cover md:flex md:h-96 md:w-96 md:justify-center "
             src={image}
             alt=""
           />
@@ -145,7 +167,7 @@ export function ProjectCard({
                 <img
                   src={darkMode ? githubIconWhite : githubIcon}
                   alt="GitHub"
-                  className="h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15"
+                  className="h-12 w-12 hover:scale-102 vertical-animation opacity-80 hover:opacity-100 md:h-15 md:w-15"
                 />
               </a>
               {images && (
@@ -153,7 +175,7 @@ export function ProjectCard({
                   <img
                     src={galleryIcon}
                     alt="Gallery Icon"
-                    className={`h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15 ${darkMode ? "invert filter" : ""}`}
+                    className={`h-12 w-12 hover:scale-102 vertical-animation opacity-80 hover:opacity-100 md:h-15 md:w-15 ${darkMode ? "invert filter" : ""}`}
                   />
                 </div>
               )}
@@ -172,7 +194,7 @@ export function ProjectCard({
               {websiteLink && (
                 <a href={websiteLink} target="_blank">
                   <img
-                    className={`h-12 w-12 hover:scale-102 hover:opacity-75 md:h-15 md:w-15 ${darkMode ? "invert filter" : ""}`}
+                    className={`h-12 w-12 hover:scale-102 vertical-animation opacity-80 hover:opacity-100 md:h-15 md:w-15 ${darkMode ? "invert filter" : ""}`}
                     src={websiteIcon}
                     alt="Website"
                   />
