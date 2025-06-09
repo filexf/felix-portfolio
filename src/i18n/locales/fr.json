@@ -98,6 +98,10 @@
       "title": "PROJET SIG",
       "desc": "Ce projet est une application web SIG permettant de visualiser et d'interagir avec des données géospatiales. Réalisée avec React, Leaflet et Mapbox, elle propose des couches cartographiques, marqueurs et popups. L'application est conçue pour être intuitive et responsive."
     },
+    "carbonSavings": {
+      "title": "CARBON SAVINGS SIMULATOR",
+      "desc": "Le Simulateur d’Économies de Carbone est une application web qui montre ce que vous économisez en faisant du vélo plutôt qu’en utilisant une voiture ou les transports en commun. Elle calcule les émissions de carbone, l’argent économisé et les calories brûlées, avec des visualisations graphiques pour des analyses claires. Développée avec React, Tailwind CSS et l’API Mapbox, elle est conviviale et réactive."
+    },
     "portfolio": {
       "title": "PORTFOLIO",
       "desc": "Ce portfolio a été réalisé avec React. J'ai utilisé React Router pour gérer plusieurs pages et l'ai hébergé sur Github Pages. Les animations sont faites avec Framer Motion. J'ai finalement implémenté un Dark Mode pour une UI plus agréable ainsi qu'un système de gestion des langues. Il met en avant mes projets, compétences et expériences, avec un design épuré et personnel."

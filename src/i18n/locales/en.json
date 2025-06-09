@@ -99,6 +99,10 @@
       "title": "GIS PROJECT",
       "desc": "This project is a web GIS application that allows users to visualize and interact with geospatial data. It was built using React, Leaflet, and Mapbox, and it includes features such as map layers, markers, and popups. The application is designed to be user-friendly and responsive."
     },
+    "carbonSavings": {
+      "title": "CARBON SAVINGS SIMULATOR",
+      "desc": "The Carbon Savings Simulator is a web app that shows what you save by biking instead of using a car or public transportation. It calculates carbon emissions, money saved, and calories burned, with graph visualizations for easy insights. Built with React, Tailwind CSS, and the Mapbox API, it’s user-friendly and responsive."
+    },
     "portfolio": {
       "title": "PORTFOLIO",
       "desc": "This portfolio was built using React. I used React Router to manage multiple pages and hosted it on Github Pages. The animations are made with Framer Motion. I finally implemented a Dark Mode for a more pleasant UI as well as a language management system. It showcases my projects, skills, and experiences, with a clean and personal design."

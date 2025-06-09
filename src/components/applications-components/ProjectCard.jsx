@@ -16,6 +16,7 @@ import sportifyPicture from "../../assets/images/Photo-projets-dev/Photo Couvert
 import tyMouetPicture from "../../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
 import gisProject from "../../assets/images/Photo-projets-dev/Web Gis Cover Picture.jpg";
 import moviesWatchlistPicture from "../../assets/images/Photo-projets-dev/Watchlist Cover.jpg";
+import carbonSavingsPhoto from "../../assets/images/Photo-projets-dev/Carbon Savings simulator.jpg"
 
 // Screenshots Sportify
 import screenshotSportify1 from "../../assets/images/Screenshots-Sportify/Screenshots-Sportify-1.jpg";
@@ -49,6 +50,10 @@ import screenshotMoviesWatchlist3 from "../../assets/images/Screenshots-Watchlis
 import screenshotMoviesWatchlist4 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-4.jpg";
 import screenshotMoviesWatchlist5 from "../../assets/images/Screenshots-Watchlist/Watchlist-Screenshot-5.jpg";
 
+// Screenshots Carbon Savings Simulator
+import screenshotCarbonSavings1 from "../../assets/images/Screenshots-Carbon-Savings-Simulator/Carbon-Savings-Screenshot-1.jpg";
+import screenshotCarbonSavings2 from "../../assets/images/Screenshots-Carbon-Savings-Simulator/Carbon-Savings-Screenshot-2.jpg";
+
 import Reveal from "../Reveal";
 
 // Project data
@@ -70,6 +75,17 @@ export const projects = [
     image: portfolioPicture,
     githubLink: "https://github.com/filexf/felix-portfolio",
     websiteLink: "https://filexf.github.io/felix-portfolio/",
+  },
+  {
+    title: "carbonSavings",
+    description: "carbonSavings",
+    image: carbonSavingsPhoto,
+    githubLink: "https://github.com/filexf/carbon-savings-simulator",
+    websiteLink: "https://carbon-savings-simulator.vercel.app/",
+    images: [
+      { src: screenshotCarbonSavings1, alt: "Screenshot 1" },
+      { src: screenshotCarbonSavings2, alt: "Screenshot 2" },
+    ],
   },
   {
     title: "movieWatchlist",

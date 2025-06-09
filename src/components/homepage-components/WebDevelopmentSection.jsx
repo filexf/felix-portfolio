@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import SeeMore from "./SeeMore";
 
 import GoldenGatePicture from "../../assets/images/Photo GGB/Photo-GGB-Squared.jpg";
-import sportifyPicture from "../../assets/images/Photo-projets-dev/Photo Couverture Sportify.png";
-import tyMouetPicture from "../../assets/images/Photo-projets-dev/Photo Ty Mouet.jpg";
+import watchlistPicture from "../../assets/images/Photo-projets-dev/Watchlist Cover.jpg";
+import gisPicture from "../../assets/images/Photo-projets-dev/Web Gis Cover Picture.jpg";
 
 import { useLanguage } from "../../context/LanguageContext";
 import { t } from "../../i18n/i18n";
@@ -25,13 +25,13 @@ export default function WebDevelopmentSection() {
           {/* Grille de projets mise à jour */}
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <ProjectCard
-              image={sportifyPicture}
-              title="SPORTIFY"
+              image={watchlistPicture}
+              title="WATCHLIST"
               path="/applications"
             />
             <ProjectCard
-              image={tyMouetPicture}
-              title="TY MOUET"
+              image={gisPicture}
+              title="GIS PROJECT"
               path="/applications"
             />
             <ProjectCard
