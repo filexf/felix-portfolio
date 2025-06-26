@@ -5,17 +5,27 @@ import { useLanguage } from "../../context/LanguageContext";
 import { t } from "../../i18n/i18n";
 import Reveal from "../Reveal";
 import SectionWrapper from "./SectionWrapper";
-import Resume from "/FelixOrain-CV.pdf";
+import EnglishResume from "/Felix_Orain_Web_Developer_Resume .pdf";
+import FrenchResume from "/Felix_Orain_CV_Developpeur_Web.pdf";
+
 
 export default function AboutSection() {
   const { language } = useLanguage();
+
+  const resumeMap = {
+    en: EnglishResume,
+    fr: FrenchResume,
+    es: EnglishResume, // fallback to English if Spanish
+  };
+  const resumeFile = resumeMap[language] || resumeMap["en"];
+
   return (
     <>
       <Reveal>
         <SectionWrapper title={t("about.title", language)}>
           <div className="lg:width-[80%] mt-2 flex w-full flex-col items-center justify-center gap-6 lg:flex-row lg:justify-center lg:gap-10 lg:pl-12">
             <img
-              className="mb-2 h-[400px] w-auto rounded-4xl shadow-md vertical-animation lg:h-[400px] my-2"
+              className="vertical-animation my-2 mb-2 h-[400px] w-auto rounded-4xl shadow-md lg:h-[400px]"
               src={profileImage}
               alt="Profile Image"
             />
@@ -25,7 +35,7 @@ export default function AboutSection() {
                 dangerouslySetInnerHTML={{ __html: t("about.desc", language) }}
               />
               <a
-                href={Resume}
+                href={resumeFile}
                 download
                 className="group inline-flex items-center gap-3 rounded-full border-2 border-gray-400 bg-slate-50 px-5 py-2 transition-all duration-300 ease-in-out hover:border-gray-900"
               >
