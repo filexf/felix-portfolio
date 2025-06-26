@@ -5,16 +5,17 @@ import { useLanguage } from "../../context/LanguageContext";
 import { t } from "../../i18n/i18n";
 import Reveal from "../Reveal";
 import SectionWrapper from "./SectionWrapper";
-
+import EnglishResume from "/Felix_Orain_Web_Developer_Resume .pdf";
+import FrenchResume from "/Felix_Orain_CV_Développeur_Web.pdf";
 
 
 export default function AboutSection() {
   const { language } = useLanguage();
 
   const resumeMap = {
-    en: "/FelixOrain-CV-en.pdf",
-    fr: "/FelixOrain-CV-fr.pdf",
-    es: "/FelixOrain-CV-en.pdf", // fallback to English if Spanish
+    en: EnglishResume,
+    fr: FrenchResume,
+    es: EnglishResume, // fallback to English if Spanish
   };
   const resumeFile = resumeMap[language] || resumeMap["en"];
 
