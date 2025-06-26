@@ -6,7 +6,7 @@ import { t } from "../../i18n/i18n";
 import Reveal from "../Reveal";
 import SectionWrapper from "./SectionWrapper";
 import EnglishResume from "/Felix_Orain_Web_Developer_Resume .pdf";
-import FrenchResume from "/Felix_Orain_CV_Développeur_Web.pdf";
+import FrenchResume from "/Felix_Orain_CV_Developpeur_Web.pdf";
 
 
 export default function AboutSection() {
